@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 2876025778
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: scan
+      Dependencies: {}
