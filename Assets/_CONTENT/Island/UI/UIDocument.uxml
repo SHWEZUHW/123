@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/BanterUnitySDK/Editor/UI/Components/Slider.uss?fileID=7433441132597879392&amp;guid=63eb2c8e95eb610469f073a6efef00d1&amp;type=3#Slider" />
+    <Style src="project://database/Assets/BanterUnitySDK/Editor/UI/Components/RadioButton.uss?fileID=7433441132597879392&amp;guid=ed9a9faaf1b4ee348bc86add7d79ed3c&amp;type=3#RadioButton" />
+    <Style src="project://database/Assets/BanterUnitySDK/Editor/UI/Components/SwitchToggle.uss?fileID=7433441132597879392&amp;guid=999fbe84f9ac79c4bb91569321b63ba3&amp;type=3#SwitchToggle" />
+    <Style src="project://database/Assets/BanterUnitySDK/Editor/UI/Components/ButtonEH.uss?fileID=7433441132597879392&amp;guid=abb54e9d7900bec4ab7df2210a2cc541&amp;type=3#ButtonEH" />
+    <ui:GroupBox name="Panel" style="flex-direction: row; flex-shrink: 0; flex-basis: auto; height: 100%; width: 100%;">
+        <ui:GroupBox name="ColumnLeft" style="height: 100%; width: 1024px; background-image: none; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 3px; padding-left: 0; flex-shrink: 1; flex-direction: column; flex-grow: 1; flex-wrap: nowrap;">
+            <ui:Label text="Lighting settings:" display-tooltip-when-elided="true" />
+            <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" style="background-image: none; width: auto; height: auto; -unity-slice-left: initial; -unity-slice-top: initial; -unity-slice-right: initial; -unity-slice-bottom: initial; -unity-background-scale-mode: stretch-to-fill; -unity-background-image-tint-color: rgb(255, 255, 255); margin-top: auto; margin-bottom: auto;" />
+            <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" style="height: auto; margin-top: auto; margin-bottom: auto;" />
+            <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" style="margin-top: auto; margin-bottom: auto;" />
+        </ui:GroupBox>
+        <ui:GroupBox name="ColumnMiddle" style="height: 244px; width: 242px; background-image: none; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 3px; padding-left: 0; flex-shrink: 1; flex-direction: column; flex-grow: 1;">
+            <ui:Button text="Button" display-tooltip-when-elided="true" style="background-image: url(&apos;project://database/Assets/_CONTENT/Island/Textures/Icons.png?fileID=-1284602316&amp;guid=483f2eaa96794e54cb27d9eac8c1d4de&amp;type=3#Icons_11&apos;); -unity-background-scale-mode: stretch-to-fill; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; border-top-left-radius: 18px; border-bottom-left-radius: 18px; border-top-right-radius: 18px; border-bottom-right-radius: 18px; height: 30px; width: 119px;" />
+            <ui:Button text="Button" display-tooltip-when-elided="true" />
+        </ui:GroupBox>
+        <ui:GroupBox name="ColumnRight" style="height: 100%; width: 266px; background-image: none; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 0; padding-left: 0; flex-shrink: 0; flex-direction: column; flex-grow: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+            <ui:RadioButton label="Radio Button" />
+            <ui:Toggle label="Toggle" style="background-color: rgba(255, 255, 255, 0);" />
+        </ui:GroupBox>
+    </ui:GroupBox>
+    <ui:Button text="Button" display-tooltip-when-elided="true" />
+</ui:UXML>
