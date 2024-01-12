@@ -1,0 +1,16 @@
+assets/prefabs/screens/3dscreen.prefab
+assets/prefabs/screens/curvedscreen.prefab
+assets/prefabs/screens/curvedscreenreflection.prefab
+assets/prefabs/screens/defaultmetalframe.prefab
+assets/prefabs/screens/defaultreflection.prefab
+assets/prefabs/screens/defaultscreen.prefab
+assets/prefabs/screens/defaultwoodframe.prefab
+assets/prefabs/screens/dome2xreflection.prefab
+assets/prefabs/screens/dome2xscreen.prefab
+assets/prefabs/screens/halfdomescreen.prefab
+assets/prefabs/screens/halfedomereflection.prefab
+assets/prefabs/screens/holostagescreen.prefab
+assets/prefabs/screens/sphere_screen.prefab
+assets/prefabs/screens/spheredomereflection.prefab
+assets/prefabs/screens/videocamera.prefab
+assets/prefabs/selfiecamera/selfiecam.prefab
