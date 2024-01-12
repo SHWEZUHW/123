@@ -15,10 +15,10 @@ ModelImporter:
       name: CrystalAni
     second: {fileID: 2100000, guid: 85397634f035c164a838560f48276817, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 1
     materialSearch: 2
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

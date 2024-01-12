@@ -1,50 +1,113 @@
 fileFormatVersion: 2
 guid: 54cd1763354db5748bb75129f961734c
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: build_crane_01
-    100004: build_crane_01_metalpiece
-    100006: build_crane_01_rope
-    100008: build_crane_01_wheel
-    100010: build_crane_01_rope_collider
-    400000: //RootNode
-    400002: build_crane_01
-    400004: build_crane_01_metalpiece
-    400006: build_crane_01_rope
-    400008: build_crane_01_wheel
-    400010: build_crane_01_rope_collider
-    2300000: //RootNode
-    2300002: build_crane_01
-    2300004: build_crane_01_metalpiece
-    2300006: build_crane_01_rope
-    2300008: build_crane_01_wheel
-    2300010: build_crane_01_rope_collider
-    3300000: //RootNode
-    3300002: build_crane_01
-    3300004: build_crane_01_metalpiece
-    3300006: build_crane_01_rope
-    3300008: build_crane_01_wheel
-    3300010: build_crane_01_rope_collider
-    4300000: Crane_01
-    4300002: build_crane_01
-    4300004: build_crane_01_rope
-    4300006: build_crane_01_wheel
-    4300008: build_crane_01_metalpiece
-    4300010: build_crane_01_rope_collider
-    9500000: //RootNode
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: build_crane_01
+  - first:
+      1: 100004
+    second: build_crane_01_metalpiece
+  - first:
+      1: 100006
+    second: build_crane_01_rope
+  - first:
+      1: 100008
+    second: build_crane_01_wheel
+  - first:
+      1: 100010
+    second: build_crane_01_rope_collider
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: build_crane_01
+  - first:
+      4: 400004
+    second: build_crane_01_metalpiece
+  - first:
+      4: 400006
+    second: build_crane_01_rope
+  - first:
+      4: 400008
+    second: build_crane_01_wheel
+  - first:
+      4: 400010
+    second: build_crane_01_rope_collider
+  - first:
+      23: 2300000
+    second: //RootNode
+  - first:
+      23: 2300002
+    second: build_crane_01
+  - first:
+      23: 2300004
+    second: build_crane_01_metalpiece
+  - first:
+      23: 2300006
+    second: build_crane_01_rope
+  - first:
+      23: 2300008
+    second: build_crane_01_wheel
+  - first:
+      23: 2300010
+    second: build_crane_01_rope_collider
+  - first:
+      33: 3300000
+    second: //RootNode
+  - first:
+      33: 3300002
+    second: build_crane_01
+  - first:
+      33: 3300004
+    second: build_crane_01_metalpiece
+  - first:
+      33: 3300006
+    second: build_crane_01_rope
+  - first:
+      33: 3300008
+    second: build_crane_01_wheel
+  - first:
+      33: 3300010
+    second: build_crane_01_rope_collider
+  - first:
+      43: 4300000
+    second: Crane_01
+  - first:
+      43: 4300002
+    second: build_crane_01
+  - first:
+      43: 4300004
+    second: build_crane_01_rope
+  - first:
+      43: 4300006
+    second: build_crane_01_wheel
+  - first:
+      43: 4300008
+    second: build_crane_01_metalpiece
+  - first:
+      43: 4300010
+    second: build_crane_01_rope_collider
+  - first:
+      95: 9500000
+    second: //RootNode
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 1
     materialName: 0
-    materialSearch: 1
+    materialSearch: 2
     materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -68,21 +131,33 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -90,10 +165,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 4
     normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 0
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -103,14 +181,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

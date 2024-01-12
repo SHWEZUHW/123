@@ -10,10 +10,10 @@ ModelImporter:
       name: Interactable
     second: {fileID: 2100000, guid: b4a60bef57935474d9e5a5d92d754719, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 2
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

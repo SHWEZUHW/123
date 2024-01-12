@@ -21,10 +21,10 @@ ModelImporter:
       name: Tex_Cat_Carrot
     second: {fileID: 2800000, guid: 48474205193765f4480b6e7e2c497e09, type: 3}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
-    materialSearch: 1
-    materialLocation: 1
+    materialSearch: 2
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

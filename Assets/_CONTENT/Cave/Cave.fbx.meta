@@ -95,10 +95,10 @@ ModelImporter:
       name: Petit_Jean_Rock_House_Cave_OBJ_175K_Retopo_8UVs_u3_v2_2K
     second: {fileID: 2800000, guid: 1a624ee0117da1e498aff5beeb22cc14, type: 3}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
-    materialSearch: 1
-    materialLocation: 1
+    materialSearch: 2
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

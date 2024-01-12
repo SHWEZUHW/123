@@ -259,10 +259,10 @@ ModelImporter:
       name: old_trunk_C
     second: {fileID: 2800000, guid: c4460508e841ed343aa93b954622c7ed, type: 3}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 1
     materialSearch: 2
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

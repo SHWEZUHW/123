@@ -1,847 +1,2487 @@
 fileFormatVersion: 2
 guid: 4cbc4e7476946d5499ec6980eb112aa2
-timeCreated: 1477119360
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: 0      001
-    100002: 0      011
-    100004: 1      011
-    100006: 10     011
-    100008: 10:1:2D
-    100010: 11:1:2D
-    100012: 12     011
-    100014: 13     011
-    100016: 139:1:8
-    100018: 14     011
-    100020: 140:1:8
-    100022: 141:1:8
-    100024: 142:1:8
-    100026: 143:1:8
-    100028: 144:1:8
-    100030: 15     011
-    100032: 172:1:8
-    100034: 173:1:8
-    100036: 174:1:8
-    100038: 175:1:8
-    100040: 177:1:8
-    100042: 178:1:8
-    100044: 179:1:8
-    100046: 181:1:8
-    100048: 183:1:8
-    100050: 185:1:8
-    100052: 187:1:8
-    100054: 189:1:8
-    100056: 191:1:8
-    100058: 193:1:8
-    100060: 195:1:8
-    100062: 197:1:8
-    100064: 199:1:8
-    100066: 2      011
-    100068: 201:1:8
-    100070: 203:1:8
-    100072: 205:1:8
-    100074: 207:1:8
-    100076: 209:1:8
-    100078: 21     011
-    100080: 211:1:8
-    100082: 213:1:8
-    100084: 214:1:8
-    100086: 215:1:8
-    100088: 217:1:8
-    100090: 219:1:8
-    100092: 2:1:2D
-    100094: 3      011
-    100096: 3:1:2D
-    100098: 4      011
-    100100: 4:1:2D
-    100102: 5      011
-    100104: 5      012
-    100106: 5      013
-    100108: 5      014
-    100110: 5      015
-    100112: 5      016
-    100114: 5      017
-    100116: 5      018
-    100118: 5      019
-    100120: 5      020
-    100122: 5      021
-    100124: 5      022
-    100126: 5:1:2D
-    100128: 6:1:2D
-    100130: 7      011
-    100132: 7:1:2D
-    100134: 8      011
-    100136: 8      012
-    100138: 8      013
-    100140: 8      014
-    100142: 8:1:2D
-    100144: 9      011
-    100146: 9      012
-    100148: 9      013
-    100150: 9      014
-    100152: 9:1:2D
-    100154: Arch39_008_010
-    100156: Arch39_008_011
-    100158: Arch39_008_012
-    100160: Arch39_008_013
-    100162: Arch39_008_014
-    100164: Arch39_008_015
-    100166: Arch39_008_016
-    100168: Arch39_008_017
-    100170: Arch39_008_018
-    100172: Arch39_008_019
-    100174: Arch39_008_020
-    100176: Arch39_008_021
-    100178: Arch39_008_1
-    100180: Arch39_008_2
-    100182: Arch39_008_4
-    100184: Arch39_008_5
-    100186: Arch39_008_6
-    100188: Arch39_008_7
-    100190: Arch39_008_8
-    100192: Arch39_008_9
-    100194: Box3146
-    100196: Box3148
-    100198: Box3150
-    100200: ChamferBox063
-    100202: ChamferBox065
-    100204: ChamferBox066
-    100206: ChamferBox068
-    100208: ChamferBox069
-    100210: ChamferBox070
-    100212: ChamferBox071
-    100214: ChamferBox072
-    100216: ChamferBox073
-    100218: ChamferBox074
-    100220: ChamferBox075
-    100222: ChamferBox076
-    100224: ChamferBox077
-    100226: ChamferBox078
-    100228: ChamferBox079
-    100230: ChamferBox080
-    100232: ChamferBox081
-    100234: ChamferBox082
-    100236: ChamferBox083
-    100238: ChamferBox084
-    100240: ChamferBox085
-    100242: ChamferBox086
-    100244: ChamferBox087
-    100246: ChamferBox088
-    100248: ChamferBox089
-    100250: ChamferBox090
-    100252: ChamferBox095
-    100254: ChamferBox096
-    100256: ChamferBox097
-    100258: ChamferBox098
-    100260: ChamferBox099
-    100262: ChamferBox100
-    100264: ChamferBox101
-    100266: ChamferBox107
-    100268: ChamferBox108
-    100270: ChamferBox133
-    100272: ChamferBox134
-    100274: ChamferBox135
-    100276: ChamferBox136
-    100278: ChamferBox138
-    100280: ChamferBox139
-    100282: ChamferBox140
-    100284: ChamferBox141
-    100286: ChamferBox142
-    100288: ChamferBox143
-    100290: ChamferBox144
-    100292: ChamferBox145
-    100294: ChamferBox146
-    100296: ChamferBox147
-    100298: ChamferBox148
-    100300: ChamferBox150
-    100302: ChamferBox151
-    100304: ChamferBox155
-    100306: ChamferBox156
-    100308: ChamferBox167
-    100310: Group005
-    100312: Group006
-    100314: Group007
-    100316: Group009
-    100318: Group010
-    100320: Group209
-    100322: Group229
-    100324: Group356
-    100326: Group357
-    100328: Group365
-    100330: Group366
-    100332: Group367
-    100334: Group368
-    100336: Group369
-    100338: Group370
-    100340: //RootNode
-    100342: Line001
-    100344: Plane001
-    400000: 0      001
-    400002: 0      011
-    400004: 1      011
-    400006: 10     011
-    400008: 10:1:2D
-    400010: 11:1:2D
-    400012: 12     011
-    400014: 13     011
-    400016: 139:1:8
-    400018: 14     011
-    400020: 140:1:8
-    400022: 141:1:8
-    400024: 142:1:8
-    400026: 143:1:8
-    400028: 144:1:8
-    400030: 15     011
-    400032: 172:1:8
-    400034: 173:1:8
-    400036: 174:1:8
-    400038: 175:1:8
-    400040: 177:1:8
-    400042: 178:1:8
-    400044: 179:1:8
-    400046: 181:1:8
-    400048: 183:1:8
-    400050: 185:1:8
-    400052: 187:1:8
-    400054: 189:1:8
-    400056: 191:1:8
-    400058: 193:1:8
-    400060: 195:1:8
-    400062: 197:1:8
-    400064: 199:1:8
-    400066: 2      011
-    400068: 201:1:8
-    400070: 203:1:8
-    400072: 205:1:8
-    400074: 207:1:8
-    400076: 209:1:8
-    400078: 21     011
-    400080: 211:1:8
-    400082: 213:1:8
-    400084: 214:1:8
-    400086: 215:1:8
-    400088: 217:1:8
-    400090: 219:1:8
-    400092: 2:1:2D
-    400094: 3      011
-    400096: 3:1:2D
-    400098: 4      011
-    400100: 4:1:2D
-    400102: 5      011
-    400104: 5      012
-    400106: 5      013
-    400108: 5      014
-    400110: 5      015
-    400112: 5      016
-    400114: 5      017
-    400116: 5      018
-    400118: 5      019
-    400120: 5      020
-    400122: 5      021
-    400124: 5      022
-    400126: 5:1:2D
-    400128: 6:1:2D
-    400130: 7      011
-    400132: 7:1:2D
-    400134: 8      011
-    400136: 8      012
-    400138: 8      013
-    400140: 8      014
-    400142: 8:1:2D
-    400144: 9      011
-    400146: 9      012
-    400148: 9      013
-    400150: 9      014
-    400152: 9:1:2D
-    400154: Arch39_008_010
-    400156: Arch39_008_011
-    400158: Arch39_008_012
-    400160: Arch39_008_013
-    400162: Arch39_008_014
-    400164: Arch39_008_015
-    400166: Arch39_008_016
-    400168: Arch39_008_017
-    400170: Arch39_008_018
-    400172: Arch39_008_019
-    400174: Arch39_008_020
-    400176: Arch39_008_021
-    400178: Arch39_008_1
-    400180: Arch39_008_2
-    400182: Arch39_008_4
-    400184: Arch39_008_5
-    400186: Arch39_008_6
-    400188: Arch39_008_7
-    400190: Arch39_008_8
-    400192: Arch39_008_9
-    400194: Box3146
-    400196: Box3148
-    400198: Box3150
-    400200: ChamferBox063
-    400202: ChamferBox065
-    400204: ChamferBox066
-    400206: ChamferBox068
-    400208: ChamferBox069
-    400210: ChamferBox070
-    400212: ChamferBox071
-    400214: ChamferBox072
-    400216: ChamferBox073
-    400218: ChamferBox074
-    400220: ChamferBox075
-    400222: ChamferBox076
-    400224: ChamferBox077
-    400226: ChamferBox078
-    400228: ChamferBox079
-    400230: ChamferBox080
-    400232: ChamferBox081
-    400234: ChamferBox082
-    400236: ChamferBox083
-    400238: ChamferBox084
-    400240: ChamferBox085
-    400242: ChamferBox086
-    400244: ChamferBox087
-    400246: ChamferBox088
-    400248: ChamferBox089
-    400250: ChamferBox090
-    400252: ChamferBox095
-    400254: ChamferBox096
-    400256: ChamferBox097
-    400258: ChamferBox098
-    400260: ChamferBox099
-    400262: ChamferBox100
-    400264: ChamferBox101
-    400266: ChamferBox107
-    400268: ChamferBox108
-    400270: ChamferBox133
-    400272: ChamferBox134
-    400274: ChamferBox135
-    400276: ChamferBox136
-    400278: ChamferBox138
-    400280: ChamferBox139
-    400282: ChamferBox140
-    400284: ChamferBox141
-    400286: ChamferBox142
-    400288: ChamferBox143
-    400290: ChamferBox144
-    400292: ChamferBox145
-    400294: ChamferBox146
-    400296: ChamferBox147
-    400298: ChamferBox148
-    400300: ChamferBox150
-    400302: ChamferBox151
-    400304: ChamferBox155
-    400306: ChamferBox156
-    400308: ChamferBox167
-    400310: Group005
-    400312: Group006
-    400314: Group007
-    400316: Group009
-    400318: Group010
-    400320: Group209
-    400322: Group229
-    400324: Group356
-    400326: Group357
-    400328: Group365
-    400330: Group366
-    400332: Group367
-    400334: Group368
-    400336: Group369
-    400338: Group370
-    400340: //RootNode
-    400342: Line001
-    400344: Plane001
-    2300000: 0      001
-    2300002: 0      011
-    2300004: 1      011
-    2300006: 10     011
-    2300008: 10:1:2D
-    2300010: 11:1:2D
-    2300012: 12     011
-    2300014: 13     011
-    2300016: 139:1:8
-    2300018: 14     011
-    2300020: 140:1:8
-    2300022: 141:1:8
-    2300024: 142:1:8
-    2300026: 143:1:8
-    2300028: 144:1:8
-    2300030: 15     011
-    2300032: 172:1:8
-    2300034: 173:1:8
-    2300036: 174:1:8
-    2300038: 175:1:8
-    2300040: 177:1:8
-    2300042: 178:1:8
-    2300044: 179:1:8
-    2300046: 181:1:8
-    2300048: 183:1:8
-    2300050: 185:1:8
-    2300052: 187:1:8
-    2300054: 189:1:8
-    2300056: 191:1:8
-    2300058: 193:1:8
-    2300060: 195:1:8
-    2300062: 197:1:8
-    2300064: 199:1:8
-    2300066: 2      011
-    2300068: 201:1:8
-    2300070: 203:1:8
-    2300072: 205:1:8
-    2300074: 207:1:8
-    2300076: 209:1:8
-    2300078: 21     011
-    2300080: 211:1:8
-    2300082: 213:1:8
-    2300084: 214:1:8
-    2300086: 215:1:8
-    2300088: 217:1:8
-    2300090: 219:1:8
-    2300092: 2:1:2D
-    2300094: 3      011
-    2300096: 3:1:2D
-    2300098: 4      011
-    2300100: 4:1:2D
-    2300102: 5      011
-    2300104: 5      012
-    2300106: 5      013
-    2300108: 5      014
-    2300110: 5      015
-    2300112: 5      016
-    2300114: 5      017
-    2300116: 5      018
-    2300118: 5      019
-    2300120: 5      020
-    2300122: 5      021
-    2300124: 5      022
-    2300126: 5:1:2D
-    2300128: 6:1:2D
-    2300130: 7      011
-    2300132: 7:1:2D
-    2300134: 8      011
-    2300136: 8      012
-    2300138: 8      013
-    2300140: 8      014
-    2300142: 8:1:2D
-    2300144: 9      011
-    2300146: 9      012
-    2300148: 9      013
-    2300150: 9      014
-    2300152: 9:1:2D
-    2300154: Arch39_008_010
-    2300156: Arch39_008_011
-    2300158: Arch39_008_012
-    2300160: Arch39_008_013
-    2300162: Arch39_008_014
-    2300164: Arch39_008_015
-    2300166: Arch39_008_016
-    2300168: Arch39_008_017
-    2300170: Arch39_008_018
-    2300172: Arch39_008_019
-    2300174: Arch39_008_020
-    2300176: Arch39_008_021
-    2300178: Arch39_008_1
-    2300180: Arch39_008_2
-    2300182: Arch39_008_4
-    2300184: Arch39_008_5
-    2300186: Arch39_008_6
-    2300188: Arch39_008_7
-    2300190: Arch39_008_8
-    2300192: Arch39_008_9
-    2300194: Box3146
-    2300196: Box3148
-    2300198: Box3150
-    2300200: ChamferBox063
-    2300202: ChamferBox065
-    2300204: ChamferBox066
-    2300206: ChamferBox068
-    2300208: ChamferBox069
-    2300210: ChamferBox070
-    2300212: ChamferBox071
-    2300214: ChamferBox072
-    2300216: ChamferBox073
-    2300218: ChamferBox074
-    2300220: ChamferBox075
-    2300222: ChamferBox076
-    2300224: ChamferBox077
-    2300226: ChamferBox078
-    2300228: ChamferBox079
-    2300230: ChamferBox080
-    2300232: ChamferBox081
-    2300234: ChamferBox082
-    2300236: ChamferBox083
-    2300238: ChamferBox084
-    2300240: ChamferBox085
-    2300242: ChamferBox086
-    2300244: ChamferBox087
-    2300246: ChamferBox088
-    2300248: ChamferBox089
-    2300250: ChamferBox090
-    2300252: ChamferBox095
-    2300254: ChamferBox096
-    2300256: ChamferBox097
-    2300258: ChamferBox098
-    2300260: ChamferBox099
-    2300262: ChamferBox100
-    2300264: ChamferBox101
-    2300266: ChamferBox107
-    2300268: ChamferBox108
-    2300270: ChamferBox133
-    2300272: ChamferBox134
-    2300274: ChamferBox135
-    2300276: ChamferBox136
-    2300278: ChamferBox138
-    2300280: ChamferBox139
-    2300282: ChamferBox140
-    2300284: ChamferBox141
-    2300286: ChamferBox142
-    2300288: ChamferBox143
-    2300290: ChamferBox144
-    2300292: ChamferBox145
-    2300294: ChamferBox146
-    2300296: ChamferBox147
-    2300298: ChamferBox148
-    2300300: ChamferBox150
-    2300302: ChamferBox151
-    2300304: ChamferBox155
-    2300306: ChamferBox156
-    2300308: ChamferBox167
-    2300310: Line001
-    2300312: Plane001
-    3300000: 0      001
-    3300002: 0      011
-    3300004: 1      011
-    3300006: 10     011
-    3300008: 10:1:2D
-    3300010: 11:1:2D
-    3300012: 12     011
-    3300014: 13     011
-    3300016: 139:1:8
-    3300018: 14     011
-    3300020: 140:1:8
-    3300022: 141:1:8
-    3300024: 142:1:8
-    3300026: 143:1:8
-    3300028: 144:1:8
-    3300030: 15     011
-    3300032: 172:1:8
-    3300034: 173:1:8
-    3300036: 174:1:8
-    3300038: 175:1:8
-    3300040: 177:1:8
-    3300042: 178:1:8
-    3300044: 179:1:8
-    3300046: 181:1:8
-    3300048: 183:1:8
-    3300050: 185:1:8
-    3300052: 187:1:8
-    3300054: 189:1:8
-    3300056: 191:1:8
-    3300058: 193:1:8
-    3300060: 195:1:8
-    3300062: 197:1:8
-    3300064: 199:1:8
-    3300066: 2      011
-    3300068: 201:1:8
-    3300070: 203:1:8
-    3300072: 205:1:8
-    3300074: 207:1:8
-    3300076: 209:1:8
-    3300078: 21     011
-    3300080: 211:1:8
-    3300082: 213:1:8
-    3300084: 214:1:8
-    3300086: 215:1:8
-    3300088: 217:1:8
-    3300090: 219:1:8
-    3300092: 2:1:2D
-    3300094: 3      011
-    3300096: 3:1:2D
-    3300098: 4      011
-    3300100: 4:1:2D
-    3300102: 5      011
-    3300104: 5      012
-    3300106: 5      013
-    3300108: 5      014
-    3300110: 5      015
-    3300112: 5      016
-    3300114: 5      017
-    3300116: 5      018
-    3300118: 5      019
-    3300120: 5      020
-    3300122: 5      021
-    3300124: 5      022
-    3300126: 5:1:2D
-    3300128: 6:1:2D
-    3300130: 7      011
-    3300132: 7:1:2D
-    3300134: 8      011
-    3300136: 8      012
-    3300138: 8      013
-    3300140: 8      014
-    3300142: 8:1:2D
-    3300144: 9      011
-    3300146: 9      012
-    3300148: 9      013
-    3300150: 9      014
-    3300152: 9:1:2D
-    3300154: Arch39_008_010
-    3300156: Arch39_008_011
-    3300158: Arch39_008_012
-    3300160: Arch39_008_013
-    3300162: Arch39_008_014
-    3300164: Arch39_008_015
-    3300166: Arch39_008_016
-    3300168: Arch39_008_017
-    3300170: Arch39_008_018
-    3300172: Arch39_008_019
-    3300174: Arch39_008_020
-    3300176: Arch39_008_021
-    3300178: Arch39_008_1
-    3300180: Arch39_008_2
-    3300182: Arch39_008_4
-    3300184: Arch39_008_5
-    3300186: Arch39_008_6
-    3300188: Arch39_008_7
-    3300190: Arch39_008_8
-    3300192: Arch39_008_9
-    3300194: Box3146
-    3300196: Box3148
-    3300198: Box3150
-    3300200: ChamferBox063
-    3300202: ChamferBox065
-    3300204: ChamferBox066
-    3300206: ChamferBox068
-    3300208: ChamferBox069
-    3300210: ChamferBox070
-    3300212: ChamferBox071
-    3300214: ChamferBox072
-    3300216: ChamferBox073
-    3300218: ChamferBox074
-    3300220: ChamferBox075
-    3300222: ChamferBox076
-    3300224: ChamferBox077
-    3300226: ChamferBox078
-    3300228: ChamferBox079
-    3300230: ChamferBox080
-    3300232: ChamferBox081
-    3300234: ChamferBox082
-    3300236: ChamferBox083
-    3300238: ChamferBox084
-    3300240: ChamferBox085
-    3300242: ChamferBox086
-    3300244: ChamferBox087
-    3300246: ChamferBox088
-    3300248: ChamferBox089
-    3300250: ChamferBox090
-    3300252: ChamferBox095
-    3300254: ChamferBox096
-    3300256: ChamferBox097
-    3300258: ChamferBox098
-    3300260: ChamferBox099
-    3300262: ChamferBox100
-    3300264: ChamferBox101
-    3300266: ChamferBox107
-    3300268: ChamferBox108
-    3300270: ChamferBox133
-    3300272: ChamferBox134
-    3300274: ChamferBox135
-    3300276: ChamferBox136
-    3300278: ChamferBox138
-    3300280: ChamferBox139
-    3300282: ChamferBox140
-    3300284: ChamferBox141
-    3300286: ChamferBox142
-    3300288: ChamferBox143
-    3300290: ChamferBox144
-    3300292: ChamferBox145
-    3300294: ChamferBox146
-    3300296: ChamferBox147
-    3300298: ChamferBox148
-    3300300: ChamferBox150
-    3300302: ChamferBox151
-    3300304: ChamferBox155
-    3300306: ChamferBox156
-    3300308: ChamferBox167
-    3300310: Line001
-    3300312: Plane001
-    4300000: 0      011
-    4300002: 1      011
-    4300004: 2      011
-    4300006: 3      011
-    4300008: 4      011
-    4300010: 5      011
-    4300012: 5      012
-    4300014: 7      011
-    4300016: 8      011
-    4300018: 9      011
-    4300020: 10     011
-    4300022: 12     011
-    4300024: 13     011
-    4300026: 14     011
-    4300028: 15     011
-    4300030: 21     011
-    4300032: 5      014
-    4300034: 5      013
-    4300036: 5      015
-    4300038: 5      016
-    4300040: 5      017
-    4300042: 5      018
-    4300044: Arch39_008_2
-    4300046: Arch39_008_1
-    4300048: Arch39_008_4
-    4300050: Arch39_008_5
-    4300052: Arch39_008_6
-    4300054: Arch39_008_010
-    4300056: Arch39_008_7
-    4300058: Arch39_008_9
-    4300060: Arch39_008_8
-    4300062: Arch39_008_011
-    4300064: Arch39_008_012
-    4300066: Arch39_008_013
-    4300068: Arch39_008_014
-    4300070: Arch39_008_015
-    4300072: Arch39_008_016
-    4300074: Arch39_008_017
-    4300076: Arch39_008_018
-    4300078: Arch39_008_019
-    4300080: Arch39_008_020
-    4300082: Arch39_008_021
-    4300084: 5      019
-    4300086: 5      020
-    4300088: 5      021
-    4300090: 5      022
-    4300092: ChamferBox108
-    4300094: ChamferBox133
-    4300096: ChamferBox134
-    4300098: ChamferBox135
-    4300100: ChamferBox136
-    4300102: ChamferBox141
-    4300104: ChamferBox138
-    4300106: ChamferBox139
-    4300108: ChamferBox140
-    4300110: ChamferBox142
-    4300112: ChamferBox143
-    4300114: ChamferBox144
-    4300116: ChamferBox145
-    4300118: ChamferBox146
-    4300120: ChamferBox147
-    4300122: ChamferBox148
-    4300124: 139:1:8
-    4300126: 140:1:8
-    4300128: 141:1:8
-    4300130: 142:1:8
-    4300132: 143:1:8
-    4300134: 144:1:8
-    4300136: 172:1:8
-    4300138: 173:1:8
-    4300140: 174:1:8
-    4300142: 175:1:8
-    4300144: 177:1:8
-    4300146: 178:1:8
-    4300148: 179:1:8
-    4300150: 181:1:8
-    4300152: 183:1:8
-    4300154: 185:1:8
-    4300156: 187:1:8
-    4300158: 189:1:8
-    4300160: 191:1:8
-    4300162: 193:1:8
-    4300164: 195:1:8
-    4300166: 197:1:8
-    4300168: 199:1:8
-    4300170: 201:1:8
-    4300172: 203:1:8
-    4300174: 205:1:8
-    4300176: 207:1:8
-    4300178: 209:1:8
-    4300180: 211:1:8
-    4300182: 213:1:8
-    4300184: 214:1:8
-    4300186: 215:1:8
-    4300188: 217:1:8
-    4300190: 219:1:8
-    4300192: 2:1:2D
-    4300194: 3:1:2D
-    4300196: 4:1:2D
-    4300198: 5:1:2D
-    4300200: 6:1:2D
-    4300202: 7:1:2D
-    4300204: 8:1:2D
-    4300206: 9:1:2D
-    4300208: 10:1:2D
-    4300210: 11:1:2D
-    4300212: 0      001
-    4300214: ChamferBox150
-    4300216: ChamferBox095
-    4300218: ChamferBox096
-    4300220: ChamferBox097
-    4300222: ChamferBox098
-    4300224: ChamferBox099
-    4300226: ChamferBox100
-    4300228: ChamferBox101
-    4300230: ChamferBox080
-    4300232: ChamferBox081
-    4300234: ChamferBox082
-    4300236: ChamferBox083
-    4300238: ChamferBox084
-    4300240: ChamferBox085
-    4300242: ChamferBox086
-    4300244: ChamferBox087
-    4300246: ChamferBox088
-    4300248: ChamferBox089
-    4300250: ChamferBox090
-    4300252: ChamferBox065
-    4300254: ChamferBox107
-    4300256: ChamferBox066
-    4300258: ChamferBox063
-    4300260: ChamferBox068
-    4300262: ChamferBox151
-    4300264: ChamferBox079
-    4300266: ChamferBox078
-    4300268: ChamferBox077
-    4300270: ChamferBox076
-    4300272: ChamferBox075
-    4300274: ChamferBox074
-    4300276: ChamferBox073
-    4300278: ChamferBox072
-    4300280: ChamferBox071
-    4300282: ChamferBox070
-    4300284: ChamferBox069
-    4300286: 8      012
-    4300288: Box3146
-    4300290: 8      013
-    4300292: Box3148
-    4300294: 8      014
-    4300296: Box3150
-    4300298: 9      012
-    4300300: 9      013
-    4300302: 9      014
-    4300304: ChamferBox155
-    4300306: ChamferBox156
-    4300308: ChamferBox167
-    4300310: Plane001
-    4300312: Line001
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: 0      001
+  - first:
+      1: 100002
+    second: 0      011
+  - first:
+      1: 100004
+    second: 1      011
+  - first:
+      1: 100006
+    second: 10     011
+  - first:
+      1: 100008
+    second: 10:1:2D
+  - first:
+      1: 100010
+    second: 11:1:2D
+  - first:
+      1: 100012
+    second: 12     011
+  - first:
+      1: 100014
+    second: 13     011
+  - first:
+      1: 100016
+    second: 139:1:8
+  - first:
+      1: 100018
+    second: 14     011
+  - first:
+      1: 100020
+    second: 140:1:8
+  - first:
+      1: 100022
+    second: 141:1:8
+  - first:
+      1: 100024
+    second: 142:1:8
+  - first:
+      1: 100026
+    second: 143:1:8
+  - first:
+      1: 100028
+    second: 144:1:8
+  - first:
+      1: 100030
+    second: 15     011
+  - first:
+      1: 100032
+    second: 172:1:8
+  - first:
+      1: 100034
+    second: 173:1:8
+  - first:
+      1: 100036
+    second: 174:1:8
+  - first:
+      1: 100038
+    second: 175:1:8
+  - first:
+      1: 100040
+    second: 177:1:8
+  - first:
+      1: 100042
+    second: 178:1:8
+  - first:
+      1: 100044
+    second: 179:1:8
+  - first:
+      1: 100046
+    second: 181:1:8
+  - first:
+      1: 100048
+    second: 183:1:8
+  - first:
+      1: 100050
+    second: 185:1:8
+  - first:
+      1: 100052
+    second: 187:1:8
+  - first:
+      1: 100054
+    second: 189:1:8
+  - first:
+      1: 100056
+    second: 191:1:8
+  - first:
+      1: 100058
+    second: 193:1:8
+  - first:
+      1: 100060
+    second: 195:1:8
+  - first:
+      1: 100062
+    second: 197:1:8
+  - first:
+      1: 100064
+    second: 199:1:8
+  - first:
+      1: 100066
+    second: 2      011
+  - first:
+      1: 100068
+    second: 201:1:8
+  - first:
+      1: 100070
+    second: 203:1:8
+  - first:
+      1: 100072
+    second: 205:1:8
+  - first:
+      1: 100074
+    second: 207:1:8
+  - first:
+      1: 100076
+    second: 209:1:8
+  - first:
+      1: 100078
+    second: 21     011
+  - first:
+      1: 100080
+    second: 211:1:8
+  - first:
+      1: 100082
+    second: 213:1:8
+  - first:
+      1: 100084
+    second: 214:1:8
+  - first:
+      1: 100086
+    second: 215:1:8
+  - first:
+      1: 100088
+    second: 217:1:8
+  - first:
+      1: 100090
+    second: 219:1:8
+  - first:
+      1: 100092
+    second: 2:1:2D
+  - first:
+      1: 100094
+    second: 3      011
+  - first:
+      1: 100096
+    second: 3:1:2D
+  - first:
+      1: 100098
+    second: 4      011
+  - first:
+      1: 100100
+    second: 4:1:2D
+  - first:
+      1: 100102
+    second: 5      011
+  - first:
+      1: 100104
+    second: 5      012
+  - first:
+      1: 100106
+    second: 5      013
+  - first:
+      1: 100108
+    second: 5      014
+  - first:
+      1: 100110
+    second: 5      015
+  - first:
+      1: 100112
+    second: 5      016
+  - first:
+      1: 100114
+    second: 5      017
+  - first:
+      1: 100116
+    second: 5      018
+  - first:
+      1: 100118
+    second: 5      019
+  - first:
+      1: 100120
+    second: 5      020
+  - first:
+      1: 100122
+    second: 5      021
+  - first:
+      1: 100124
+    second: 5      022
+  - first:
+      1: 100126
+    second: 5:1:2D
+  - first:
+      1: 100128
+    second: 6:1:2D
+  - first:
+      1: 100130
+    second: 7      011
+  - first:
+      1: 100132
+    second: 7:1:2D
+  - first:
+      1: 100134
+    second: 8      011
+  - first:
+      1: 100136
+    second: 8      012
+  - first:
+      1: 100138
+    second: 8      013
+  - first:
+      1: 100140
+    second: 8      014
+  - first:
+      1: 100142
+    second: 8:1:2D
+  - first:
+      1: 100144
+    second: 9      011
+  - first:
+      1: 100146
+    second: 9      012
+  - first:
+      1: 100148
+    second: 9      013
+  - first:
+      1: 100150
+    second: 9      014
+  - first:
+      1: 100152
+    second: 9:1:2D
+  - first:
+      1: 100154
+    second: Arch39_008_010
+  - first:
+      1: 100156
+    second: Arch39_008_011
+  - first:
+      1: 100158
+    second: Arch39_008_012
+  - first:
+      1: 100160
+    second: Arch39_008_013
+  - first:
+      1: 100162
+    second: Arch39_008_014
+  - first:
+      1: 100164
+    second: Arch39_008_015
+  - first:
+      1: 100166
+    second: Arch39_008_016
+  - first:
+      1: 100168
+    second: Arch39_008_017
+  - first:
+      1: 100170
+    second: Arch39_008_018
+  - first:
+      1: 100172
+    second: Arch39_008_019
+  - first:
+      1: 100174
+    second: Arch39_008_020
+  - first:
+      1: 100176
+    second: Arch39_008_021
+  - first:
+      1: 100178
+    second: Arch39_008_1
+  - first:
+      1: 100180
+    second: Arch39_008_2
+  - first:
+      1: 100182
+    second: Arch39_008_4
+  - first:
+      1: 100184
+    second: Arch39_008_5
+  - first:
+      1: 100186
+    second: Arch39_008_6
+  - first:
+      1: 100188
+    second: Arch39_008_7
+  - first:
+      1: 100190
+    second: Arch39_008_8
+  - first:
+      1: 100192
+    second: Arch39_008_9
+  - first:
+      1: 100194
+    second: Box3146
+  - first:
+      1: 100196
+    second: Box3148
+  - first:
+      1: 100198
+    second: Box3150
+  - first:
+      1: 100200
+    second: ChamferBox063
+  - first:
+      1: 100202
+    second: ChamferBox065
+  - first:
+      1: 100204
+    second: ChamferBox066
+  - first:
+      1: 100206
+    second: ChamferBox068
+  - first:
+      1: 100208
+    second: ChamferBox069
+  - first:
+      1: 100210
+    second: ChamferBox070
+  - first:
+      1: 100212
+    second: ChamferBox071
+  - first:
+      1: 100214
+    second: ChamferBox072
+  - first:
+      1: 100216
+    second: ChamferBox073
+  - first:
+      1: 100218
+    second: ChamferBox074
+  - first:
+      1: 100220
+    second: ChamferBox075
+  - first:
+      1: 100222
+    second: ChamferBox076
+  - first:
+      1: 100224
+    second: ChamferBox077
+  - first:
+      1: 100226
+    second: ChamferBox078
+  - first:
+      1: 100228
+    second: ChamferBox079
+  - first:
+      1: 100230
+    second: ChamferBox080
+  - first:
+      1: 100232
+    second: ChamferBox081
+  - first:
+      1: 100234
+    second: ChamferBox082
+  - first:
+      1: 100236
+    second: ChamferBox083
+  - first:
+      1: 100238
+    second: ChamferBox084
+  - first:
+      1: 100240
+    second: ChamferBox085
+  - first:
+      1: 100242
+    second: ChamferBox086
+  - first:
+      1: 100244
+    second: ChamferBox087
+  - first:
+      1: 100246
+    second: ChamferBox088
+  - first:
+      1: 100248
+    second: ChamferBox089
+  - first:
+      1: 100250
+    second: ChamferBox090
+  - first:
+      1: 100252
+    second: ChamferBox095
+  - first:
+      1: 100254
+    second: ChamferBox096
+  - first:
+      1: 100256
+    second: ChamferBox097
+  - first:
+      1: 100258
+    second: ChamferBox098
+  - first:
+      1: 100260
+    second: ChamferBox099
+  - first:
+      1: 100262
+    second: ChamferBox100
+  - first:
+      1: 100264
+    second: ChamferBox101
+  - first:
+      1: 100266
+    second: ChamferBox107
+  - first:
+      1: 100268
+    second: ChamferBox108
+  - first:
+      1: 100270
+    second: ChamferBox133
+  - first:
+      1: 100272
+    second: ChamferBox134
+  - first:
+      1: 100274
+    second: ChamferBox135
+  - first:
+      1: 100276
+    second: ChamferBox136
+  - first:
+      1: 100278
+    second: ChamferBox138
+  - first:
+      1: 100280
+    second: ChamferBox139
+  - first:
+      1: 100282
+    second: ChamferBox140
+  - first:
+      1: 100284
+    second: ChamferBox141
+  - first:
+      1: 100286
+    second: ChamferBox142
+  - first:
+      1: 100288
+    second: ChamferBox143
+  - first:
+      1: 100290
+    second: ChamferBox144
+  - first:
+      1: 100292
+    second: ChamferBox145
+  - first:
+      1: 100294
+    second: ChamferBox146
+  - first:
+      1: 100296
+    second: ChamferBox147
+  - first:
+      1: 100298
+    second: ChamferBox148
+  - first:
+      1: 100300
+    second: ChamferBox150
+  - first:
+      1: 100302
+    second: ChamferBox151
+  - first:
+      1: 100304
+    second: ChamferBox155
+  - first:
+      1: 100306
+    second: ChamferBox156
+  - first:
+      1: 100308
+    second: ChamferBox167
+  - first:
+      1: 100310
+    second: Group005
+  - first:
+      1: 100312
+    second: Group006
+  - first:
+      1: 100314
+    second: Group007
+  - first:
+      1: 100316
+    second: Group009
+  - first:
+      1: 100318
+    second: Group010
+  - first:
+      1: 100320
+    second: Group209
+  - first:
+      1: 100322
+    second: Group229
+  - first:
+      1: 100324
+    second: Group356
+  - first:
+      1: 100326
+    second: Group357
+  - first:
+      1: 100328
+    second: Group365
+  - first:
+      1: 100330
+    second: Group366
+  - first:
+      1: 100332
+    second: Group367
+  - first:
+      1: 100334
+    second: Group368
+  - first:
+      1: 100336
+    second: Group369
+  - first:
+      1: 100338
+    second: Group370
+  - first:
+      1: 100340
+    second: //RootNode
+  - first:
+      1: 100342
+    second: Line001
+  - first:
+      1: 100344
+    second: Plane001
+  - first:
+      4: 400000
+    second: 0      001
+  - first:
+      4: 400002
+    second: 0      011
+  - first:
+      4: 400004
+    second: 1      011
+  - first:
+      4: 400006
+    second: 10     011
+  - first:
+      4: 400008
+    second: 10:1:2D
+  - first:
+      4: 400010
+    second: 11:1:2D
+  - first:
+      4: 400012
+    second: 12     011
+  - first:
+      4: 400014
+    second: 13     011
+  - first:
+      4: 400016
+    second: 139:1:8
+  - first:
+      4: 400018
+    second: 14     011
+  - first:
+      4: 400020
+    second: 140:1:8
+  - first:
+      4: 400022
+    second: 141:1:8
+  - first:
+      4: 400024
+    second: 142:1:8
+  - first:
+      4: 400026
+    second: 143:1:8
+  - first:
+      4: 400028
+    second: 144:1:8
+  - first:
+      4: 400030
+    second: 15     011
+  - first:
+      4: 400032
+    second: 172:1:8
+  - first:
+      4: 400034
+    second: 173:1:8
+  - first:
+      4: 400036
+    second: 174:1:8
+  - first:
+      4: 400038
+    second: 175:1:8
+  - first:
+      4: 400040
+    second: 177:1:8
+  - first:
+      4: 400042
+    second: 178:1:8
+  - first:
+      4: 400044
+    second: 179:1:8
+  - first:
+      4: 400046
+    second: 181:1:8
+  - first:
+      4: 400048
+    second: 183:1:8
+  - first:
+      4: 400050
+    second: 185:1:8
+  - first:
+      4: 400052
+    second: 187:1:8
+  - first:
+      4: 400054
+    second: 189:1:8
+  - first:
+      4: 400056
+    second: 191:1:8
+  - first:
+      4: 400058
+    second: 193:1:8
+  - first:
+      4: 400060
+    second: 195:1:8
+  - first:
+      4: 400062
+    second: 197:1:8
+  - first:
+      4: 400064
+    second: 199:1:8
+  - first:
+      4: 400066
+    second: 2      011
+  - first:
+      4: 400068
+    second: 201:1:8
+  - first:
+      4: 400070
+    second: 203:1:8
+  - first:
+      4: 400072
+    second: 205:1:8
+  - first:
+      4: 400074
+    second: 207:1:8
+  - first:
+      4: 400076
+    second: 209:1:8
+  - first:
+      4: 400078
+    second: 21     011
+  - first:
+      4: 400080
+    second: 211:1:8
+  - first:
+      4: 400082
+    second: 213:1:8
+  - first:
+      4: 400084
+    second: 214:1:8
+  - first:
+      4: 400086
+    second: 215:1:8
+  - first:
+      4: 400088
+    second: 217:1:8
+  - first:
+      4: 400090
+    second: 219:1:8
+  - first:
+      4: 400092
+    second: 2:1:2D
+  - first:
+      4: 400094
+    second: 3      011
+  - first:
+      4: 400096
+    second: 3:1:2D
+  - first:
+      4: 400098
+    second: 4      011
+  - first:
+      4: 400100
+    second: 4:1:2D
+  - first:
+      4: 400102
+    second: 5      011
+  - first:
+      4: 400104
+    second: 5      012
+  - first:
+      4: 400106
+    second: 5      013
+  - first:
+      4: 400108
+    second: 5      014
+  - first:
+      4: 400110
+    second: 5      015
+  - first:
+      4: 400112
+    second: 5      016
+  - first:
+      4: 400114
+    second: 5      017
+  - first:
+      4: 400116
+    second: 5      018
+  - first:
+      4: 400118
+    second: 5      019
+  - first:
+      4: 400120
+    second: 5      020
+  - first:
+      4: 400122
+    second: 5      021
+  - first:
+      4: 400124
+    second: 5      022
+  - first:
+      4: 400126
+    second: 5:1:2D
+  - first:
+      4: 400128
+    second: 6:1:2D
+  - first:
+      4: 400130
+    second: 7      011
+  - first:
+      4: 400132
+    second: 7:1:2D
+  - first:
+      4: 400134
+    second: 8      011
+  - first:
+      4: 400136
+    second: 8      012
+  - first:
+      4: 400138
+    second: 8      013
+  - first:
+      4: 400140
+    second: 8      014
+  - first:
+      4: 400142
+    second: 8:1:2D
+  - first:
+      4: 400144
+    second: 9      011
+  - first:
+      4: 400146
+    second: 9      012
+  - first:
+      4: 400148
+    second: 9      013
+  - first:
+      4: 400150
+    second: 9      014
+  - first:
+      4: 400152
+    second: 9:1:2D
+  - first:
+      4: 400154
+    second: Arch39_008_010
+  - first:
+      4: 400156
+    second: Arch39_008_011
+  - first:
+      4: 400158
+    second: Arch39_008_012
+  - first:
+      4: 400160
+    second: Arch39_008_013
+  - first:
+      4: 400162
+    second: Arch39_008_014
+  - first:
+      4: 400164
+    second: Arch39_008_015
+  - first:
+      4: 400166
+    second: Arch39_008_016
+  - first:
+      4: 400168
+    second: Arch39_008_017
+  - first:
+      4: 400170
+    second: Arch39_008_018
+  - first:
+      4: 400172
+    second: Arch39_008_019
+  - first:
+      4: 400174
+    second: Arch39_008_020
+  - first:
+      4: 400176
+    second: Arch39_008_021
+  - first:
+      4: 400178
+    second: Arch39_008_1
+  - first:
+      4: 400180
+    second: Arch39_008_2
+  - first:
+      4: 400182
+    second: Arch39_008_4
+  - first:
+      4: 400184
+    second: Arch39_008_5
+  - first:
+      4: 400186
+    second: Arch39_008_6
+  - first:
+      4: 400188
+    second: Arch39_008_7
+  - first:
+      4: 400190
+    second: Arch39_008_8
+  - first:
+      4: 400192
+    second: Arch39_008_9
+  - first:
+      4: 400194
+    second: Box3146
+  - first:
+      4: 400196
+    second: Box3148
+  - first:
+      4: 400198
+    second: Box3150
+  - first:
+      4: 400200
+    second: ChamferBox063
+  - first:
+      4: 400202
+    second: ChamferBox065
+  - first:
+      4: 400204
+    second: ChamferBox066
+  - first:
+      4: 400206
+    second: ChamferBox068
+  - first:
+      4: 400208
+    second: ChamferBox069
+  - first:
+      4: 400210
+    second: ChamferBox070
+  - first:
+      4: 400212
+    second: ChamferBox071
+  - first:
+      4: 400214
+    second: ChamferBox072
+  - first:
+      4: 400216
+    second: ChamferBox073
+  - first:
+      4: 400218
+    second: ChamferBox074
+  - first:
+      4: 400220
+    second: ChamferBox075
+  - first:
+      4: 400222
+    second: ChamferBox076
+  - first:
+      4: 400224
+    second: ChamferBox077
+  - first:
+      4: 400226
+    second: ChamferBox078
+  - first:
+      4: 400228
+    second: ChamferBox079
+  - first:
+      4: 400230
+    second: ChamferBox080
+  - first:
+      4: 400232
+    second: ChamferBox081
+  - first:
+      4: 400234
+    second: ChamferBox082
+  - first:
+      4: 400236
+    second: ChamferBox083
+  - first:
+      4: 400238
+    second: ChamferBox084
+  - first:
+      4: 400240
+    second: ChamferBox085
+  - first:
+      4: 400242
+    second: ChamferBox086
+  - first:
+      4: 400244
+    second: ChamferBox087
+  - first:
+      4: 400246
+    second: ChamferBox088
+  - first:
+      4: 400248
+    second: ChamferBox089
+  - first:
+      4: 400250
+    second: ChamferBox090
+  - first:
+      4: 400252
+    second: ChamferBox095
+  - first:
+      4: 400254
+    second: ChamferBox096
+  - first:
+      4: 400256
+    second: ChamferBox097
+  - first:
+      4: 400258
+    second: ChamferBox098
+  - first:
+      4: 400260
+    second: ChamferBox099
+  - first:
+      4: 400262
+    second: ChamferBox100
+  - first:
+      4: 400264
+    second: ChamferBox101
+  - first:
+      4: 400266
+    second: ChamferBox107
+  - first:
+      4: 400268
+    second: ChamferBox108
+  - first:
+      4: 400270
+    second: ChamferBox133
+  - first:
+      4: 400272
+    second: ChamferBox134
+  - first:
+      4: 400274
+    second: ChamferBox135
+  - first:
+      4: 400276
+    second: ChamferBox136
+  - first:
+      4: 400278
+    second: ChamferBox138
+  - first:
+      4: 400280
+    second: ChamferBox139
+  - first:
+      4: 400282
+    second: ChamferBox140
+  - first:
+      4: 400284
+    second: ChamferBox141
+  - first:
+      4: 400286
+    second: ChamferBox142
+  - first:
+      4: 400288
+    second: ChamferBox143
+  - first:
+      4: 400290
+    second: ChamferBox144
+  - first:
+      4: 400292
+    second: ChamferBox145
+  - first:
+      4: 400294
+    second: ChamferBox146
+  - first:
+      4: 400296
+    second: ChamferBox147
+  - first:
+      4: 400298
+    second: ChamferBox148
+  - first:
+      4: 400300
+    second: ChamferBox150
+  - first:
+      4: 400302
+    second: ChamferBox151
+  - first:
+      4: 400304
+    second: ChamferBox155
+  - first:
+      4: 400306
+    second: ChamferBox156
+  - first:
+      4: 400308
+    second: ChamferBox167
+  - first:
+      4: 400310
+    second: Group005
+  - first:
+      4: 400312
+    second: Group006
+  - first:
+      4: 400314
+    second: Group007
+  - first:
+      4: 400316
+    second: Group009
+  - first:
+      4: 400318
+    second: Group010
+  - first:
+      4: 400320
+    second: Group209
+  - first:
+      4: 400322
+    second: Group229
+  - first:
+      4: 400324
+    second: Group356
+  - first:
+      4: 400326
+    second: Group357
+  - first:
+      4: 400328
+    second: Group365
+  - first:
+      4: 400330
+    second: Group366
+  - first:
+      4: 400332
+    second: Group367
+  - first:
+      4: 400334
+    second: Group368
+  - first:
+      4: 400336
+    second: Group369
+  - first:
+      4: 400338
+    second: Group370
+  - first:
+      4: 400340
+    second: //RootNode
+  - first:
+      4: 400342
+    second: Line001
+  - first:
+      4: 400344
+    second: Plane001
+  - first:
+      23: 2300000
+    second: 0      001
+  - first:
+      23: 2300002
+    second: 0      011
+  - first:
+      23: 2300004
+    second: 1      011
+  - first:
+      23: 2300006
+    second: 10     011
+  - first:
+      23: 2300008
+    second: 10:1:2D
+  - first:
+      23: 2300010
+    second: 11:1:2D
+  - first:
+      23: 2300012
+    second: 12     011
+  - first:
+      23: 2300014
+    second: 13     011
+  - first:
+      23: 2300016
+    second: 139:1:8
+  - first:
+      23: 2300018
+    second: 14     011
+  - first:
+      23: 2300020
+    second: 140:1:8
+  - first:
+      23: 2300022
+    second: 141:1:8
+  - first:
+      23: 2300024
+    second: 142:1:8
+  - first:
+      23: 2300026
+    second: 143:1:8
+  - first:
+      23: 2300028
+    second: 144:1:8
+  - first:
+      23: 2300030
+    second: 15     011
+  - first:
+      23: 2300032
+    second: 172:1:8
+  - first:
+      23: 2300034
+    second: 173:1:8
+  - first:
+      23: 2300036
+    second: 174:1:8
+  - first:
+      23: 2300038
+    second: 175:1:8
+  - first:
+      23: 2300040
+    second: 177:1:8
+  - first:
+      23: 2300042
+    second: 178:1:8
+  - first:
+      23: 2300044
+    second: 179:1:8
+  - first:
+      23: 2300046
+    second: 181:1:8
+  - first:
+      23: 2300048
+    second: 183:1:8
+  - first:
+      23: 2300050
+    second: 185:1:8
+  - first:
+      23: 2300052
+    second: 187:1:8
+  - first:
+      23: 2300054
+    second: 189:1:8
+  - first:
+      23: 2300056
+    second: 191:1:8
+  - first:
+      23: 2300058
+    second: 193:1:8
+  - first:
+      23: 2300060
+    second: 195:1:8
+  - first:
+      23: 2300062
+    second: 197:1:8
+  - first:
+      23: 2300064
+    second: 199:1:8
+  - first:
+      23: 2300066
+    second: 2      011
+  - first:
+      23: 2300068
+    second: 201:1:8
+  - first:
+      23: 2300070
+    second: 203:1:8
+  - first:
+      23: 2300072
+    second: 205:1:8
+  - first:
+      23: 2300074
+    second: 207:1:8
+  - first:
+      23: 2300076
+    second: 209:1:8
+  - first:
+      23: 2300078
+    second: 21     011
+  - first:
+      23: 2300080
+    second: 211:1:8
+  - first:
+      23: 2300082
+    second: 213:1:8
+  - first:
+      23: 2300084
+    second: 214:1:8
+  - first:
+      23: 2300086
+    second: 215:1:8
+  - first:
+      23: 2300088
+    second: 217:1:8
+  - first:
+      23: 2300090
+    second: 219:1:8
+  - first:
+      23: 2300092
+    second: 2:1:2D
+  - first:
+      23: 2300094
+    second: 3      011
+  - first:
+      23: 2300096
+    second: 3:1:2D
+  - first:
+      23: 2300098
+    second: 4      011
+  - first:
+      23: 2300100
+    second: 4:1:2D
+  - first:
+      23: 2300102
+    second: 5      011
+  - first:
+      23: 2300104
+    second: 5      012
+  - first:
+      23: 2300106
+    second: 5      013
+  - first:
+      23: 2300108
+    second: 5      014
+  - first:
+      23: 2300110
+    second: 5      015
+  - first:
+      23: 2300112
+    second: 5      016
+  - first:
+      23: 2300114
+    second: 5      017
+  - first:
+      23: 2300116
+    second: 5      018
+  - first:
+      23: 2300118
+    second: 5      019
+  - first:
+      23: 2300120
+    second: 5      020
+  - first:
+      23: 2300122
+    second: 5      021
+  - first:
+      23: 2300124
+    second: 5      022
+  - first:
+      23: 2300126
+    second: 5:1:2D
+  - first:
+      23: 2300128
+    second: 6:1:2D
+  - first:
+      23: 2300130
+    second: 7      011
+  - first:
+      23: 2300132
+    second: 7:1:2D
+  - first:
+      23: 2300134
+    second: 8      011
+  - first:
+      23: 2300136
+    second: 8      012
+  - first:
+      23: 2300138
+    second: 8      013
+  - first:
+      23: 2300140
+    second: 8      014
+  - first:
+      23: 2300142
+    second: 8:1:2D
+  - first:
+      23: 2300144
+    second: 9      011
+  - first:
+      23: 2300146
+    second: 9      012
+  - first:
+      23: 2300148
+    second: 9      013
+  - first:
+      23: 2300150
+    second: 9      014
+  - first:
+      23: 2300152
+    second: 9:1:2D
+  - first:
+      23: 2300154
+    second: Arch39_008_010
+  - first:
+      23: 2300156
+    second: Arch39_008_011
+  - first:
+      23: 2300158
+    second: Arch39_008_012
+  - first:
+      23: 2300160
+    second: Arch39_008_013
+  - first:
+      23: 2300162
+    second: Arch39_008_014
+  - first:
+      23: 2300164
+    second: Arch39_008_015
+  - first:
+      23: 2300166
+    second: Arch39_008_016
+  - first:
+      23: 2300168
+    second: Arch39_008_017
+  - first:
+      23: 2300170
+    second: Arch39_008_018
+  - first:
+      23: 2300172
+    second: Arch39_008_019
+  - first:
+      23: 2300174
+    second: Arch39_008_020
+  - first:
+      23: 2300176
+    second: Arch39_008_021
+  - first:
+      23: 2300178
+    second: Arch39_008_1
+  - first:
+      23: 2300180
+    second: Arch39_008_2
+  - first:
+      23: 2300182
+    second: Arch39_008_4
+  - first:
+      23: 2300184
+    second: Arch39_008_5
+  - first:
+      23: 2300186
+    second: Arch39_008_6
+  - first:
+      23: 2300188
+    second: Arch39_008_7
+  - first:
+      23: 2300190
+    second: Arch39_008_8
+  - first:
+      23: 2300192
+    second: Arch39_008_9
+  - first:
+      23: 2300194
+    second: Box3146
+  - first:
+      23: 2300196
+    second: Box3148
+  - first:
+      23: 2300198
+    second: Box3150
+  - first:
+      23: 2300200
+    second: ChamferBox063
+  - first:
+      23: 2300202
+    second: ChamferBox065
+  - first:
+      23: 2300204
+    second: ChamferBox066
+  - first:
+      23: 2300206
+    second: ChamferBox068
+  - first:
+      23: 2300208
+    second: ChamferBox069
+  - first:
+      23: 2300210
+    second: ChamferBox070
+  - first:
+      23: 2300212
+    second: ChamferBox071
+  - first:
+      23: 2300214
+    second: ChamferBox072
+  - first:
+      23: 2300216
+    second: ChamferBox073
+  - first:
+      23: 2300218
+    second: ChamferBox074
+  - first:
+      23: 2300220
+    second: ChamferBox075
+  - first:
+      23: 2300222
+    second: ChamferBox076
+  - first:
+      23: 2300224
+    second: ChamferBox077
+  - first:
+      23: 2300226
+    second: ChamferBox078
+  - first:
+      23: 2300228
+    second: ChamferBox079
+  - first:
+      23: 2300230
+    second: ChamferBox080
+  - first:
+      23: 2300232
+    second: ChamferBox081
+  - first:
+      23: 2300234
+    second: ChamferBox082
+  - first:
+      23: 2300236
+    second: ChamferBox083
+  - first:
+      23: 2300238
+    second: ChamferBox084
+  - first:
+      23: 2300240
+    second: ChamferBox085
+  - first:
+      23: 2300242
+    second: ChamferBox086
+  - first:
+      23: 2300244
+    second: ChamferBox087
+  - first:
+      23: 2300246
+    second: ChamferBox088
+  - first:
+      23: 2300248
+    second: ChamferBox089
+  - first:
+      23: 2300250
+    second: ChamferBox090
+  - first:
+      23: 2300252
+    second: ChamferBox095
+  - first:
+      23: 2300254
+    second: ChamferBox096
+  - first:
+      23: 2300256
+    second: ChamferBox097
+  - first:
+      23: 2300258
+    second: ChamferBox098
+  - first:
+      23: 2300260
+    second: ChamferBox099
+  - first:
+      23: 2300262
+    second: ChamferBox100
+  - first:
+      23: 2300264
+    second: ChamferBox101
+  - first:
+      23: 2300266
+    second: ChamferBox107
+  - first:
+      23: 2300268
+    second: ChamferBox108
+  - first:
+      23: 2300270
+    second: ChamferBox133
+  - first:
+      23: 2300272
+    second: ChamferBox134
+  - first:
+      23: 2300274
+    second: ChamferBox135
+  - first:
+      23: 2300276
+    second: ChamferBox136
+  - first:
+      23: 2300278
+    second: ChamferBox138
+  - first:
+      23: 2300280
+    second: ChamferBox139
+  - first:
+      23: 2300282
+    second: ChamferBox140
+  - first:
+      23: 2300284
+    second: ChamferBox141
+  - first:
+      23: 2300286
+    second: ChamferBox142
+  - first:
+      23: 2300288
+    second: ChamferBox143
+  - first:
+      23: 2300290
+    second: ChamferBox144
+  - first:
+      23: 2300292
+    second: ChamferBox145
+  - first:
+      23: 2300294
+    second: ChamferBox146
+  - first:
+      23: 2300296
+    second: ChamferBox147
+  - first:
+      23: 2300298
+    second: ChamferBox148
+  - first:
+      23: 2300300
+    second: ChamferBox150
+  - first:
+      23: 2300302
+    second: ChamferBox151
+  - first:
+      23: 2300304
+    second: ChamferBox155
+  - first:
+      23: 2300306
+    second: ChamferBox156
+  - first:
+      23: 2300308
+    second: ChamferBox167
+  - first:
+      23: 2300310
+    second: Line001
+  - first:
+      23: 2300312
+    second: Plane001
+  - first:
+      33: 3300000
+    second: 0      001
+  - first:
+      33: 3300002
+    second: 0      011
+  - first:
+      33: 3300004
+    second: 1      011
+  - first:
+      33: 3300006
+    second: 10     011
+  - first:
+      33: 3300008
+    second: 10:1:2D
+  - first:
+      33: 3300010
+    second: 11:1:2D
+  - first:
+      33: 3300012
+    second: 12     011
+  - first:
+      33: 3300014
+    second: 13     011
+  - first:
+      33: 3300016
+    second: 139:1:8
+  - first:
+      33: 3300018
+    second: 14     011
+  - first:
+      33: 3300020
+    second: 140:1:8
+  - first:
+      33: 3300022
+    second: 141:1:8
+  - first:
+      33: 3300024
+    second: 142:1:8
+  - first:
+      33: 3300026
+    second: 143:1:8
+  - first:
+      33: 3300028
+    second: 144:1:8
+  - first:
+      33: 3300030
+    second: 15     011
+  - first:
+      33: 3300032
+    second: 172:1:8
+  - first:
+      33: 3300034
+    second: 173:1:8
+  - first:
+      33: 3300036
+    second: 174:1:8
+  - first:
+      33: 3300038
+    second: 175:1:8
+  - first:
+      33: 3300040
+    second: 177:1:8
+  - first:
+      33: 3300042
+    second: 178:1:8
+  - first:
+      33: 3300044
+    second: 179:1:8
+  - first:
+      33: 3300046
+    second: 181:1:8
+  - first:
+      33: 3300048
+    second: 183:1:8
+  - first:
+      33: 3300050
+    second: 185:1:8
+  - first:
+      33: 3300052
+    second: 187:1:8
+  - first:
+      33: 3300054
+    second: 189:1:8
+  - first:
+      33: 3300056
+    second: 191:1:8
+  - first:
+      33: 3300058
+    second: 193:1:8
+  - first:
+      33: 3300060
+    second: 195:1:8
+  - first:
+      33: 3300062
+    second: 197:1:8
+  - first:
+      33: 3300064
+    second: 199:1:8
+  - first:
+      33: 3300066
+    second: 2      011
+  - first:
+      33: 3300068
+    second: 201:1:8
+  - first:
+      33: 3300070
+    second: 203:1:8
+  - first:
+      33: 3300072
+    second: 205:1:8
+  - first:
+      33: 3300074
+    second: 207:1:8
+  - first:
+      33: 3300076
+    second: 209:1:8
+  - first:
+      33: 3300078
+    second: 21     011
+  - first:
+      33: 3300080
+    second: 211:1:8
+  - first:
+      33: 3300082
+    second: 213:1:8
+  - first:
+      33: 3300084
+    second: 214:1:8
+  - first:
+      33: 3300086
+    second: 215:1:8
+  - first:
+      33: 3300088
+    second: 217:1:8
+  - first:
+      33: 3300090
+    second: 219:1:8
+  - first:
+      33: 3300092
+    second: 2:1:2D
+  - first:
+      33: 3300094
+    second: 3      011
+  - first:
+      33: 3300096
+    second: 3:1:2D
+  - first:
+      33: 3300098
+    second: 4      011
+  - first:
+      33: 3300100
+    second: 4:1:2D
+  - first:
+      33: 3300102
+    second: 5      011
+  - first:
+      33: 3300104
+    second: 5      012
+  - first:
+      33: 3300106
+    second: 5      013
+  - first:
+      33: 3300108
+    second: 5      014
+  - first:
+      33: 3300110
+    second: 5      015
+  - first:
+      33: 3300112
+    second: 5      016
+  - first:
+      33: 3300114
+    second: 5      017
+  - first:
+      33: 3300116
+    second: 5      018
+  - first:
+      33: 3300118
+    second: 5      019
+  - first:
+      33: 3300120
+    second: 5      020
+  - first:
+      33: 3300122
+    second: 5      021
+  - first:
+      33: 3300124
+    second: 5      022
+  - first:
+      33: 3300126
+    second: 5:1:2D
+  - first:
+      33: 3300128
+    second: 6:1:2D
+  - first:
+      33: 3300130
+    second: 7      011
+  - first:
+      33: 3300132
+    second: 7:1:2D
+  - first:
+      33: 3300134
+    second: 8      011
+  - first:
+      33: 3300136
+    second: 8      012
+  - first:
+      33: 3300138
+    second: 8      013
+  - first:
+      33: 3300140
+    second: 8      014
+  - first:
+      33: 3300142
+    second: 8:1:2D
+  - first:
+      33: 3300144
+    second: 9      011
+  - first:
+      33: 3300146
+    second: 9      012
+  - first:
+      33: 3300148
+    second: 9      013
+  - first:
+      33: 3300150
+    second: 9      014
+  - first:
+      33: 3300152
+    second: 9:1:2D
+  - first:
+      33: 3300154
+    second: Arch39_008_010
+  - first:
+      33: 3300156
+    second: Arch39_008_011
+  - first:
+      33: 3300158
+    second: Arch39_008_012
+  - first:
+      33: 3300160
+    second: Arch39_008_013
+  - first:
+      33: 3300162
+    second: Arch39_008_014
+  - first:
+      33: 3300164
+    second: Arch39_008_015
+  - first:
+      33: 3300166
+    second: Arch39_008_016
+  - first:
+      33: 3300168
+    second: Arch39_008_017
+  - first:
+      33: 3300170
+    second: Arch39_008_018
+  - first:
+      33: 3300172
+    second: Arch39_008_019
+  - first:
+      33: 3300174
+    second: Arch39_008_020
+  - first:
+      33: 3300176
+    second: Arch39_008_021
+  - first:
+      33: 3300178
+    second: Arch39_008_1
+  - first:
+      33: 3300180
+    second: Arch39_008_2
+  - first:
+      33: 3300182
+    second: Arch39_008_4
+  - first:
+      33: 3300184
+    second: Arch39_008_5
+  - first:
+      33: 3300186
+    second: Arch39_008_6
+  - first:
+      33: 3300188
+    second: Arch39_008_7
+  - first:
+      33: 3300190
+    second: Arch39_008_8
+  - first:
+      33: 3300192
+    second: Arch39_008_9
+  - first:
+      33: 3300194
+    second: Box3146
+  - first:
+      33: 3300196
+    second: Box3148
+  - first:
+      33: 3300198
+    second: Box3150
+  - first:
+      33: 3300200
+    second: ChamferBox063
+  - first:
+      33: 3300202
+    second: ChamferBox065
+  - first:
+      33: 3300204
+    second: ChamferBox066
+  - first:
+      33: 3300206
+    second: ChamferBox068
+  - first:
+      33: 3300208
+    second: ChamferBox069
+  - first:
+      33: 3300210
+    second: ChamferBox070
+  - first:
+      33: 3300212
+    second: ChamferBox071
+  - first:
+      33: 3300214
+    second: ChamferBox072
+  - first:
+      33: 3300216
+    second: ChamferBox073
+  - first:
+      33: 3300218
+    second: ChamferBox074
+  - first:
+      33: 3300220
+    second: ChamferBox075
+  - first:
+      33: 3300222
+    second: ChamferBox076
+  - first:
+      33: 3300224
+    second: ChamferBox077
+  - first:
+      33: 3300226
+    second: ChamferBox078
+  - first:
+      33: 3300228
+    second: ChamferBox079
+  - first:
+      33: 3300230
+    second: ChamferBox080
+  - first:
+      33: 3300232
+    second: ChamferBox081
+  - first:
+      33: 3300234
+    second: ChamferBox082
+  - first:
+      33: 3300236
+    second: ChamferBox083
+  - first:
+      33: 3300238
+    second: ChamferBox084
+  - first:
+      33: 3300240
+    second: ChamferBox085
+  - first:
+      33: 3300242
+    second: ChamferBox086
+  - first:
+      33: 3300244
+    second: ChamferBox087
+  - first:
+      33: 3300246
+    second: ChamferBox088
+  - first:
+      33: 3300248
+    second: ChamferBox089
+  - first:
+      33: 3300250
+    second: ChamferBox090
+  - first:
+      33: 3300252
+    second: ChamferBox095
+  - first:
+      33: 3300254
+    second: ChamferBox096
+  - first:
+      33: 3300256
+    second: ChamferBox097
+  - first:
+      33: 3300258
+    second: ChamferBox098
+  - first:
+      33: 3300260
+    second: ChamferBox099
+  - first:
+      33: 3300262
+    second: ChamferBox100
+  - first:
+      33: 3300264
+    second: ChamferBox101
+  - first:
+      33: 3300266
+    second: ChamferBox107
+  - first:
+      33: 3300268
+    second: ChamferBox108
+  - first:
+      33: 3300270
+    second: ChamferBox133
+  - first:
+      33: 3300272
+    second: ChamferBox134
+  - first:
+      33: 3300274
+    second: ChamferBox135
+  - first:
+      33: 3300276
+    second: ChamferBox136
+  - first:
+      33: 3300278
+    second: ChamferBox138
+  - first:
+      33: 3300280
+    second: ChamferBox139
+  - first:
+      33: 3300282
+    second: ChamferBox140
+  - first:
+      33: 3300284
+    second: ChamferBox141
+  - first:
+      33: 3300286
+    second: ChamferBox142
+  - first:
+      33: 3300288
+    second: ChamferBox143
+  - first:
+      33: 3300290
+    second: ChamferBox144
+  - first:
+      33: 3300292
+    second: ChamferBox145
+  - first:
+      33: 3300294
+    second: ChamferBox146
+  - first:
+      33: 3300296
+    second: ChamferBox147
+  - first:
+      33: 3300298
+    second: ChamferBox148
+  - first:
+      33: 3300300
+    second: ChamferBox150
+  - first:
+      33: 3300302
+    second: ChamferBox151
+  - first:
+      33: 3300304
+    second: ChamferBox155
+  - first:
+      33: 3300306
+    second: ChamferBox156
+  - first:
+      33: 3300308
+    second: ChamferBox167
+  - first:
+      33: 3300310
+    second: Line001
+  - first:
+      33: 3300312
+    second: Plane001
+  - first:
+      43: 4300000
+    second: 0      011
+  - first:
+      43: 4300002
+    second: 1      011
+  - first:
+      43: 4300004
+    second: 2      011
+  - first:
+      43: 4300006
+    second: 3      011
+  - first:
+      43: 4300008
+    second: 4      011
+  - first:
+      43: 4300010
+    second: 5      011
+  - first:
+      43: 4300012
+    second: 5      012
+  - first:
+      43: 4300014
+    second: 7      011
+  - first:
+      43: 4300016
+    second: 8      011
+  - first:
+      43: 4300018
+    second: 9      011
+  - first:
+      43: 4300020
+    second: 10     011
+  - first:
+      43: 4300022
+    second: 12     011
+  - first:
+      43: 4300024
+    second: 13     011
+  - first:
+      43: 4300026
+    second: 14     011
+  - first:
+      43: 4300028
+    second: 15     011
+  - first:
+      43: 4300030
+    second: 21     011
+  - first:
+      43: 4300032
+    second: 5      014
+  - first:
+      43: 4300034
+    second: 5      013
+  - first:
+      43: 4300036
+    second: 5      015
+  - first:
+      43: 4300038
+    second: 5      016
+  - first:
+      43: 4300040
+    second: 5      017
+  - first:
+      43: 4300042
+    second: 5      018
+  - first:
+      43: 4300044
+    second: Arch39_008_2
+  - first:
+      43: 4300046
+    second: Arch39_008_1
+  - first:
+      43: 4300048
+    second: Arch39_008_4
+  - first:
+      43: 4300050
+    second: Arch39_008_5
+  - first:
+      43: 4300052
+    second: Arch39_008_6
+  - first:
+      43: 4300054
+    second: Arch39_008_010
+  - first:
+      43: 4300056
+    second: Arch39_008_7
+  - first:
+      43: 4300058
+    second: Arch39_008_9
+  - first:
+      43: 4300060
+    second: Arch39_008_8
+  - first:
+      43: 4300062
+    second: Arch39_008_011
+  - first:
+      43: 4300064
+    second: Arch39_008_012
+  - first:
+      43: 4300066
+    second: Arch39_008_013
+  - first:
+      43: 4300068
+    second: Arch39_008_014
+  - first:
+      43: 4300070
+    second: Arch39_008_015
+  - first:
+      43: 4300072
+    second: Arch39_008_016
+  - first:
+      43: 4300074
+    second: Arch39_008_017
+  - first:
+      43: 4300076
+    second: Arch39_008_018
+  - first:
+      43: 4300078
+    second: Arch39_008_019
+  - first:
+      43: 4300080
+    second: Arch39_008_020
+  - first:
+      43: 4300082
+    second: Arch39_008_021
+  - first:
+      43: 4300084
+    second: 5      019
+  - first:
+      43: 4300086
+    second: 5      020
+  - first:
+      43: 4300088
+    second: 5      021
+  - first:
+      43: 4300090
+    second: 5      022
+  - first:
+      43: 4300092
+    second: ChamferBox108
+  - first:
+      43: 4300094
+    second: ChamferBox133
+  - first:
+      43: 4300096
+    second: ChamferBox134
+  - first:
+      43: 4300098
+    second: ChamferBox135
+  - first:
+      43: 4300100
+    second: ChamferBox136
+  - first:
+      43: 4300102
+    second: ChamferBox141
+  - first:
+      43: 4300104
+    second: ChamferBox138
+  - first:
+      43: 4300106
+    second: ChamferBox139
+  - first:
+      43: 4300108
+    second: ChamferBox140
+  - first:
+      43: 4300110
+    second: ChamferBox142
+  - first:
+      43: 4300112
+    second: ChamferBox143
+  - first:
+      43: 4300114
+    second: ChamferBox144
+  - first:
+      43: 4300116
+    second: ChamferBox145
+  - first:
+      43: 4300118
+    second: ChamferBox146
+  - first:
+      43: 4300120
+    second: ChamferBox147
+  - first:
+      43: 4300122
+    second: ChamferBox148
+  - first:
+      43: 4300124
+    second: 139:1:8
+  - first:
+      43: 4300126
+    second: 140:1:8
+  - first:
+      43: 4300128
+    second: 141:1:8
+  - first:
+      43: 4300130
+    second: 142:1:8
+  - first:
+      43: 4300132
+    second: 143:1:8
+  - first:
+      43: 4300134
+    second: 144:1:8
+  - first:
+      43: 4300136
+    second: 172:1:8
+  - first:
+      43: 4300138
+    second: 173:1:8
+  - first:
+      43: 4300140
+    second: 174:1:8
+  - first:
+      43: 4300142
+    second: 175:1:8
+  - first:
+      43: 4300144
+    second: 177:1:8
+  - first:
+      43: 4300146
+    second: 178:1:8
+  - first:
+      43: 4300148
+    second: 179:1:8
+  - first:
+      43: 4300150
+    second: 181:1:8
+  - first:
+      43: 4300152
+    second: 183:1:8
+  - first:
+      43: 4300154
+    second: 185:1:8
+  - first:
+      43: 4300156
+    second: 187:1:8
+  - first:
+      43: 4300158
+    second: 189:1:8
+  - first:
+      43: 4300160
+    second: 191:1:8
+  - first:
+      43: 4300162
+    second: 193:1:8
+  - first:
+      43: 4300164
+    second: 195:1:8
+  - first:
+      43: 4300166
+    second: 197:1:8
+  - first:
+      43: 4300168
+    second: 199:1:8
+  - first:
+      43: 4300170
+    second: 201:1:8
+  - first:
+      43: 4300172
+    second: 203:1:8
+  - first:
+      43: 4300174
+    second: 205:1:8
+  - first:
+      43: 4300176
+    second: 207:1:8
+  - first:
+      43: 4300178
+    second: 209:1:8
+  - first:
+      43: 4300180
+    second: 211:1:8
+  - first:
+      43: 4300182
+    second: 213:1:8
+  - first:
+      43: 4300184
+    second: 214:1:8
+  - first:
+      43: 4300186
+    second: 215:1:8
+  - first:
+      43: 4300188
+    second: 217:1:8
+  - first:
+      43: 4300190
+    second: 219:1:8
+  - first:
+      43: 4300192
+    second: 2:1:2D
+  - first:
+      43: 4300194
+    second: 3:1:2D
+  - first:
+      43: 4300196
+    second: 4:1:2D
+  - first:
+      43: 4300198
+    second: 5:1:2D
+  - first:
+      43: 4300200
+    second: 6:1:2D
+  - first:
+      43: 4300202
+    second: 7:1:2D
+  - first:
+      43: 4300204
+    second: 8:1:2D
+  - first:
+      43: 4300206
+    second: 9:1:2D
+  - first:
+      43: 4300208
+    second: 10:1:2D
+  - first:
+      43: 4300210
+    second: 11:1:2D
+  - first:
+      43: 4300212
+    second: 0      001
+  - first:
+      43: 4300214
+    second: ChamferBox150
+  - first:
+      43: 4300216
+    second: ChamferBox095
+  - first:
+      43: 4300218
+    second: ChamferBox096
+  - first:
+      43: 4300220
+    second: ChamferBox097
+  - first:
+      43: 4300222
+    second: ChamferBox098
+  - first:
+      43: 4300224
+    second: ChamferBox099
+  - first:
+      43: 4300226
+    second: ChamferBox100
+  - first:
+      43: 4300228
+    second: ChamferBox101
+  - first:
+      43: 4300230
+    second: ChamferBox080
+  - first:
+      43: 4300232
+    second: ChamferBox081
+  - first:
+      43: 4300234
+    second: ChamferBox082
+  - first:
+      43: 4300236
+    second: ChamferBox083
+  - first:
+      43: 4300238
+    second: ChamferBox084
+  - first:
+      43: 4300240
+    second: ChamferBox085
+  - first:
+      43: 4300242
+    second: ChamferBox086
+  - first:
+      43: 4300244
+    second: ChamferBox087
+  - first:
+      43: 4300246
+    second: ChamferBox088
+  - first:
+      43: 4300248
+    second: ChamferBox089
+  - first:
+      43: 4300250
+    second: ChamferBox090
+  - first:
+      43: 4300252
+    second: ChamferBox065
+  - first:
+      43: 4300254
+    second: ChamferBox107
+  - first:
+      43: 4300256
+    second: ChamferBox066
+  - first:
+      43: 4300258
+    second: ChamferBox063
+  - first:
+      43: 4300260
+    second: ChamferBox068
+  - first:
+      43: 4300262
+    second: ChamferBox151
+  - first:
+      43: 4300264
+    second: ChamferBox079
+  - first:
+      43: 4300266
+    second: ChamferBox078
+  - first:
+      43: 4300268
+    second: ChamferBox077
+  - first:
+      43: 4300270
+    second: ChamferBox076
+  - first:
+      43: 4300272
+    second: ChamferBox075
+  - first:
+      43: 4300274
+    second: ChamferBox074
+  - first:
+      43: 4300276
+    second: ChamferBox073
+  - first:
+      43: 4300278
+    second: ChamferBox072
+  - first:
+      43: 4300280
+    second: ChamferBox071
+  - first:
+      43: 4300282
+    second: ChamferBox070
+  - first:
+      43: 4300284
+    second: ChamferBox069
+  - first:
+      43: 4300286
+    second: 8      012
+  - first:
+      43: 4300288
+    second: Box3146
+  - first:
+      43: 4300290
+    second: 8      013
+  - first:
+      43: 4300292
+    second: Box3148
+  - first:
+      43: 4300294
+    second: 8      014
+  - first:
+      43: 4300296
+    second: Box3150
+  - first:
+      43: 4300298
+    second: 9      012
+  - first:
+      43: 4300300
+    second: 9      013
+  - first:
+      43: 4300302
+    second: 9      014
+  - first:
+      43: 4300304
+    second: ChamferBox155
+  - first:
+      43: 4300306
+    second: ChamferBox156
+  - first:
+      43: 4300308
+    second: ChamferBox167
+  - first:
+      43: 4300310
+    second: Plane001
+  - first:
+      43: 4300312
+    second: Line001
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
-    materialSearch: 1
+    materialSearch: 2
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -849,25 +2489,47 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -877,11 +2539,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

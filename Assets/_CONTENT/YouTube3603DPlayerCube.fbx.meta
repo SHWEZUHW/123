@@ -10,10 +10,10 @@ ModelImporter:
       name: YT3603D
     second: {fileID: 2100000, guid: f4833c42914388742acf69e782c4e696, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
-    materialSearch: 1
-    materialLocation: 1
+    materialSearch: 2
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

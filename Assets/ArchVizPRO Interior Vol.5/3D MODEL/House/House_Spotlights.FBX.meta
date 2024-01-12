@@ -1,271 +1,776 @@
 fileFormatVersion: 2
 guid: 13e4f7d05d0fd5845b68d52e5fabb8ee
-timeCreated: 1495224587
-licenseType: Store
 ModelImporter:
-  serializedVersion: 21
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Spotlights
-    100004: Spotlights 1
-    100006: Spotlights 10
-    100008: Spotlights 11
-    100010: Spotlights 12
-    100012: Spotlights 13
-    100014: Spotlights 14
-    100016: Spotlights 15
-    100018: Spotlights 16
-    100020: Spotlights 17
-    100022: Spotlights 18
-    100024: Spotlights 19
-    100026: Spotlights 2
-    100028: Spotlights 20
-    100030: Spotlights 21
-    100032: Spotlights 22
-    100034: Spotlights 23
-    100036: Spotlights 24
-    100038: Spotlights 25
-    100040: Spotlights 26
-    100042: Spotlights 27
-    100044: Spotlights 28
-    100046: Spotlights 29
-    100048: Spotlights 3
-    100050: Spotlights 30
-    100052: Spotlights 31
-    100054: Spotlights 32
-    100056: Spotlights 33
-    100058: Spotlights 34
-    100060: Spotlights 35
-    100062: Spotlights 36
-    100064: Spotlights 37
-    100066: Spotlights 38
-    100068: Spotlights 39
-    100070: Spotlights 4
-    100072: Spotlights 40
-    100074: Spotlights 41
-    100076: Spotlights 42
-    100078: Spotlights 5
-    100080: Spotlights 6
-    100082: Spotlights 7
-    100084: Spotlights 8
-    100086: Spotlights 9
-    100088: Spotlights001
-    100090: Spotlights002
-    100092: Spotlights003
-    100094: Spotlights004
-    100096: Spotlights005
-    100098: Spotlights006
-    100100: Spotlights007
-    400000: //RootNode
-    400002: Spotlights
-    400004: Spotlights 1
-    400006: Spotlights 10
-    400008: Spotlights 11
-    400010: Spotlights 12
-    400012: Spotlights 13
-    400014: Spotlights 14
-    400016: Spotlights 15
-    400018: Spotlights 16
-    400020: Spotlights 17
-    400022: Spotlights 18
-    400024: Spotlights 19
-    400026: Spotlights 2
-    400028: Spotlights 20
-    400030: Spotlights 21
-    400032: Spotlights 22
-    400034: Spotlights 23
-    400036: Spotlights 24
-    400038: Spotlights 25
-    400040: Spotlights 26
-    400042: Spotlights 27
-    400044: Spotlights 28
-    400046: Spotlights 29
-    400048: Spotlights 3
-    400050: Spotlights 30
-    400052: Spotlights 31
-    400054: Spotlights 32
-    400056: Spotlights 33
-    400058: Spotlights 34
-    400060: Spotlights 35
-    400062: Spotlights 36
-    400064: Spotlights 37
-    400066: Spotlights 38
-    400068: Spotlights 39
-    400070: Spotlights 4
-    400072: Spotlights 40
-    400074: Spotlights 41
-    400076: Spotlights 42
-    400078: Spotlights 5
-    400080: Spotlights 6
-    400082: Spotlights 7
-    400084: Spotlights 8
-    400086: Spotlights 9
-    400088: Spotlights001
-    400090: Spotlights002
-    400092: Spotlights003
-    400094: Spotlights004
-    400096: Spotlights005
-    400098: Spotlights006
-    400100: Spotlights007
-    2300000: Spotlights
-    2300002: Spotlights 1
-    2300004: Spotlights 10
-    2300006: Spotlights 11
-    2300008: Spotlights 12
-    2300010: Spotlights 13
-    2300012: Spotlights 14
-    2300014: Spotlights 15
-    2300016: Spotlights 16
-    2300018: Spotlights 17
-    2300020: Spotlights 18
-    2300022: Spotlights 19
-    2300024: Spotlights 2
-    2300026: Spotlights 20
-    2300028: Spotlights 21
-    2300030: Spotlights 22
-    2300032: Spotlights 23
-    2300034: Spotlights 24
-    2300036: Spotlights 25
-    2300038: Spotlights 26
-    2300040: Spotlights 27
-    2300042: Spotlights 28
-    2300044: Spotlights 29
-    2300046: Spotlights 3
-    2300048: Spotlights 30
-    2300050: Spotlights 31
-    2300052: Spotlights 32
-    2300054: Spotlights 33
-    2300056: Spotlights 34
-    2300058: Spotlights 35
-    2300060: Spotlights 36
-    2300062: Spotlights 37
-    2300064: Spotlights 38
-    2300066: Spotlights 39
-    2300068: Spotlights 4
-    2300070: Spotlights 40
-    2300072: Spotlights 41
-    2300074: Spotlights 42
-    2300076: Spotlights 5
-    2300078: Spotlights 6
-    2300080: Spotlights 7
-    2300082: Spotlights 8
-    2300084: Spotlights 9
-    2300086: Spotlights001
-    2300088: Spotlights002
-    2300090: Spotlights003
-    2300092: Spotlights004
-    2300094: Spotlights005
-    2300096: Spotlights006
-    2300098: Spotlights007
-    3300000: Spotlights
-    3300002: Spotlights 1
-    3300004: Spotlights 10
-    3300006: Spotlights 11
-    3300008: Spotlights 12
-    3300010: Spotlights 13
-    3300012: Spotlights 14
-    3300014: Spotlights 15
-    3300016: Spotlights 16
-    3300018: Spotlights 17
-    3300020: Spotlights 18
-    3300022: Spotlights 19
-    3300024: Spotlights 2
-    3300026: Spotlights 20
-    3300028: Spotlights 21
-    3300030: Spotlights 22
-    3300032: Spotlights 23
-    3300034: Spotlights 24
-    3300036: Spotlights 25
-    3300038: Spotlights 26
-    3300040: Spotlights 27
-    3300042: Spotlights 28
-    3300044: Spotlights 29
-    3300046: Spotlights 3
-    3300048: Spotlights 30
-    3300050: Spotlights 31
-    3300052: Spotlights 32
-    3300054: Spotlights 33
-    3300056: Spotlights 34
-    3300058: Spotlights 35
-    3300060: Spotlights 36
-    3300062: Spotlights 37
-    3300064: Spotlights 38
-    3300066: Spotlights 39
-    3300068: Spotlights 4
-    3300070: Spotlights 40
-    3300072: Spotlights 41
-    3300074: Spotlights 42
-    3300076: Spotlights 5
-    3300078: Spotlights 6
-    3300080: Spotlights 7
-    3300082: Spotlights 8
-    3300084: Spotlights 9
-    3300086: Spotlights001
-    3300088: Spotlights002
-    3300090: Spotlights003
-    3300092: Spotlights004
-    3300094: Spotlights005
-    3300096: Spotlights006
-    3300098: Spotlights007
-    4300000: Spotlights
-    4300002: Spotlights
-    4300004: Spotlights
-    4300006: Spotlights
-    4300008: Spotlights
-    4300010: Spotlights
-    4300012: Spotlights
-    4300014: Spotlights
-    4300016: Spotlights
-    4300018: Spotlights
-    4300020: Spotlights
-    4300022: Spotlights
-    4300024: Spotlights
-    4300026: Spotlights
-    4300028: Spotlights
-    4300030: Spotlights
-    4300032: Spotlights
-    4300034: Spotlights
-    4300036: Spotlights
-    4300038: Spotlights
-    4300040: Spotlights
-    4300042: Spotlights
-    4300044: Spotlights
-    4300046: Spotlights
-    4300048: Spotlights
-    4300050: Spotlights
-    4300052: Spotlights
-    4300054: Spotlights
-    4300056: Spotlights
-    4300058: Spotlights
-    4300060: Spotlights
-    4300062: Spotlights
-    4300064: Spotlights
-    4300066: Spotlights
-    4300068: Spotlights
-    4300070: Spotlights
-    4300072: Spotlights
-    4300074: Spotlights
-    4300076: Spotlights
-    4300078: Spotlights
-    4300080: Spotlights
-    4300082: Spotlights
-    4300084: Spotlights
-    4300086: Spotlights001
-    4300088: Spotlights002
-    4300090: Spotlights003
-    4300092: Spotlights004
-    4300094: Spotlights005
-    4300096: Spotlights006
-    4300098: Spotlights007
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Spotlights
+  - first:
+      1: 100004
+    second: Spotlights 1
+  - first:
+      1: 100006
+    second: Spotlights 10
+  - first:
+      1: 100008
+    second: Spotlights 11
+  - first:
+      1: 100010
+    second: Spotlights 12
+  - first:
+      1: 100012
+    second: Spotlights 13
+  - first:
+      1: 100014
+    second: Spotlights 14
+  - first:
+      1: 100016
+    second: Spotlights 15
+  - first:
+      1: 100018
+    second: Spotlights 16
+  - first:
+      1: 100020
+    second: Spotlights 17
+  - first:
+      1: 100022
+    second: Spotlights 18
+  - first:
+      1: 100024
+    second: Spotlights 19
+  - first:
+      1: 100026
+    second: Spotlights 2
+  - first:
+      1: 100028
+    second: Spotlights 20
+  - first:
+      1: 100030
+    second: Spotlights 21
+  - first:
+      1: 100032
+    second: Spotlights 22
+  - first:
+      1: 100034
+    second: Spotlights 23
+  - first:
+      1: 100036
+    second: Spotlights 24
+  - first:
+      1: 100038
+    second: Spotlights 25
+  - first:
+      1: 100040
+    second: Spotlights 26
+  - first:
+      1: 100042
+    second: Spotlights 27
+  - first:
+      1: 100044
+    second: Spotlights 28
+  - first:
+      1: 100046
+    second: Spotlights 29
+  - first:
+      1: 100048
+    second: Spotlights 3
+  - first:
+      1: 100050
+    second: Spotlights 30
+  - first:
+      1: 100052
+    second: Spotlights 31
+  - first:
+      1: 100054
+    second: Spotlights 32
+  - first:
+      1: 100056
+    second: Spotlights 33
+  - first:
+      1: 100058
+    second: Spotlights 34
+  - first:
+      1: 100060
+    second: Spotlights 35
+  - first:
+      1: 100062
+    second: Spotlights 36
+  - first:
+      1: 100064
+    second: Spotlights 37
+  - first:
+      1: 100066
+    second: Spotlights 38
+  - first:
+      1: 100068
+    second: Spotlights 39
+  - first:
+      1: 100070
+    second: Spotlights 4
+  - first:
+      1: 100072
+    second: Spotlights 40
+  - first:
+      1: 100074
+    second: Spotlights 41
+  - first:
+      1: 100076
+    second: Spotlights 42
+  - first:
+      1: 100078
+    second: Spotlights 5
+  - first:
+      1: 100080
+    second: Spotlights 6
+  - first:
+      1: 100082
+    second: Spotlights 7
+  - first:
+      1: 100084
+    second: Spotlights 8
+  - first:
+      1: 100086
+    second: Spotlights 9
+  - first:
+      1: 100088
+    second: Spotlights001
+  - first:
+      1: 100090
+    second: Spotlights002
+  - first:
+      1: 100092
+    second: Spotlights003
+  - first:
+      1: 100094
+    second: Spotlights004
+  - first:
+      1: 100096
+    second: Spotlights005
+  - first:
+      1: 100098
+    second: Spotlights006
+  - first:
+      1: 100100
+    second: Spotlights007
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Spotlights
+  - first:
+      4: 400004
+    second: Spotlights 1
+  - first:
+      4: 400006
+    second: Spotlights 10
+  - first:
+      4: 400008
+    second: Spotlights 11
+  - first:
+      4: 400010
+    second: Spotlights 12
+  - first:
+      4: 400012
+    second: Spotlights 13
+  - first:
+      4: 400014
+    second: Spotlights 14
+  - first:
+      4: 400016
+    second: Spotlights 15
+  - first:
+      4: 400018
+    second: Spotlights 16
+  - first:
+      4: 400020
+    second: Spotlights 17
+  - first:
+      4: 400022
+    second: Spotlights 18
+  - first:
+      4: 400024
+    second: Spotlights 19
+  - first:
+      4: 400026
+    second: Spotlights 2
+  - first:
+      4: 400028
+    second: Spotlights 20
+  - first:
+      4: 400030
+    second: Spotlights 21
+  - first:
+      4: 400032
+    second: Spotlights 22
+  - first:
+      4: 400034
+    second: Spotlights 23
+  - first:
+      4: 400036
+    second: Spotlights 24
+  - first:
+      4: 400038
+    second: Spotlights 25
+  - first:
+      4: 400040
+    second: Spotlights 26
+  - first:
+      4: 400042
+    second: Spotlights 27
+  - first:
+      4: 400044
+    second: Spotlights 28
+  - first:
+      4: 400046
+    second: Spotlights 29
+  - first:
+      4: 400048
+    second: Spotlights 3
+  - first:
+      4: 400050
+    second: Spotlights 30
+  - first:
+      4: 400052
+    second: Spotlights 31
+  - first:
+      4: 400054
+    second: Spotlights 32
+  - first:
+      4: 400056
+    second: Spotlights 33
+  - first:
+      4: 400058
+    second: Spotlights 34
+  - first:
+      4: 400060
+    second: Spotlights 35
+  - first:
+      4: 400062
+    second: Spotlights 36
+  - first:
+      4: 400064
+    second: Spotlights 37
+  - first:
+      4: 400066
+    second: Spotlights 38
+  - first:
+      4: 400068
+    second: Spotlights 39
+  - first:
+      4: 400070
+    second: Spotlights 4
+  - first:
+      4: 400072
+    second: Spotlights 40
+  - first:
+      4: 400074
+    second: Spotlights 41
+  - first:
+      4: 400076
+    second: Spotlights 42
+  - first:
+      4: 400078
+    second: Spotlights 5
+  - first:
+      4: 400080
+    second: Spotlights 6
+  - first:
+      4: 400082
+    second: Spotlights 7
+  - first:
+      4: 400084
+    second: Spotlights 8
+  - first:
+      4: 400086
+    second: Spotlights 9
+  - first:
+      4: 400088
+    second: Spotlights001
+  - first:
+      4: 400090
+    second: Spotlights002
+  - first:
+      4: 400092
+    second: Spotlights003
+  - first:
+      4: 400094
+    second: Spotlights004
+  - first:
+      4: 400096
+    second: Spotlights005
+  - first:
+      4: 400098
+    second: Spotlights006
+  - first:
+      4: 400100
+    second: Spotlights007
+  - first:
+      23: 2300000
+    second: Spotlights
+  - first:
+      23: 2300002
+    second: Spotlights 1
+  - first:
+      23: 2300004
+    second: Spotlights 10
+  - first:
+      23: 2300006
+    second: Spotlights 11
+  - first:
+      23: 2300008
+    second: Spotlights 12
+  - first:
+      23: 2300010
+    second: Spotlights 13
+  - first:
+      23: 2300012
+    second: Spotlights 14
+  - first:
+      23: 2300014
+    second: Spotlights 15
+  - first:
+      23: 2300016
+    second: Spotlights 16
+  - first:
+      23: 2300018
+    second: Spotlights 17
+  - first:
+      23: 2300020
+    second: Spotlights 18
+  - first:
+      23: 2300022
+    second: Spotlights 19
+  - first:
+      23: 2300024
+    second: Spotlights 2
+  - first:
+      23: 2300026
+    second: Spotlights 20
+  - first:
+      23: 2300028
+    second: Spotlights 21
+  - first:
+      23: 2300030
+    second: Spotlights 22
+  - first:
+      23: 2300032
+    second: Spotlights 23
+  - first:
+      23: 2300034
+    second: Spotlights 24
+  - first:
+      23: 2300036
+    second: Spotlights 25
+  - first:
+      23: 2300038
+    second: Spotlights 26
+  - first:
+      23: 2300040
+    second: Spotlights 27
+  - first:
+      23: 2300042
+    second: Spotlights 28
+  - first:
+      23: 2300044
+    second: Spotlights 29
+  - first:
+      23: 2300046
+    second: Spotlights 3
+  - first:
+      23: 2300048
+    second: Spotlights 30
+  - first:
+      23: 2300050
+    second: Spotlights 31
+  - first:
+      23: 2300052
+    second: Spotlights 32
+  - first:
+      23: 2300054
+    second: Spotlights 33
+  - first:
+      23: 2300056
+    second: Spotlights 34
+  - first:
+      23: 2300058
+    second: Spotlights 35
+  - first:
+      23: 2300060
+    second: Spotlights 36
+  - first:
+      23: 2300062
+    second: Spotlights 37
+  - first:
+      23: 2300064
+    second: Spotlights 38
+  - first:
+      23: 2300066
+    second: Spotlights 39
+  - first:
+      23: 2300068
+    second: Spotlights 4
+  - first:
+      23: 2300070
+    second: Spotlights 40
+  - first:
+      23: 2300072
+    second: Spotlights 41
+  - first:
+      23: 2300074
+    second: Spotlights 42
+  - first:
+      23: 2300076
+    second: Spotlights 5
+  - first:
+      23: 2300078
+    second: Spotlights 6
+  - first:
+      23: 2300080
+    second: Spotlights 7
+  - first:
+      23: 2300082
+    second: Spotlights 8
+  - first:
+      23: 2300084
+    second: Spotlights 9
+  - first:
+      23: 2300086
+    second: Spotlights001
+  - first:
+      23: 2300088
+    second: Spotlights002
+  - first:
+      23: 2300090
+    second: Spotlights003
+  - first:
+      23: 2300092
+    second: Spotlights004
+  - first:
+      23: 2300094
+    second: Spotlights005
+  - first:
+      23: 2300096
+    second: Spotlights006
+  - first:
+      23: 2300098
+    second: Spotlights007
+  - first:
+      33: 3300000
+    second: Spotlights
+  - first:
+      33: 3300002
+    second: Spotlights 1
+  - first:
+      33: 3300004
+    second: Spotlights 10
+  - first:
+      33: 3300006
+    second: Spotlights 11
+  - first:
+      33: 3300008
+    second: Spotlights 12
+  - first:
+      33: 3300010
+    second: Spotlights 13
+  - first:
+      33: 3300012
+    second: Spotlights 14
+  - first:
+      33: 3300014
+    second: Spotlights 15
+  - first:
+      33: 3300016
+    second: Spotlights 16
+  - first:
+      33: 3300018
+    second: Spotlights 17
+  - first:
+      33: 3300020
+    second: Spotlights 18
+  - first:
+      33: 3300022
+    second: Spotlights 19
+  - first:
+      33: 3300024
+    second: Spotlights 2
+  - first:
+      33: 3300026
+    second: Spotlights 20
+  - first:
+      33: 3300028
+    second: Spotlights 21
+  - first:
+      33: 3300030
+    second: Spotlights 22
+  - first:
+      33: 3300032
+    second: Spotlights 23
+  - first:
+      33: 3300034
+    second: Spotlights 24
+  - first:
+      33: 3300036
+    second: Spotlights 25
+  - first:
+      33: 3300038
+    second: Spotlights 26
+  - first:
+      33: 3300040
+    second: Spotlights 27
+  - first:
+      33: 3300042
+    second: Spotlights 28
+  - first:
+      33: 3300044
+    second: Spotlights 29
+  - first:
+      33: 3300046
+    second: Spotlights 3
+  - first:
+      33: 3300048
+    second: Spotlights 30
+  - first:
+      33: 3300050
+    second: Spotlights 31
+  - first:
+      33: 3300052
+    second: Spotlights 32
+  - first:
+      33: 3300054
+    second: Spotlights 33
+  - first:
+      33: 3300056
+    second: Spotlights 34
+  - first:
+      33: 3300058
+    second: Spotlights 35
+  - first:
+      33: 3300060
+    second: Spotlights 36
+  - first:
+      33: 3300062
+    second: Spotlights 37
+  - first:
+      33: 3300064
+    second: Spotlights 38
+  - first:
+      33: 3300066
+    second: Spotlights 39
+  - first:
+      33: 3300068
+    second: Spotlights 4
+  - first:
+      33: 3300070
+    second: Spotlights 40
+  - first:
+      33: 3300072
+    second: Spotlights 41
+  - first:
+      33: 3300074
+    second: Spotlights 42
+  - first:
+      33: 3300076
+    second: Spotlights 5
+  - first:
+      33: 3300078
+    second: Spotlights 6
+  - first:
+      33: 3300080
+    second: Spotlights 7
+  - first:
+      33: 3300082
+    second: Spotlights 8
+  - first:
+      33: 3300084
+    second: Spotlights 9
+  - first:
+      33: 3300086
+    second: Spotlights001
+  - first:
+      33: 3300088
+    second: Spotlights002
+  - first:
+      33: 3300090
+    second: Spotlights003
+  - first:
+      33: 3300092
+    second: Spotlights004
+  - first:
+      33: 3300094
+    second: Spotlights005
+  - first:
+      33: 3300096
+    second: Spotlights006
+  - first:
+      33: 3300098
+    second: Spotlights007
+  - first:
+      43: 4300000
+    second: Spotlights
+  - first:
+      43: 4300002
+    second: Spotlights
+  - first:
+      43: 4300004
+    second: Spotlights
+  - first:
+      43: 4300006
+    second: Spotlights
+  - first:
+      43: 4300008
+    second: Spotlights
+  - first:
+      43: 4300010
+    second: Spotlights
+  - first:
+      43: 4300012
+    second: Spotlights
+  - first:
+      43: 4300014
+    second: Spotlights
+  - first:
+      43: 4300016
+    second: Spotlights
+  - first:
+      43: 4300018
+    second: Spotlights
+  - first:
+      43: 4300020
+    second: Spotlights
+  - first:
+      43: 4300022
+    second: Spotlights
+  - first:
+      43: 4300024
+    second: Spotlights
+  - first:
+      43: 4300026
+    second: Spotlights
+  - first:
+      43: 4300028
+    second: Spotlights
+  - first:
+      43: 4300030
+    second: Spotlights
+  - first:
+      43: 4300032
+    second: Spotlights
+  - first:
+      43: 4300034
+    second: Spotlights
+  - first:
+      43: 4300036
+    second: Spotlights
+  - first:
+      43: 4300038
+    second: Spotlights
+  - first:
+      43: 4300040
+    second: Spotlights
+  - first:
+      43: 4300042
+    second: Spotlights
+  - first:
+      43: 4300044
+    second: Spotlights
+  - first:
+      43: 4300046
+    second: Spotlights
+  - first:
+      43: 4300048
+    second: Spotlights
+  - first:
+      43: 4300050
+    second: Spotlights
+  - first:
+      43: 4300052
+    second: Spotlights
+  - first:
+      43: 4300054
+    second: Spotlights
+  - first:
+      43: 4300056
+    second: Spotlights
+  - first:
+      43: 4300058
+    second: Spotlights
+  - first:
+      43: 4300060
+    second: Spotlights
+  - first:
+      43: 4300062
+    second: Spotlights
+  - first:
+      43: 4300064
+    second: Spotlights
+  - first:
+      43: 4300066
+    second: Spotlights
+  - first:
+      43: 4300068
+    second: Spotlights
+  - first:
+      43: 4300070
+    second: Spotlights
+  - first:
+      43: 4300072
+    second: Spotlights
+  - first:
+      43: 4300074
+    second: Spotlights
+  - first:
+      43: 4300076
+    second: Spotlights
+  - first:
+      43: 4300078
+    second: Spotlights
+  - first:
+      43: 4300080
+    second: Spotlights
+  - first:
+      43: 4300082
+    second: Spotlights
+  - first:
+      43: 4300084
+    second: Spotlights
+  - first:
+      43: 4300086
+    second: Spotlights001
+  - first:
+      43: 4300088
+    second: Spotlights002
+  - first:
+      43: 4300090
+    second: Spotlights003
+  - first:
+      43: 4300092
+    second: Spotlights004
+  - first:
+      43: 4300094
+    second: Spotlights005
+  - first:
+      43: 4300096
+    second: Spotlights006
+  - first:
+      43: 4300098
+    second: Spotlights007
+  externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 1
     materialName: 0
-    materialSearch: 1
+    materialSearch: 2
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -273,6 +778,8 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -287,19 +794,33 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -307,10 +828,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -320,14 +844,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

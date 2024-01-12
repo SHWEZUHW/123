@@ -10,10 +10,10 @@ ModelImporter:
       name: Clouds
     second: {fileID: 2100000, guid: 38c2c2eb27bea9d40b375620339da27e, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 1
     materialSearch: 2
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

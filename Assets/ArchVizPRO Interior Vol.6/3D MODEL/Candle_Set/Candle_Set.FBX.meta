@@ -1,75 +1,182 @@
 fileFormatVersion: 2
 guid: abb663916f51dc4468cc5917b9e3d015
-timeCreated: 1523946443
-licenseType: Store
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Fullitalig_Medium
-    100004: Fullitalig_Short
-    100006: Fullitalig_Tall
-    100008: Harliga
-    100010: Harliga_Glass
-    100012: PS CandleHolder
-    100014: Candle
-    100016: Candle 1
-    100018: Candle 2
-    100020: Candle 3
-    400000: //RootNode
-    400002: Fullitalig_Medium
-    400004: Fullitalig_Short
-    400006: Fullitalig_Tall
-    400008: Harliga
-    400010: Harliga_Glass
-    400012: PS CandleHolder
-    400014: Candle
-    400016: Candle 1
-    400018: Candle 2
-    400020: Candle 3
-    2100000: 01 - Default
-    2100002: 'Material #0'
-    2300000: Fullitalig_Medium
-    2300002: Fullitalig_Short
-    2300004: Fullitalig_Tall
-    2300006: Harliga
-    2300008: Harliga_Glass
-    2300010: PS CandleHolder
-    2300012: Candle
-    2300014: Candle 1
-    2300016: Candle 2
-    2300018: Candle 3
-    3300000: Fullitalig_Medium
-    3300002: Fullitalig_Short
-    3300004: Fullitalig_Tall
-    3300006: Harliga
-    3300008: Harliga_Glass
-    3300010: PS CandleHolder
-    3300012: Candle
-    3300014: Candle 1
-    3300016: Candle 2
-    3300018: Candle 3
-    4300000: Fullitalig_Tall
-    4300002: Harliga
-    4300004: Harliga_Glass
-    4300006: PS CandleHolder
-    4300008: Fullitalig_Medium
-    4300010: Fullitalig_Short
-    4300012: Candle
-    4300014: Candle
-    4300016: Candle
-    4300018: Candle
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Fullitalig_Medium
+  - first:
+      1: 100004
+    second: Fullitalig_Short
+  - first:
+      1: 100006
+    second: Fullitalig_Tall
+  - first:
+      1: 100008
+    second: Harliga
+  - first:
+      1: 100010
+    second: Harliga_Glass
+  - first:
+      1: 100012
+    second: PS CandleHolder
+  - first:
+      1: 100014
+    second: Candle
+  - first:
+      1: 100016
+    second: Candle 1
+  - first:
+      1: 100018
+    second: Candle 2
+  - first:
+      1: 100020
+    second: Candle 3
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Fullitalig_Medium
+  - first:
+      4: 400004
+    second: Fullitalig_Short
+  - first:
+      4: 400006
+    second: Fullitalig_Tall
+  - first:
+      4: 400008
+    second: Harliga
+  - first:
+      4: 400010
+    second: Harliga_Glass
+  - first:
+      4: 400012
+    second: PS CandleHolder
+  - first:
+      4: 400014
+    second: Candle
+  - first:
+      4: 400016
+    second: Candle 1
+  - first:
+      4: 400018
+    second: Candle 2
+  - first:
+      4: 400020
+    second: Candle 3
+  - first:
+      21: 2100000
+    second: 01 - Default
+  - first:
+      21: 2100002
+    second: Material #0
+  - first:
+      23: 2300000
+    second: Fullitalig_Medium
+  - first:
+      23: 2300002
+    second: Fullitalig_Short
+  - first:
+      23: 2300004
+    second: Fullitalig_Tall
+  - first:
+      23: 2300006
+    second: Harliga
+  - first:
+      23: 2300008
+    second: Harliga_Glass
+  - first:
+      23: 2300010
+    second: PS CandleHolder
+  - first:
+      23: 2300012
+    second: Candle
+  - first:
+      23: 2300014
+    second: Candle 1
+  - first:
+      23: 2300016
+    second: Candle 2
+  - first:
+      23: 2300018
+    second: Candle 3
+  - first:
+      33: 3300000
+    second: Fullitalig_Medium
+  - first:
+      33: 3300002
+    second: Fullitalig_Short
+  - first:
+      33: 3300004
+    second: Fullitalig_Tall
+  - first:
+      33: 3300006
+    second: Harliga
+  - first:
+      33: 3300008
+    second: Harliga_Glass
+  - first:
+      33: 3300010
+    second: PS CandleHolder
+  - first:
+      33: 3300012
+    second: Candle
+  - first:
+      33: 3300014
+    second: Candle 1
+  - first:
+      33: 3300016
+    second: Candle 2
+  - first:
+      33: 3300018
+    second: Candle 3
+  - first:
+      43: 4300000
+    second: Fullitalig_Tall
+  - first:
+      43: 4300002
+    second: Harliga
+  - first:
+      43: 4300004
+    second: Harliga_Glass
+  - first:
+      43: 4300006
+    second: PS CandleHolder
+  - first:
+      43: 4300008
+    second: Fullitalig_Medium
+  - first:
+      43: 4300010
+    second: Fullitalig_Short
+  - first:
+      43: 4300012
+    second: Candle
+  - first:
+      43: 4300014
+    second: Candle
+  - first:
+      43: 4300016
+    second: Candle
+  - first:
+      43: 4300018
+    second: Candle
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
-    materialSearch: 1
-    materialLocation: 1
+    materialSearch: 2
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -78,6 +185,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -92,21 +200,33 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -114,10 +234,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -127,14 +250,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

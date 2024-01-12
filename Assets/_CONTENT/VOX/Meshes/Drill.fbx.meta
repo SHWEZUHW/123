@@ -15,10 +15,10 @@ ModelImporter:
       name: Weapons
     second: {fileID: 2100000, guid: f5c9c040dff2ec54a8e223b8b6b1da51, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
-    materialSearch: 1
-    materialLocation: 1
+    materialSearch: 2
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

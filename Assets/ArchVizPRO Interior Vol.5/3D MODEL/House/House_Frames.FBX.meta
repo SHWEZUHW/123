@@ -1,223 +1,632 @@
 fileFormatVersion: 2
 guid: b94c0d2e4b5f4d94a997f4d5e6932ac7
-timeCreated: 1485708313
-licenseType: Store
 ModelImporter:
-  serializedVersion: 21
-  fileIDToRecycleName:
-    100000: Frame_Door
-    100002: Frame_Door 1
-    100004: Frame_Door_Glass
-    100006: Frame_Door_Glass 1
-    100008: Frame_Front
-    100010: Frame_Left
-    100012: Frame_Right
-    100014: Frames_Glass
-    100016: //RootNode
-    100018: Door_Glass
-    100020: Door_Glass 1
-    100022: Door_Glass_Exterior
-    100024: Door_Glass_Exterior 1
-    100026: Frames
-    100028: Frames 1
-    100030: Frames 2
-    100032: Frames 3
-    100034: Frames 4
-    100036: Frames 5
-    100038: Frames 6
-    100040: Frames 7
-    100042: Frames 8
-    100044: Frames 9
-    100046: Glass
-    100048: Glass 1
-    100050: Glass 2
-    100052: Glass 3
-    100054: Glass 4
-    100056: Glass 5
-    100058: Glass 6
-    100060: Glass 7
-    100062: Glass 8
-    100064: Glass_Exterior
-    100066: Glass_Exterior 1
-    100068: Glass_Exterior 2
-    100070: Glass_Exterior 3
-    100072: Glass_Exterior 4
-    100074: Glass_Exterior 5
-    100076: Glass_Exterior 6
-    100078: Glass_Exterior 7
-    100080: Glass_Exterior 8
-    100082: Group004
-    400000: Frame_Door
-    400002: Frame_Door 1
-    400004: Frame_Door_Glass
-    400006: Frame_Door_Glass 1
-    400008: Frame_Front
-    400010: Frame_Left
-    400012: Frame_Right
-    400014: Frames_Glass
-    400016: //RootNode
-    400018: Door_Glass
-    400020: Door_Glass 1
-    400022: Door_Glass_Exterior
-    400024: Door_Glass_Exterior 1
-    400026: Frames
-    400028: Frames 1
-    400030: Frames 2
-    400032: Frames 3
-    400034: Frames 4
-    400036: Frames 5
-    400038: Frames 6
-    400040: Frames 7
-    400042: Frames 8
-    400044: Frames 9
-    400046: Glass
-    400048: Glass 1
-    400050: Glass 2
-    400052: Glass 3
-    400054: Glass 4
-    400056: Glass 5
-    400058: Glass 6
-    400060: Glass 7
-    400062: Glass 8
-    400064: Glass_Exterior
-    400066: Glass_Exterior 1
-    400068: Glass_Exterior 2
-    400070: Glass_Exterior 3
-    400072: Glass_Exterior 4
-    400074: Glass_Exterior 5
-    400076: Glass_Exterior 6
-    400078: Glass_Exterior 7
-    400080: Glass_Exterior 8
-    400082: Group004
-    2300000: Frame_Door
-    2300002: Frame_Door 1
-    2300004: Frame_Door_Glass
-    2300006: Frame_Door_Glass 1
-    2300008: Frame_Front
-    2300010: Frame_Left
-    2300012: Frame_Right
-    2300014: Frames_Glass
-    2300016: Door_Glass
-    2300018: Door_Glass 1
-    2300020: Door_Glass_Exterior
-    2300022: Door_Glass_Exterior 1
-    2300024: Frames
-    2300026: Frames 1
-    2300028: Frames 2
-    2300030: Frames 3
-    2300032: Frames 4
-    2300034: Frames 5
-    2300036: Frames 6
-    2300038: Frames 7
-    2300040: Frames 8
-    2300042: Frames 9
-    2300044: Glass
-    2300046: Glass 2
-    2300048: Glass 3
-    2300050: Glass 4
-    2300052: Glass 5
-    2300054: Glass 6
-    2300056: Glass 7
-    2300058: Glass 8
-    2300060: Glass_Exterior
-    2300062: Glass_Exterior 1
-    2300064: Glass_Exterior 2
-    2300066: Glass_Exterior 3
-    2300068: Glass_Exterior 4
-    2300070: Glass_Exterior 5
-    2300072: Glass_Exterior 6
-    2300074: Glass_Exterior 7
-    2300076: Glass 1
-    2300078: Glass_Exterior 8
-    3300000: Frame_Door
-    3300002: Frame_Door 1
-    3300004: Frame_Door_Glass
-    3300006: Frame_Door_Glass 1
-    3300008: Frame_Front
-    3300010: Frame_Left
-    3300012: Frame_Right
-    3300014: Frames_Glass
-    3300016: Door_Glass
-    3300018: Door_Glass 1
-    3300020: Door_Glass_Exterior
-    3300022: Door_Glass_Exterior 1
-    3300024: Frames
-    3300026: Frames 1
-    3300028: Frames 2
-    3300030: Frames 3
-    3300032: Frames 4
-    3300034: Frames 5
-    3300036: Frames 6
-    3300038: Frames 7
-    3300040: Frames 8
-    3300042: Frames 9
-    3300044: Glass
-    3300046: Glass 2
-    3300048: Glass 3
-    3300050: Glass 4
-    3300052: Glass 5
-    3300054: Glass 6
-    3300056: Glass 7
-    3300058: Glass 8
-    3300060: Glass_Exterior
-    3300062: Glass_Exterior 1
-    3300064: Glass_Exterior 2
-    3300066: Glass_Exterior 3
-    3300068: Glass_Exterior 4
-    3300070: Glass_Exterior 5
-    3300072: Glass_Exterior 6
-    3300074: Glass_Exterior 7
-    3300076: Glass 1
-    3300078: Glass_Exterior 8
-    4300000: Frame_Door
-    4300002: Frame_Door_Glass
-    4300004: Frame_Door_Glass
-    4300006: Frame_Door
-    4300008: Frames_Glass
-    4300010: Frame_Front
-    4300012: Frame_Right
-    4300014: Frame_Left
-    4300016: Door_Glass
-    4300018: Glass
-    4300020: Frames
-    4300022: Frames
-    4300024: Frames
-    4300026: Glass
-    4300028: Frames
-    4300030: Glass
-    4300032: Door_Glass
-    4300034: Frames
-    4300036: Glass
-    4300038: Frames
-    4300040: Glass
-    4300042: Frames
-    4300044: Glass
-    4300046: Frames
-    4300048: Glass
-    4300050: Frames
-    4300052: Frames
-    4300054: Glass
-    4300056: Glass_Exterior
-    4300058: Glass_Exterior
-    4300060: Glass_Exterior
-    4300062: Glass_Exterior
-    4300064: Glass_Exterior
-    4300066: Glass_Exterior
-    4300068: Glass_Exterior
-    4300070: Glass_Exterior
-    4300072: Door_Glass_Exterior
-    4300074: Door_Glass_Exterior
-    4300076: Glass_Exterior
-    4300078: Glass
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Frame_Door
+  - first:
+      1: 100002
+    second: Frame_Door 1
+  - first:
+      1: 100004
+    second: Frame_Door_Glass
+  - first:
+      1: 100006
+    second: Frame_Door_Glass 1
+  - first:
+      1: 100008
+    second: Frame_Front
+  - first:
+      1: 100010
+    second: Frame_Left
+  - first:
+      1: 100012
+    second: Frame_Right
+  - first:
+      1: 100014
+    second: Frames_Glass
+  - first:
+      1: 100016
+    second: //RootNode
+  - first:
+      1: 100018
+    second: Door_Glass
+  - first:
+      1: 100020
+    second: Door_Glass 1
+  - first:
+      1: 100022
+    second: Door_Glass_Exterior
+  - first:
+      1: 100024
+    second: Door_Glass_Exterior 1
+  - first:
+      1: 100026
+    second: Frames
+  - first:
+      1: 100028
+    second: Frames 1
+  - first:
+      1: 100030
+    second: Frames 2
+  - first:
+      1: 100032
+    second: Frames 3
+  - first:
+      1: 100034
+    second: Frames 4
+  - first:
+      1: 100036
+    second: Frames 5
+  - first:
+      1: 100038
+    second: Frames 6
+  - first:
+      1: 100040
+    second: Frames 7
+  - first:
+      1: 100042
+    second: Frames 8
+  - first:
+      1: 100044
+    second: Frames 9
+  - first:
+      1: 100046
+    second: Glass
+  - first:
+      1: 100048
+    second: Glass 1
+  - first:
+      1: 100050
+    second: Glass 2
+  - first:
+      1: 100052
+    second: Glass 3
+  - first:
+      1: 100054
+    second: Glass 4
+  - first:
+      1: 100056
+    second: Glass 5
+  - first:
+      1: 100058
+    second: Glass 6
+  - first:
+      1: 100060
+    second: Glass 7
+  - first:
+      1: 100062
+    second: Glass 8
+  - first:
+      1: 100064
+    second: Glass_Exterior
+  - first:
+      1: 100066
+    second: Glass_Exterior 1
+  - first:
+      1: 100068
+    second: Glass_Exterior 2
+  - first:
+      1: 100070
+    second: Glass_Exterior 3
+  - first:
+      1: 100072
+    second: Glass_Exterior 4
+  - first:
+      1: 100074
+    second: Glass_Exterior 5
+  - first:
+      1: 100076
+    second: Glass_Exterior 6
+  - first:
+      1: 100078
+    second: Glass_Exterior 7
+  - first:
+      1: 100080
+    second: Glass_Exterior 8
+  - first:
+      1: 100082
+    second: Group004
+  - first:
+      4: 400000
+    second: Frame_Door
+  - first:
+      4: 400002
+    second: Frame_Door 1
+  - first:
+      4: 400004
+    second: Frame_Door_Glass
+  - first:
+      4: 400006
+    second: Frame_Door_Glass 1
+  - first:
+      4: 400008
+    second: Frame_Front
+  - first:
+      4: 400010
+    second: Frame_Left
+  - first:
+      4: 400012
+    second: Frame_Right
+  - first:
+      4: 400014
+    second: Frames_Glass
+  - first:
+      4: 400016
+    second: //RootNode
+  - first:
+      4: 400018
+    second: Door_Glass
+  - first:
+      4: 400020
+    second: Door_Glass 1
+  - first:
+      4: 400022
+    second: Door_Glass_Exterior
+  - first:
+      4: 400024
+    second: Door_Glass_Exterior 1
+  - first:
+      4: 400026
+    second: Frames
+  - first:
+      4: 400028
+    second: Frames 1
+  - first:
+      4: 400030
+    second: Frames 2
+  - first:
+      4: 400032
+    second: Frames 3
+  - first:
+      4: 400034
+    second: Frames 4
+  - first:
+      4: 400036
+    second: Frames 5
+  - first:
+      4: 400038
+    second: Frames 6
+  - first:
+      4: 400040
+    second: Frames 7
+  - first:
+      4: 400042
+    second: Frames 8
+  - first:
+      4: 400044
+    second: Frames 9
+  - first:
+      4: 400046
+    second: Glass
+  - first:
+      4: 400048
+    second: Glass 1
+  - first:
+      4: 400050
+    second: Glass 2
+  - first:
+      4: 400052
+    second: Glass 3
+  - first:
+      4: 400054
+    second: Glass 4
+  - first:
+      4: 400056
+    second: Glass 5
+  - first:
+      4: 400058
+    second: Glass 6
+  - first:
+      4: 400060
+    second: Glass 7
+  - first:
+      4: 400062
+    second: Glass 8
+  - first:
+      4: 400064
+    second: Glass_Exterior
+  - first:
+      4: 400066
+    second: Glass_Exterior 1
+  - first:
+      4: 400068
+    second: Glass_Exterior 2
+  - first:
+      4: 400070
+    second: Glass_Exterior 3
+  - first:
+      4: 400072
+    second: Glass_Exterior 4
+  - first:
+      4: 400074
+    second: Glass_Exterior 5
+  - first:
+      4: 400076
+    second: Glass_Exterior 6
+  - first:
+      4: 400078
+    second: Glass_Exterior 7
+  - first:
+      4: 400080
+    second: Glass_Exterior 8
+  - first:
+      4: 400082
+    second: Group004
+  - first:
+      23: 2300000
+    second: Frame_Door
+  - first:
+      23: 2300002
+    second: Frame_Door 1
+  - first:
+      23: 2300004
+    second: Frame_Door_Glass
+  - first:
+      23: 2300006
+    second: Frame_Door_Glass 1
+  - first:
+      23: 2300008
+    second: Frame_Front
+  - first:
+      23: 2300010
+    second: Frame_Left
+  - first:
+      23: 2300012
+    second: Frame_Right
+  - first:
+      23: 2300014
+    second: Frames_Glass
+  - first:
+      23: 2300016
+    second: Door_Glass
+  - first:
+      23: 2300018
+    second: Door_Glass 1
+  - first:
+      23: 2300020
+    second: Door_Glass_Exterior
+  - first:
+      23: 2300022
+    second: Door_Glass_Exterior 1
+  - first:
+      23: 2300024
+    second: Frames
+  - first:
+      23: 2300026
+    second: Frames 1
+  - first:
+      23: 2300028
+    second: Frames 2
+  - first:
+      23: 2300030
+    second: Frames 3
+  - first:
+      23: 2300032
+    second: Frames 4
+  - first:
+      23: 2300034
+    second: Frames 5
+  - first:
+      23: 2300036
+    second: Frames 6
+  - first:
+      23: 2300038
+    second: Frames 7
+  - first:
+      23: 2300040
+    second: Frames 8
+  - first:
+      23: 2300042
+    second: Frames 9
+  - first:
+      23: 2300044
+    second: Glass
+  - first:
+      23: 2300046
+    second: Glass 2
+  - first:
+      23: 2300048
+    second: Glass 3
+  - first:
+      23: 2300050
+    second: Glass 4
+  - first:
+      23: 2300052
+    second: Glass 5
+  - first:
+      23: 2300054
+    second: Glass 6
+  - first:
+      23: 2300056
+    second: Glass 7
+  - first:
+      23: 2300058
+    second: Glass 8
+  - first:
+      23: 2300060
+    second: Glass_Exterior
+  - first:
+      23: 2300062
+    second: Glass_Exterior 1
+  - first:
+      23: 2300064
+    second: Glass_Exterior 2
+  - first:
+      23: 2300066
+    second: Glass_Exterior 3
+  - first:
+      23: 2300068
+    second: Glass_Exterior 4
+  - first:
+      23: 2300070
+    second: Glass_Exterior 5
+  - first:
+      23: 2300072
+    second: Glass_Exterior 6
+  - first:
+      23: 2300074
+    second: Glass_Exterior 7
+  - first:
+      23: 2300076
+    second: Glass 1
+  - first:
+      23: 2300078
+    second: Glass_Exterior 8
+  - first:
+      33: 3300000
+    second: Frame_Door
+  - first:
+      33: 3300002
+    second: Frame_Door 1
+  - first:
+      33: 3300004
+    second: Frame_Door_Glass
+  - first:
+      33: 3300006
+    second: Frame_Door_Glass 1
+  - first:
+      33: 3300008
+    second: Frame_Front
+  - first:
+      33: 3300010
+    second: Frame_Left
+  - first:
+      33: 3300012
+    second: Frame_Right
+  - first:
+      33: 3300014
+    second: Frames_Glass
+  - first:
+      33: 3300016
+    second: Door_Glass
+  - first:
+      33: 3300018
+    second: Door_Glass 1
+  - first:
+      33: 3300020
+    second: Door_Glass_Exterior
+  - first:
+      33: 3300022
+    second: Door_Glass_Exterior 1
+  - first:
+      33: 3300024
+    second: Frames
+  - first:
+      33: 3300026
+    second: Frames 1
+  - first:
+      33: 3300028
+    second: Frames 2
+  - first:
+      33: 3300030
+    second: Frames 3
+  - first:
+      33: 3300032
+    second: Frames 4
+  - first:
+      33: 3300034
+    second: Frames 5
+  - first:
+      33: 3300036
+    second: Frames 6
+  - first:
+      33: 3300038
+    second: Frames 7
+  - first:
+      33: 3300040
+    second: Frames 8
+  - first:
+      33: 3300042
+    second: Frames 9
+  - first:
+      33: 3300044
+    second: Glass
+  - first:
+      33: 3300046
+    second: Glass 2
+  - first:
+      33: 3300048
+    second: Glass 3
+  - first:
+      33: 3300050
+    second: Glass 4
+  - first:
+      33: 3300052
+    second: Glass 5
+  - first:
+      33: 3300054
+    second: Glass 6
+  - first:
+      33: 3300056
+    second: Glass 7
+  - first:
+      33: 3300058
+    second: Glass 8
+  - first:
+      33: 3300060
+    second: Glass_Exterior
+  - first:
+      33: 3300062
+    second: Glass_Exterior 1
+  - first:
+      33: 3300064
+    second: Glass_Exterior 2
+  - first:
+      33: 3300066
+    second: Glass_Exterior 3
+  - first:
+      33: 3300068
+    second: Glass_Exterior 4
+  - first:
+      33: 3300070
+    second: Glass_Exterior 5
+  - first:
+      33: 3300072
+    second: Glass_Exterior 6
+  - first:
+      33: 3300074
+    second: Glass_Exterior 7
+  - first:
+      33: 3300076
+    second: Glass 1
+  - first:
+      33: 3300078
+    second: Glass_Exterior 8
+  - first:
+      43: 4300000
+    second: Frame_Door
+  - first:
+      43: 4300002
+    second: Frame_Door_Glass
+  - first:
+      43: 4300004
+    second: Frame_Door_Glass
+  - first:
+      43: 4300006
+    second: Frame_Door
+  - first:
+      43: 4300008
+    second: Frames_Glass
+  - first:
+      43: 4300010
+    second: Frame_Front
+  - first:
+      43: 4300012
+    second: Frame_Right
+  - first:
+      43: 4300014
+    second: Frame_Left
+  - first:
+      43: 4300016
+    second: Door_Glass
+  - first:
+      43: 4300018
+    second: Glass
+  - first:
+      43: 4300020
+    second: Frames
+  - first:
+      43: 4300022
+    second: Frames
+  - first:
+      43: 4300024
+    second: Frames
+  - first:
+      43: 4300026
+    second: Glass
+  - first:
+      43: 4300028
+    second: Frames
+  - first:
+      43: 4300030
+    second: Glass
+  - first:
+      43: 4300032
+    second: Door_Glass
+  - first:
+      43: 4300034
+    second: Frames
+  - first:
+      43: 4300036
+    second: Glass
+  - first:
+      43: 4300038
+    second: Frames
+  - first:
+      43: 4300040
+    second: Glass
+  - first:
+      43: 4300042
+    second: Frames
+  - first:
+      43: 4300044
+    second: Glass
+  - first:
+      43: 4300046
+    second: Frames
+  - first:
+      43: 4300048
+    second: Glass
+  - first:
+      43: 4300050
+    second: Frames
+  - first:
+      43: 4300052
+    second: Frames
+  - first:
+      43: 4300054
+    second: Glass
+  - first:
+      43: 4300056
+    second: Glass_Exterior
+  - first:
+      43: 4300058
+    second: Glass_Exterior
+  - first:
+      43: 4300060
+    second: Glass_Exterior
+  - first:
+      43: 4300062
+    second: Glass_Exterior
+  - first:
+      43: 4300064
+    second: Glass_Exterior
+  - first:
+      43: 4300066
+    second: Glass_Exterior
+  - first:
+      43: 4300068
+    second: Glass_Exterior
+  - first:
+      43: 4300070
+    second: Glass_Exterior
+  - first:
+      43: 4300072
+    second: Door_Glass_Exterior
+  - first:
+      43: 4300074
+    second: Door_Glass_Exterior
+  - first:
+      43: 4300076
+    second: Glass_Exterior
+  - first:
+      43: 4300078
+    second: Glass
+  externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 1
     materialName: 0
-    materialSearch: 1
+    materialSearch: 2
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -225,6 +634,8 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -239,19 +650,33 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -259,10 +684,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -272,14 +700,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

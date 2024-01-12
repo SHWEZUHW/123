@@ -10,10 +10,10 @@ ModelImporter:
       name: PortalStencilMask_mat
     second: {fileID: 2100000, guid: edfdf7f01316d6b409c26cf015f70342, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 1
     materialSearch: 2
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

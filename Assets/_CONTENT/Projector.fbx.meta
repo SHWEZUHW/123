@@ -10,10 +10,10 @@ ModelImporter:
       name: Project
     second: {fileID: 2100000, guid: a340a8621a7963e43ac81018e88234e8, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
-    materialSearch: 1
-    materialLocation: 1
+    materialSearch: 2
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
