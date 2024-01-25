@@ -10,8 +10,10 @@ public class IntegratedLightProbePlacer : EditorWindow
     private bool placingMode;
     private float yOffset = 0.25f; // Shared Y Offset
     private float brightnessFactor = 0.5f; // Brightness factor from the first script
-    private float gridDensity = 1f; // From the second script
+    private float gridDensity = 0f; // From the second script
     private float mergeDistance = 1f; // From the second script
+	private GameObject volumeMeshObject;
+	private float volumeProbeSpacing = 1.0f;
 
     [MenuItem("Banter/Tools/Light Probe Placer")]
     public static void ShowWindow()
@@ -23,12 +25,37 @@ public class IntegratedLightProbePlacer : EditorWindow
     {
         // Common Light Probe Group field
         lightProbeGroup = (LightProbeGroup)EditorGUILayout.ObjectField("Light Probe Group", lightProbeGroup, typeof(LightProbeGroup), true);
-        yOffset = EditorGUILayout.FloatField("Y Offset", yOffset);
 
-        // Tab or Section for Placing and Modifying Brightness (from the first script)
+
+        // Section for Volume-based Probe Placement
+        GUILayout.Label("Auto Light Probe Placement", EditorStyles.boldLabel);
+		gridDensity = EditorGUILayout.FloatField("Grid Density", gridDensity);
+        volumeMeshObject = (GameObject)EditorGUILayout.ObjectField("Volume Mesh Object", volumeMeshObject, typeof(GameObject), true);
+
+
+		if (GUILayout.Button(new GUIContent("Place Light Probes in Volume", " Use Grid density of 0.1. The higher the Grid Density value, the more probes will be placed.")))
+		{
+			PlaceProbesInVolume();
+		}
+
+		if (GUILayout.Button(new GUIContent("Place Light Probes on NavMesh", "Use Grid density of 1. The smaller the Grid Density value, the more probes will be placed.")))
+		{
+			PlaceLightProbes();
+		}
+
+		
+		mergeDistance = EditorGUILayout.FloatField("Merge Distance", mergeDistance);
+        if (GUILayout.Button("Merge Light Probes"))
+        {
+            MergeLightProbes();
+        }
+		
+		// Tab or Section for Placing and Modifying Brightness (from the first script)
         GUILayout.Label("Manual Light Probe Placement", EditorStyles.boldLabel);
         placingMode = EditorGUILayout.Toggle("Place Probes Mode", placingMode);
-        brightnessFactor = EditorGUILayout.Slider("Brightness Factor", brightnessFactor, 0f, 1f);
+		yOffset = EditorGUILayout.FloatField("Y Offset", yOffset);
+		
+		brightnessFactor = EditorGUILayout.Slider("Brightness Factor", brightnessFactor, 0f, 1f);
         if (GUILayout.Button("Lower Brightness"))
         {
             ModifyLightProbeBrightness(brightnessFactor, false);
@@ -36,20 +63,6 @@ public class IntegratedLightProbePlacer : EditorWindow
         if (GUILayout.Button("Increase Brightness"))
         {
             ModifyLightProbeBrightness(brightnessFactor, true);
-        }
-
-        // Tab or Section for NavMesh-based Probe Placement (from the second script)
-        GUILayout.Label("Light Probe Placement on NavMesh", EditorStyles.boldLabel);
-        gridDensity = EditorGUILayout.FloatField("Grid Density", gridDensity);
-        mergeDistance = EditorGUILayout.FloatField("Merge Distance", mergeDistance);
-
-        if (GUILayout.Button("Place Light Probes on NavMesh"))
-        {
-            PlaceLightProbes();
-        }
-        if (GUILayout.Button("Merge Light Probes"))
-        {
-            MergeLightProbes();
         }
     }
 
@@ -73,7 +86,100 @@ public class IntegratedLightProbePlacer : EditorWindow
         Debug.Log(increase ? "Light Probe Brightness Increased" : "Light Probe Brightness Lowered");
     }
 
-    private void PlaceLightProbes()
+private void PlaceProbesInVolume()
+{
+    if (volumeMeshObject == null)
+    {
+        Debug.LogError("Volume Mesh Object is not set.");
+        return;
+    }
+
+    if (lightProbeGroup == null)
+    {
+        lightProbeGroup = volumeMeshObject.GetComponent<LightProbeGroup>();
+        if (lightProbeGroup == null)
+        {
+            lightProbeGroup = volumeMeshObject.AddComponent<LightProbeGroup>();
+        }
+    }
+
+    Bounds bounds = CalculateScaledBounds(volumeMeshObject);
+    float probeSpacing = CalculateProbeSpacing(bounds, gridDensity);
+    List<Vector3> probePositions = new List<Vector3>();
+
+    // Transform the bounds to world space before iterating
+    Vector3 worldMin = volumeMeshObject.transform.TransformPoint(bounds.min);
+    Vector3 worldMax = volumeMeshObject.transform.TransformPoint(bounds.max);
+
+    for (float x = worldMin.x; x <= worldMax.x; x += probeSpacing)
+    {
+        for (float y = worldMin.y; y <= worldMax.y; y += probeSpacing)
+        {
+            for (float z = worldMin.z; z <= worldMax.z; z += probeSpacing)
+            {
+                Vector3 worldPosition = new Vector3(x, y, z);
+                // Ensure we are placing probes inside the collider bounds
+                if (volumeMeshObject.GetComponent<Collider>().bounds.Contains(worldPosition))
+                {
+                    // Add the point in the local space of the LightProbeGroup
+                    probePositions.Add(lightProbeGroup.transform.InverseTransformPoint(worldPosition));
+                }
+            }
+        }
+    }
+
+    lightProbeGroup.probePositions = probePositions.ToArray();
+    Debug.Log($"Placed {probePositions.Count} light probes inside the volume.");
+}
+
+private Bounds CalculateScaledBounds(GameObject obj)
+{
+    MeshFilter meshFilter = obj.GetComponent<MeshFilter>();
+    if (meshFilter == null)
+    {
+        Debug.LogError("MeshFilter component not found.");
+        return new Bounds();
+    }
+
+    Mesh mesh = meshFilter.sharedMesh;
+    Bounds bounds = mesh.bounds;
+    // Apply the object's scale to the bounds
+    bounds.size = Vector3.Scale(bounds.size, obj.transform.localScale);
+    return bounds;
+}
+
+
+private float CalculateProbeSpacing(Bounds bounds, float density)
+{
+    // Make sure density is positive and non-zero to avoid division by zero
+    if (density <= 0f)
+    {
+        Debug.LogError("Density must be greater than zero.");
+        return 0f;
+    }
+
+    // Calculate the approximate spacing needed to achieve the desired density
+    float volume = bounds.size.x * bounds.size.y * bounds.size.z;
+    float targetProbeCount = density * volume;
+    float spacing = Mathf.Pow(volume / targetProbeCount, 1f / 3f);
+
+    return spacing;
+}
+
+
+private bool IsPointInsideMesh(Vector3 point, GameObject obj)
+{
+    Collider collider = obj.GetComponent<Collider>();
+    if (collider == null)
+    {
+        Debug.LogWarning("No Collider component found on the object, cannot verify if the point is inside the mesh.");
+        return false;
+    }
+    return collider.bounds.Contains(obj.transform.InverseTransformPoint(point));
+}
+
+
+private void PlaceLightProbes()
     {
         if (lightProbeGroup == null)
         {

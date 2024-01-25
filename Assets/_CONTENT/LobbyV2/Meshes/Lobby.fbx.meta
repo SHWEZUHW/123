@@ -12,6 +12,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Grid
+    second: {fileID: 2100000, guid: 01abc45fff46d49499704a9482d29ddf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightMesh
+    second: {fileID: 2100000, guid: 2ac61377c88e2054ea8393bcd29c86e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Material.001
     second: {fileID: 2100000, guid: ac233236734a1df47829b066838549cf, type: 2}
   - first:
@@ -72,13 +82,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: WoodDark
+    second: {fileID: 2100000, guid: 613826f8428512e4f8cab8db7055196d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dark concrete
+    second: {fileID: 2100000, guid: c67a9d8e005b0244b9c4a30432ac6111, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: next event
     second: {fileID: 2100000, guid: ddcf213ab3ad093438114cce49f16452, type: 2}
   materials:
-    materialImportMode: 1
-    materialName: 0
+    materialImportMode: 2
+    materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -101,7 +121,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Wolf3D_Outfit_Top","Text.006","Text.005","Text.004","Text.003","Text.002","Text.001","Text","Circle.004","Circle.003","Circle.002","Circle.001","Circle","Text.011","Text.010","Text.009","Text.008","Text.007","Cylinder","Icosphere","Cylinder.002","Cylinder.004","BezierCurve"],"padding":[256,256,256,256,256,256,256,256,138,138,230,89,12,256,256,256,256,256,95,20,39,39,61],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["Wolf3D_Outfit_Top","Text.006","Text.005","Text.004","Text.003","Text.002","Text.001","Text","Circle.004","Circle.003","Circle.002","Circle.001","Circle","Text.011","Text.010","Text.009","Text.008","Text.007","Cylinder","Icosphere","Cylinder.002","Cylinder.004","BezierCurve","Cylinder.001","Circle.011","Circle.010","Circle.009","Plane.002","Plane.001","Plane","Circle.013","Circle.012","Curve.001"],"padding":[256,256,256,256,256,256,256,256,138,138,230,89,12,256,256,256,256,256,95,15,39,39,69,138,45,55,10,256,256,256,113,55,35],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
