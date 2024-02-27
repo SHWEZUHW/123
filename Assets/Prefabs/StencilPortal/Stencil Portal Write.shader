@@ -1,6 +1,6 @@
-// Made with Amplify Shader Editor v1.9.1.5
+// Made with Amplify Shader Editor v1.9.2.2
 // Available at the Unity Asset Store - http://u3d.as/y3X 
-Shader "Banter/Stencil Portal Write"
+Shader "Banter/Stencil Video Write"
 {
 	Properties
 	{
@@ -10,23 +10,21 @@ Shader "Banter/Stencil Portal Write"
 
 	SubShader
 	{
-		Tags{ "RenderType" = "Opaque"  "Queue" = "Geometry+0" "IgnoreProjector" = "True" }
+		Tags{ "RenderType" = "Transparent"  "Queue" = "Transparent+0" "IgnoreProjector" = "True" }
 		Cull Back
-		ZWrite Off
 		Stencil
 		{
 			Ref [_StencilReference]
 			Comp Always
 			Pass Replace
 		}
-		ColorMask 0
 		CGPROGRAM
 		#pragma target 3.0
 		#pragma exclude_renderers xboxone xboxseries playstation ps4 ps5 switch 
-		#pragma surface surf Unlit keepalpha noshadow 
+		#pragma surface surf Unlit alpha:fade keepalpha noshadow 
 		struct Input
 		{
-			half filler;
+			float4 vertexColor : COLOR;
 		};
 
 		uniform int _StencilReference;
@@ -38,7 +36,7 @@ Shader "Banter/Stencil Portal Write"
 
 		void surf( Input i , inout SurfaceOutput o )
 		{
-			o.Alpha = 1;
+			o.Alpha = saturate( i.vertexColor ).r;
 		}
 
 		ENDCG
@@ -46,8 +44,12 @@ Shader "Banter/Stencil Portal Write"
 	CustomEditor "ASEMaterialInspector"
 }
 /*ASEBEGIN
-Version=19105
-Node;AmplifyShaderEditor.IntNode;14;11.30759,-97.80232;Inherit;False;Property;_StencilReference;Stencil Reference;0;0;Create;True;0;0;0;True;0;False;1;1;False;0;1;INT;0
-Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;0,0;Half;False;True;-1;2;ASEMaterialInspector;0;0;Unlit;Banter/Stencil Portal Write;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;False;False;False;False;False;False;Back;2;False;;0;False;;False;0;False;;0;False;;False;0;Opaque;0.5;True;False;0;False;Opaque;;Geometry;All;6;d3d11;glcore;gles;gles3;metal;vulkan;False;False;False;False;0;False;;True;1;True;_StencilReference;255;False;;255;False;;7;False;;3;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;0;4;10;25;False;0.5;False;0;5;False;;10;False;;0;0;False;;0;False;;0;False;;0;False;;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;True;Relative;0;;1;-1;-1;-1;0;False;0;0;False;;-1;0;False;;0;0;0;False;0.1;False;;0;False;;False;15;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
+Version=19202
+Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;0,0;Half;False;True;-1;2;ASEMaterialInspector;0;0;Unlit;Banter/Stencil Video Write;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;False;False;False;False;False;False;Back;1;False;;0;False;;False;0;False;;0;False;;False;0;Transparent;0.5;True;False;0;False;Transparent;;Transparent;All;6;d3d11;glcore;gles;gles3;metal;vulkan;False;False;False;False;0;False;;True;1;True;_StencilReference;255;False;;255;False;;7;False;;3;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;0;4;10;25;False;0.5;False;2;5;False;;10;False;;0;0;False;;0;False;;0;False;;0;False;;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;True;Relative;0;;1;-1;-1;-1;0;False;0;0;False;;-1;0;False;;0;0;0;False;0.1;False;;0;False;;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;16;FLOAT4;0,0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
+Node;AmplifyShaderEditor.VertexColorNode;15;-443.3462,197.5988;Inherit;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SaturateNode;16;-190.3462,198.5988;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.IntNode;14;4.307587,-115.8023;Inherit;False;Property;_StencilReference;Stencil Reference;0;0;Create;True;0;0;0;True;0;False;1;1;False;0;1;INT;0
+WireConnection;0;9;16;0
+WireConnection;16;0;15;0
 ASEEND*/
-//CHKSM=8A8E0FD2AF9A86543006B397C72A76A273C6C311
+//CHKSM=C3761BE96B379D1ABA91BB7107E4A53D1961BD0F

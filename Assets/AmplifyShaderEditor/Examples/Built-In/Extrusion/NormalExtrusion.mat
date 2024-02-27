@@ -22,7 +22,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 2800000, guid: e477163a653bf6246954b3fea8ea8875, type: 3}
+        m_Texture: {fileID: 2800000, guid: 66adf15986201724384a99aebcb005e1, type: 3}
         m_Scale: {x: 3, y: 3}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -84,8 +84,8 @@ Material:
     - _Ext: 10.62
     - _Extr: 10.62
     - _Extrs: 10.62
-    - _ExtrusionAmount: 1.4
-    - _ExtrusionPoint: 0.28
+    - _ExtrusionAmount: 5
+    - _ExtrusionPoint: 0.84
     - _ExtrxusionPo: 10.62
     - _ExtrxusionPoi: 10.62
     - _ExtrxusionPoin: 10.62

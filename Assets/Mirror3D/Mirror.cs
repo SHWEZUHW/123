@@ -6,6 +6,8 @@ using UnityEngine.PlayerLoop;
 using UnityEngine.XR;
 
 using TMPro;
+using Unity.Mathematics;
+
 //using UnityEngine.Experimental.Rendering;
 //using UnityEngine.Rendering;
 //using UnityEngine.Rendering.Universal;
@@ -21,18 +23,17 @@ namespace Mirror
 
         // Public variables
         [Header("Main Settings")] public Vector3 projectionDirection = Vector3.forward;
-        public LayerMask m_LayerMask = -1; // Set the layermask for the portal camera
-        private int m_TextureSize = 1024; // The texture size (resolution)
+        public LayerMask m_LayerMask = -1;		// Set the layermask for the portal camera
+		private LayerMask previousLayerMask = -1; 
+		public CameraClearFlags clearFlags = CameraClearFlags.Color;		
+	   private int m_TextureSize = 1024; // The texture size (resolution)
 		
-    public float minDistance = 5.0f; // Minimum distance for texture scaling
-    public float maxDistance = 50.0f; // Maximum distance for texture scaling
-    public int minTextureSize = 512; // Minimum texture size
-    public int maxTextureSize = 2048; // Maximum texture size
-	
-	   private float updateInterval = 0.5f; // Interval in seconds to update texture size
+        public float minDistance = 5.0f; // Minimum distance for texture scaling
+        public float maxDistance = 50.0f; // Maximum distance for texture scaling
+        public int minTextureSize = 512; // Minimum texture size
+        public int maxTextureSize = 2048; // Maximum texture size
 
-	
-	public TextMeshPro debugText;
+	    private float updateInterval = 0.5f; // Interval in seconds to update texture size
 
         [Header("Advanced Settings")]
         //clipping & culling
@@ -43,10 +44,18 @@ namespace Mirror
         // Texture settings
         public bool m_DisablePixelLights = true;
         public int m_framesNeededToUpdate = 0;
+        
+        public Camera LeftCamera;
+        public Camera RightCamera;
 
+        public Renderer ReflectionRenderer;
 
+        //public Material DefaultSkyboxToCheck;
+        //public Renderer FakeSkybox;
+
+        public bool TwoDMode;
+        
         // Private variables
-        private Dictionary<Camera, Camera> m_PortalCameras = new Dictionary<Camera, Camera>();
 
         private int m_frameCounter = 0;
         private static bool s_InsideRendering = false; // To prevent recursion
@@ -56,16 +65,19 @@ namespace Mirror
         private RenderTexture m_PortalTextureRight = null;
 
         Dictionary<Camera.StereoscopicEye, int> m_oldReflectionTextureSizes = new Dictionary<Camera.StereoscopicEye, int>();
+
+        private bool _last2D = false;
+
+        private static readonly int _stereoMode = Shader.PropertyToID("_StereoMode");
         //private int m_OldReflectionTextureSizeLeft = 0;
         //private int m_OldReflectionTextureSizeRight = 0;
-
 #endregion
 
 #region Methods
 
         private void OnEnable()
         {
-			
+            Camera.onPreCull += PreCull;
             Camera.onPreRender += UpdateCamera;
             //RenderPipeline.beginCameraRendering += UpdateCamera;
             if (m_oldReflectionTextureSizes.Count < 2)
@@ -74,6 +86,8 @@ namespace Mirror
                 m_oldReflectionTextureSizes.Add(Camera.StereoscopicEye.Right, m_TextureSize);
             }
         }
+
+       
 
         private void OnDisable()
         {
@@ -92,11 +106,6 @@ namespace Mirror
                 DestroyImmediate(m_PortalTextureRight);
                 m_PortalTextureRight = null;
             }
-
-            foreach (var kvp in m_PortalCameras)
-                DestroyImmediate(((Camera) kvp.Value).gameObject);
-
-            m_PortalCameras.Clear();
         }
 
 #endregion
@@ -105,6 +114,7 @@ namespace Mirror
  void Start()
     {
         StartCoroutine(UpdateTextureSizeAtInterval());
+        _last2D = !TwoDMode;
     }
 
     IEnumerator UpdateTextureSizeAtInterval()
@@ -133,31 +143,62 @@ void UpdateTextureSize()
 
         // Scale texture size linearly based on the rounded normalized distance
         m_TextureSize = Mathf.RoundToInt(Mathf.Lerp(maxTextureSize, minTextureSize, normalizedDistance));
-
-        // Update TextMeshPro text
-        if (debugText != null)
-        {
-            debugText.text = $"Texture Size: {m_TextureSize}\n" +
-                             $"Normalized Distance: {normalizedDistance:F1}\n" +
-                             $"Distance: {distance:F2}";
-        }
     }
 
 
 #region Functions
 
+        private Material skyboxInst;
+        private void PreCull(Camera camera)
+        {
+            // if (ReflectionRenderer == null || FakeSkybox == null)
+            //    return;
+            if (ReflectionRenderer == null)
+                return;
+
+            if (!ReflectionRenderer.isVisible)
+                return;
+            
+            if (!((camera.cameraType == CameraType.Game || camera.cameraType == CameraType.SceneView) &&
+                  camera.tag != "PortalCam"))
+                return;
+                
+            Material sky = RenderSettings.skybox;
+            
+            if (camera.stereoEnabled && !TwoDMode && camera.clearFlags == CameraClearFlags.Skybox)
+            {
+               // if (FakeSkybox && sky != null && sky != DefaultSkyboxToCheck)
+                //{
+                 //   FakeSkybox.material = sky;
+                 //   FakeSkybox.material.renderQueue = 2999;
+                 //   FakeSkybox.enabled = true;
+                 //   FakeSkybox.transform.rotation = quaternion.identity;
+               // }
+            }
+        }
+        
         void UpdateCamera(Camera camera)
         {
+			if (camera != null)
+			{
+            LeftCamera.clearFlags = clearFlags;
+			RightCamera.clearFlags = clearFlags;
+			}
+		
+            if (!ReflectionRenderer.isVisible)
+                return;
+            
             if ((camera.cameraType == CameraType.Game || camera.cameraType == CameraType.SceneView) &&
                 camera.tag != "PortalCam") // is the current camera eligeble for portalling?
             {
+	
                 if (m_frameCounter > 0) // update over how many frames?
                 {
                     m_frameCounter--;
                     return;
                 }
 
-                var rend = GetComponent<Renderer>();
+                var rend = ReflectionRenderer;
 
                 if (!enabled || !rend || !rend.sharedMaterial || !rend.enabled
                 ) // <<<< Why does the renderer NEED to have a shared material??
@@ -172,7 +213,8 @@ void UpdateTextureSize()
 
                 // Render the camera
                 RenderCamera(camera, rend, Camera.StereoscopicEye.Left, ref m_PortalTextureLeft);
-                if (camera.stereoEnabled)
+                
+                if (camera.stereoEnabled && !TwoDMode)
                 {
                     try
                     {
@@ -181,6 +223,21 @@ void UpdateTextureSize()
                     catch (Exception e)
                     {
                         Debug.LogException(e, this);
+                    }
+                }
+
+					//FakeSkybox.enabled = false;
+					
+					
+                if (TwoDMode != _last2D )
+                {
+                    _last2D = TwoDMode;
+                    Material[] materials = rend.materials; // Why only get the shared materials?
+                    
+                    foreach (Material mat in materials)
+                    {
+                        if (mat.HasProperty(_stereoMode))
+                            mat.SetFloat(_stereoMode, TwoDMode?0f:1f);
                     }
                 }
             }
@@ -194,6 +251,8 @@ void UpdateTextureSize()
             CreatePortalCamera(camera, eye, out portalCamera, ref portalTexture);
             CopyCameraProperties(camera, portalCamera, eye); // Copy the properties of the (player) camera
 
+            int oldPixelLightCount = QualitySettings.pixelLightCount;
+            
             // find out the reflection plane: position and normal in world space
             Vector3 pos = transform.position; //portalRenderPlane.transform.forward;//
             Vector3
@@ -202,7 +261,7 @@ void UpdateTextureSize()
             //normal.Normalize(); // Alex: normalize in case someone enters a non-normalized vector. Turned off for now because it is a fun effect :P
 
             // Optionally disable pixel lights for reflection
-            int oldPixelLightCount = QualitySettings.pixelLightCount;
+           
             if (m_DisablePixelLights)
                 QualitySettings.pixelLightCount = 0;
 
@@ -250,8 +309,6 @@ void UpdateTextureSize()
 
             portalCamera.worldToCameraMatrix = worldToCameraMatrix * reflection;
 
-
-
             // Setup oblique projection matrix so that near plane is our reflection plane. This way we clip everything below/above it for free.
             Vector4 clipPlane = CameraSpacePlane(worldToCameraMatrix * reflection, pos, normal, 1.0f);
 
@@ -266,19 +323,22 @@ void UpdateTextureSize()
 
             portalCamera.projectionMatrix = projectionMatrix;
             portalCamera.cullingMask = m_LayerMask.value; // Set culling mask <<<<
-            portalCamera.targetTexture = portalTexture; // Set the target texture <<<
+            // Set the target texture <<<
 
             GL.invertCulling = true;
 
             portalCamera.transform.rotation = camera.transform.rotation;
+            
 
+            portalCamera.targetTexture = portalTexture;
+            
             portalCamera.Render();
             //UniversalRenderPipeline.RenderSingleCamera(SRC, portalCamera); // URP Version of: portalCamera.Render();
 
             GL.invertCulling = false;
 
             // Assign the rendertexture to the material
-            Material[] materials = rend.sharedMaterials; // Why only get the shared materials?
+            Material[] materials = rend.materials; // Why only get the shared materials?
             string property = "_ReflectionTex" + eye.ToString();
 
             foreach (Material mat in materials)
@@ -319,24 +379,11 @@ void UpdateTextureSize()
             }
 
             // Create camera with the render texture
-            if (!m_PortalCameras.TryGetValue(currentCamera, out portalCamera)
-            ) // if it does not yet exist in the dictionary, create it. If it does, assign it. (catch both not-in-dictionary and in-dictionary-but-deleted-GO)
-            {
-                GameObject go =
-                    new GameObject(
-                        "Mirror Reflection Camera id" + GetInstanceID() + " for " + currentCamera.GetInstanceID(),
-                        typeof(Camera), typeof(Skybox)); // create the new game object
-                portalCamera = go.GetComponent<Camera>();
-                portalCamera.enabled = false;
-                portalCamera.transform.position = transform.position;
-                portalCamera.transform.rotation = transform.rotation;
-                portalCamera.tag =
-                    "PortalCam"; // Tag it as a portal camera so it doesn't participate in the additional CameraRender function
-                //portalCamera.gameObject.AddComponent<FlareLayer>(); // Adds a flare layer to make Lens Flares appear in the image?? disabled for now
-                go.hideFlags =
-                    HideFlags.DontSave; // The object will not be saved to the Scene. It will not be destroyed when a new Scene is loaded.
-                m_PortalCameras.Add(currentCamera, portalCamera); // add the newly created camera to the dictionary
-            }
+            portalCamera = eye==Camera.StereoscopicEye.Left?LeftCamera:RightCamera;
+            portalCamera.enabled = false;
+            portalCamera.transform.position = transform.position;
+            portalCamera.transform.rotation = transform.rotation;
+              
         }
 
         private void CopyCameraProperties(Camera src, Camera dest, Camera.StereoscopicEye eye)
@@ -346,7 +393,7 @@ void UpdateTextureSize()
 
             // set camera to clear the same way as current camera <<< Not really sure what this does, more info: https://docs.unity3d.com/Manual/class-Camera.html
             dest.clearFlags = src.clearFlags;
-            dest.backgroundColor = src.backgroundColor;
+            //dest.backgroundColor = src.backgroundColor;
 
             // if (src.clearFlags == CameraClearFlags.Skybox)
             // {
@@ -367,7 +414,7 @@ void UpdateTextureSize()
             // even if we are supplying custom camera&projection matrices,
             // some of values are used elsewhere (e.g. skybox uses far plane)
              // To prevent the camera from following some eye, else this gets fuckey sometimes (e.g. the FOV cant be copied)
-             dest.farClipPlane = src.farClipPlane; // src.farClipPlane;// 30m is enough in this scene
+            dest.farClipPlane = src.farClipPlane; // src.farClipPlane;// 30m is enough in this scene
             dest.nearClipPlane = src.nearClipPlane;
             dest.orthographic = src.orthographic;
             dest.fieldOfView = src.fieldOfView;
@@ -386,6 +433,64 @@ void UpdateTextureSize()
             Vector3 cnormal = worldToCameraMatrix.MultiplyVector(normal).normalized * sideSign;
             return new Vector4(cnormal.x, cnormal.y, cnormal.z, -Vector3.Dot(cpos, cnormal));
         }
+
+        public void Set2DMode(bool on)
+        {
+            TwoDMode = on;
+        }
+
+
+ // Call this method to toggle the "Avatars only" preset
+    public void ToggleAvatarsOnly(bool isEnabled)
+    {
+        if (isEnabled)
+        {
+            // Store the current layer mask before changing
+            previousLayerMask = m_LayerMask;
+
+            // Set to "Avatars only" layers (6, 7, 8, 10)
+            m_LayerMask = (1 << 6) | (1 << 7) | (1 << 8) | (1 << 10);
+        }
+        else
+        {
+            // Revert to the previous layer mask
+            m_LayerMask = previousLayerMask;
+        }
+    }
+	
+	    // Public function to set clear flags via Unity events
+    public void SetClearFlags(int flagIndex)
+    {
+        clearFlags = (CameraClearFlags)flagIndex;
+        UpdateCamera(LeftCamera);
+        UpdateCamera(RightCamera);
+    }
+	
+	// Public function to set minDistance
+    public void SetMinDistance(float distance)
+    {
+        minDistance = distance;
+    }
+
+    // Public function to set maxDistance
+    public void SetMaxDistance(float distance)
+    {
+        maxDistance = distance;
+    }
+
+    // Public function to set minTextureSize
+    public void SetMinTextureSize(int size)
+    {
+        minTextureSize = size;
+    }
+
+    // Public function to set maxTextureSize
+    public void SetMaxTextureSize(int size)
+    {
+        maxTextureSize = size;
+    }
+	
+
 
 #endregion
 

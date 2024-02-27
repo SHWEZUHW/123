@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.003725466, g: 0.0028845428, b: 0.0069690337, a: 1}
+  m_IndirectSpecularColor: {r: 0.0037574267, g: 0.0029976002, b: 0.006852484, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -64964,8 +64964,8 @@ MonoBehaviour:
   renderSettingsRTPVExport: 1
   renderSettingsRTPVSceneView: 1
   renderSettingsRTPVHDR: 0
-  renderSettingsRTPVWidth: 1202
-  renderSettingsRTPVHeight: 635
+  renderSettingsRTPVWidth: 1660
+  renderSettingsRTPVHeight: 1023
   lastBakeTime: 56
   enlightenWarningShown: 0
   enlightenWarningShown2: 0
