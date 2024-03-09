@@ -15,10 +15,10 @@ ModelImporter:
       name: VideoReflect
     second: {fileID: 2100000, guid: b99913c47be7ece4f8495160674d580c, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

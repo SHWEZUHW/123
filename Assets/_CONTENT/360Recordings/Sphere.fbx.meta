@@ -10,10 +10,10 @@ ModelImporter:
       name: 360
     second: {fileID: 2100000, guid: a0ac7a211258a1443a0d15d82ce6b67e, type: 2}
   materials:
-    materialImportMode: 1
-    materialName: 0
+    materialImportMode: 2
+    materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

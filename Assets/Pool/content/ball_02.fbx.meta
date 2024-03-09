@@ -10,10 +10,10 @@ ModelImporter:
       name: BilliardBalls
     second: {fileID: 2100000, guid: ee2a993662e705b418a00aadcf0737e5, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

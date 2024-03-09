@@ -10,10 +10,10 @@ ModelImporter:
       name: EdgeLightFX_mat
     second: {fileID: 2100000, guid: 0a0be2fef064c3f4a8dd7b6f581e967d, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

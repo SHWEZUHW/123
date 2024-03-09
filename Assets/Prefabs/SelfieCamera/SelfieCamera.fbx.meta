@@ -20,10 +20,10 @@ ModelImporter:
       name: SelfieStick
     second: {fileID: 2100000, guid: 96c25c0c157ad0746b8ddd895c5cfdc6, type: 2}
   materials:
-    materialImportMode: 1
-    materialName: 0
+    materialImportMode: 2
+    materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

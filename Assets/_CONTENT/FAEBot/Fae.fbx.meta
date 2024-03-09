@@ -10,10 +10,10 @@ ModelImporter:
       name: Wolf3D_Avatar
     second: {fileID: 2100000, guid: c0274bb9c7c0d1741a504a9a76dcb832, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

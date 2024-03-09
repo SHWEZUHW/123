@@ -33,10 +33,10 @@ ModelImporter:
       name: mat_torch_01
     second: {fileID: 2100000, guid: 48f254d0888b8154aa9fe4076be8a00e, type: 2}
   materials:
-    materialImportMode: 1
-    materialName: 0
+    materialImportMode: 2
+    materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

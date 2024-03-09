@@ -10,10 +10,10 @@ ModelImporter:
       name: PrototypeDark
     second: {fileID: 2100000, guid: 2469cfa6d45769d4cb9be4ae3dce924c, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

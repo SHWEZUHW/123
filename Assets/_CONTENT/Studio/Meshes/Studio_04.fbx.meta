@@ -55,10 +55,10 @@ ModelImporter:
       name: StagePlanks
     second: {fileID: 2100000, guid: f89880a49f42574428851277743b5730, type: 2}
   materials:
-    materialImportMode: 1
-    materialName: 0
+    materialImportMode: 2
+    materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

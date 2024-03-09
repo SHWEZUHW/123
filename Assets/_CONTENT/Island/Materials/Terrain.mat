@@ -121,8 +121,8 @@ Material:
     - __dirty: 0
     - _max: -0.15
     - _min: 0.5
-    - _screenprojection: 1
-    - _terrainlight: 1
+    - _screenprojection: 0
+    - _terrainlight: 0
     m_Colors:
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _Color0: {r: 1, g: 1, b: 1, a: 0}

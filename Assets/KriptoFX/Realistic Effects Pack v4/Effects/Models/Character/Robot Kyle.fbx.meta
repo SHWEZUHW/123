@@ -331,10 +331,10 @@ ModelImporter:
       name: Robot
     second: {fileID: 2100000, guid: d98b3f61c3f696d4e898e17502e58082, type: 2}
   materials:
-    materialImportMode: 1
-    materialName: 0
+    materialImportMode: 2
+    materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

@@ -127,7 +127,7 @@ public class TriggerEvent : MonoBehaviour
             }
         }catch{
             Debug.Log("Error");
-        }
+	 }
         return false;
     }
 

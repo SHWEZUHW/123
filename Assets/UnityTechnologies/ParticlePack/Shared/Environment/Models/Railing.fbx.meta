@@ -130,10 +130,10 @@ ModelImporter:
       name: lambert1
     second: {fileID: 2100000, guid: 50d6c6916e743b64c8b4e4282f2c9603, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

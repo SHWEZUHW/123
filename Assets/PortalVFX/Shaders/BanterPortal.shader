@@ -54,6 +54,7 @@ Shader "Banter/PortalC"
 			#include "UnityShaderVariables.cginc"
 			#define ASE_NEEDS_VERT_COLOR
 			#define ASE_NEEDS_VERT_POSITION
+			#define ASE_NEEDS_FRAG_WORLD_POSITION
 
 
 			struct appdata
@@ -63,6 +64,7 @@ Shader "Banter/PortalC"
 				float3 ase_normal : NORMAL;
 				float4 ase_texcoord : TEXCOORD0;
 				float4 ase_texcoord1 : TEXCOORD1;
+				float4 ase_tangent : TANGENT;
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 			};
 			
@@ -74,6 +76,9 @@ Shader "Banter/PortalC"
 				#endif
 				float4 ase_texcoord1 : TEXCOORD1;
 				float4 ase_color : COLOR;
+				float4 ase_texcoord2 : TEXCOORD2;
+				float4 ase_texcoord3 : TEXCOORD3;
+				float4 ase_texcoord4 : TEXCOORD4;
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 				UNITY_VERTEX_OUTPUT_STEREO
 			};
@@ -132,9 +137,22 @@ Shader "Banter/PortalC"
 				float clampResult59 = clamp( temp_output_57_0 , -1.0 , -0.35 );
 				float clampResult54 = clamp( ( 1.0 - temp_output_52_0 ) , -0.6 , 0.0 );
 				
+				float3 ase_worldTangent = UnityObjectToWorldDir(v.ase_tangent);
+				o.ase_texcoord2.xyz = ase_worldTangent;
+				float3 ase_worldNormal = UnityObjectToWorldNormal(v.ase_normal);
+				o.ase_texcoord3.xyz = ase_worldNormal;
+				float ase_vertexTangentSign = v.ase_tangent.w * ( unity_WorldTransformParams.w >= 0.0 ? 1.0 : -1.0 );
+				float3 ase_worldBitangent = cross( ase_worldNormal, ase_worldTangent ) * ase_vertexTangentSign;
+				o.ase_texcoord4.xyz = ase_worldBitangent;
+				
 				o.ase_texcoord1.xy = v.ase_texcoord.xy;
 				o.ase_texcoord1.zw = v.ase_texcoord1.xy;
 				o.ase_color = v.color;
+				
+				//setting value to unused interpolator channels and avoid initialization warnings
+				o.ase_texcoord2.w = 0;
+				o.ase_texcoord3.w = 0;
+				o.ase_texcoord4.w = 0;
 				float3 vertexValue = float3(0, 0, 0);
 				#if ASE_ABSOLUTE_VERTEX_POS
 				vertexValue = v.vertex.xyz;
@@ -178,7 +196,18 @@ Shader "Banter/PortalC"
 				simplePerlin2D120 = simplePerlin2D120*0.5 + 0.5;
 				float4 temp_output_40_0 = saturate( i.ase_color );
 				float4 temp_output_127_0 = ( float4( ( (tex2DNode114).rgb + ( simplePerlin2D120 * 0.015 ) ) , 0.0 ) * ( ( 1.0 - temp_output_40_0 ) + float4( 0.2169811,0.2169811,0.2169811,0 ) ) );
-				float4 tex2DNode1 = tex2D( _MainTex, ( float4( ( ( ( texCoord122 * temp_output_147_0 ) + float2( 0,0 ) ) - ( ( temp_output_147_0 * _Vector1 ) - _Vector1 ) ), 0.0 , 0.0 ) + ( temp_output_127_0 * clampResult189 ) ).rg );
+				float3 ase_worldTangent = i.ase_texcoord2.xyz;
+				float3 ase_worldNormal = i.ase_texcoord3.xyz;
+				float3 ase_worldBitangent = i.ase_texcoord4.xyz;
+				float3 tanToWorld0 = float3( ase_worldTangent.x, ase_worldBitangent.x, ase_worldNormal.x );
+				float3 tanToWorld1 = float3( ase_worldTangent.y, ase_worldBitangent.y, ase_worldNormal.y );
+				float3 tanToWorld2 = float3( ase_worldTangent.z, ase_worldBitangent.z, ase_worldNormal.z );
+				float3 ase_worldViewDir = UnityWorldSpaceViewDir(WorldPosition);
+				ase_worldViewDir = normalize(ase_worldViewDir);
+				float3 ase_tanViewDir =  tanToWorld0 * ase_worldViewDir.x + tanToWorld1 * ase_worldViewDir.y  + tanToWorld2 * ase_worldViewDir.z;
+				ase_tanViewDir = normalize(ase_tanViewDir);
+				float2 Offset213 = ( ( -3.0 - 1 ) * ase_tanViewDir.xy * 0.1 ) + ( float4( ( ( ( texCoord122 * temp_output_147_0 ) + float2( 0,0 ) ) - ( ( temp_output_147_0 * _Vector1 ) - _Vector1 ) ), 0.0 , 0.0 ) + ( temp_output_127_0 * clampResult189 ) ).rg;
+				float4 tex2DNode1 = tex2D( _MainTex, Offset213 );
 				float smoothstepResult22 = smoothstep( 0.4 , 0.45 , texCoord2.y);
 				float4 appendResult110 = (float4(tex2DNode1.rgb , saturate( smoothstepResult22 )));
 				float4 appendResult135 = (float4(saturate( ( tex2DNode114 * _Color ) ).rgb , tex2D( _FXTex, panner119 ).r));
@@ -201,7 +230,6 @@ Node;AmplifyShaderEditor.SimpleMultiplyOpNode;39;694.2155,920.4197;Inherit;False
 Node;AmplifyShaderEditor.NormalVertexDataNode;34;30.98381,1031.762;Inherit;False;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;35;427.1208,1060.36;Inherit;False;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;0;False;1;FLOAT4;0
 Node;AmplifyShaderEditor.DynamicAppendNode;37;243.4664,1034.075;Inherit;False;FLOAT4;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT4;0
-Node;AmplifyShaderEditor.SimpleAddOpNode;97;-25.8638,-654.3907;Inherit;False;2;2;0;FLOAT2;0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.VertexColorNode;38;-1961.778,964.7357;Inherit;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;134;425.4489,98.74373;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;148;-609.9736,-1228.521;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT2;0,0;False;1;FLOAT2;0
@@ -264,7 +292,10 @@ Node;AmplifyShaderEditor.ClampOpNode;189;-277.2482,221.5774;Inherit;True;3;0;FLO
 Node;AmplifyShaderEditor.Vector2Node;209;-2445.52,-484.0081;Inherit;False;Property;_Tiling;Tiling;6;1;[PerRendererData];Create;True;0;0;0;False;0;False;0.65,1;1,1;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.Vector2Node;210;-2439.52,-343.0081;Inherit;False;Property;_Offset;Offset;5;1;[PerRendererData];Create;True;0;0;0;False;0;False;0.15,0;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.ColorNode;133;145.4492,172.7437;Inherit;False;Property;_Color;Color;2;0;Create;True;0;0;0;False;0;False;0.6591351,0.1367925,1,0;0.4481131,0.9091011,1,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SamplerNode;1;98.33147,-677.689;Inherit;True;Property;_MainTex;MainTex;0;0;Create;True;0;0;0;False;0;False;-1;None;c7e1ba3cd8f6f3a40bc83edf588f77b2;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SimpleAddOpNode;97;-180.8638,-648.3907;Inherit;False;2;2;0;FLOAT2;0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.SamplerNode;1;177.3315,-682.689;Inherit;True;Property;_MainTex;MainTex;0;0;Create;True;0;0;0;False;0;False;-1;None;dc3502c2ef1bb2c439775048c6463b11;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.ViewDirInputsCoordNode;214;-479.9695,-813.4435;Inherit;False;Tangent;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.ParallaxMappingNode;213;-8.969482,-883.4435;Inherit;False;Normal;4;0;FLOAT2;0,0;False;1;FLOAT;-3;False;2;FLOAT;0.1;False;3;FLOAT3;0,0,0;False;1;FLOAT2;0
 WireConnection;127;0;121;0
 WireConnection;127;1;205;0
 WireConnection;39;0;40;0
@@ -273,8 +304,6 @@ WireConnection;35;0;37;0
 WireConnection;35;1;59;0
 WireConnection;37;1;34;2
 WireConnection;37;2;34;3
-WireConnection;97;0;153;0
-WireConnection;97;1;104;0
 WireConnection;134;0;114;0
 WireConnection;134;1;133;0
 WireConnection;148;0;147;0
@@ -341,6 +370,10 @@ WireConnection;123;0;122;0
 WireConnection;54;0;53;0
 WireConnection;59;0;57;0
 WireConnection;189;0;191;0
-WireConnection;1;1;97;0
+WireConnection;97;0;153;0
+WireConnection;97;1;104;0
+WireConnection;1;1;213;0
+WireConnection;213;0;97;0
+WireConnection;213;3;214;0
 ASEEND*/
-//CHKSM=926D64AB5C58FE506B61D13A65EF1080313F0A5E
+//CHKSM=612063241B9E96BBC843F4ADEBEC8C4907814ECA

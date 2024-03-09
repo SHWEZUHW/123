@@ -28,10 +28,10 @@ ModelImporter:
       name: mat_bucket_01
     second: {fileID: 2100000, guid: 89ee76b34fd87a84b848ee920c80fd1c, type: 2}
   materials:
-    materialImportMode: 1
-    materialName: 0
+    materialImportMode: 2
+    materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

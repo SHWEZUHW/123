@@ -465,10 +465,10 @@ ModelImporter:
       name: Alpha_Joints_MAT
     second: {fileID: 2100000, guid: bb058fbc18c6ae64e9427db3f8279f16, type: 2}
   materials:
-    materialImportMode: 1
-    materialName: 0
+    materialImportMode: 2
+    materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

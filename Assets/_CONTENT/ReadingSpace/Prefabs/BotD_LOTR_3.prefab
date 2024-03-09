@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a9811c197b0e340928ada4b367c226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: ac6e01ac-81e8-47bd-a431-4fd620957687
+  Id: e538735e-a91f-4ad9-82e5-ca4fcf6895c2
   lastObject: {fileID: 0}
 --- !u!114 &1787693059574960916
 MonoBehaviour:
@@ -162,6 +162,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1787693059021515035}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+        m_MethodName: set_isKinematic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
   isSynced: 0
   adminOnly: 0
@@ -345,7 +357,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

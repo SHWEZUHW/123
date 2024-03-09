@@ -382,10 +382,10 @@ ModelImporter:
       name: Default
     second: {fileID: 2100000, guid: 8a758f41de96147d29c0b9d92ce2a3c5, type: 2}
   materials:
-    materialImportMode: 1
-    materialName: 0
+    materialImportMode: 2
+    materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

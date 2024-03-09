@@ -197,10 +197,10 @@ ModelImporter:
     second: //RootNode
   externalObjects: {}
   materials:
-    materialImportMode: 1
-    materialName: 3
+    materialImportMode: 2
+    materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 3
     bakeSimulation: 0

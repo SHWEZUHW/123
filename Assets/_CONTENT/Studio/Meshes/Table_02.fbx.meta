@@ -20,10 +20,10 @@ ModelImporter:
       name: Table
     second: {fileID: 2100000, guid: dc188450effdf0e45b2c33eea9732e83, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

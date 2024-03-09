@@ -118,10 +118,10 @@ ModelImporter:
       name: mat_barrel_01
     second: {fileID: 2100000, guid: eaec9ff889e883347b9e9b240505d349, type: 2}
   materials:
-    materialImportMode: 1
-    materialName: 0
+    materialImportMode: 2
+    materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

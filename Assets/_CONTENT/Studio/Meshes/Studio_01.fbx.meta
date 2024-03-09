@@ -55,10 +55,10 @@ ModelImporter:
       name: Wood
     second: {fileID: 2100000, guid: eadc22d62693ca9409ca3effa10c8901, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

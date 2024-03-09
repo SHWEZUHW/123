@@ -25,10 +25,10 @@ ModelImporter:
       name: test16k
     second: {fileID: 2800000, guid: 7300064fcf805d245b05d4a56a802d8b, type: 3}
   materials:
-    materialImportMode: 1
-    materialName: 0
+    materialImportMode: 2
+    materialName: 1
     materialSearch: 2
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

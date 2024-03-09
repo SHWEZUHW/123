@@ -9,7 +9,8 @@ Shader "DiffuseLightControl"
 	Properties
 	{
 		_MainTex("MainTex", 2D) = "white" {}
-		_Darkening("Darkening", Range( 0 , 1)) = 0
+		_ReadingLightening("ReadingLightening", Range( 0 , 1)) = 0
+		_ReadingDarkening("ReadingDarkening", Range( 0 , 1)) = 0
 		[HideInInspector] _texcoord2( "", 2D ) = "white" {}
 		[HideInInspector] _texcoord( "", 2D ) = "white" {}
 		[HideInInspector] __dirty( "", Int ) = 1
@@ -17,7 +18,7 @@ Shader "DiffuseLightControl"
 
 	SubShader
 	{
-		Tags{ "RenderType" = "Opaque"  "Queue" = "Geometry+0" }
+		Tags{ "RenderType" = "Opaque"  "Queue" = "Geometry+0" "IsEmissive" = "true"  }
 		Cull Back
 		CGINCLUDE
 		#include "UnityCG.cginc"
@@ -33,18 +34,20 @@ Shader "DiffuseLightControl"
 		};
 
 		uniform sampler2D _MainTex;
+		uniform half _ReadingLightening;
 
 		UNITY_INSTANCING_BUFFER_START(DiffuseLightControl)
 			UNITY_DEFINE_INSTANCED_PROP(half4, _MainTex_ST)
 #define _MainTex_ST_arr DiffuseLightControl
-			UNITY_DEFINE_INSTANCED_PROP(half, _Darkening)
-#define _Darkening_arr DiffuseLightControl
+			UNITY_DEFINE_INSTANCED_PROP(half, _ReadingDarkening)
+#define _ReadingDarkening_arr DiffuseLightControl
 		UNITY_INSTANCING_BUFFER_END(DiffuseLightControl)
 
 		void surf( Input i , inout SurfaceOutput o )
 		{
 			half4 _MainTex_ST_Instance = UNITY_ACCESS_INSTANCED_PROP(_MainTex_ST_arr, _MainTex_ST);
 			float2 uv_MainTex = i.uv_texcoord * _MainTex_ST_Instance.xy + _MainTex_ST_Instance.zw;
+			half4 tex2DNode1 = tex2D( _MainTex, uv_MainTex );
 			half2 staticUV55_g1 = (i.uv2_texcoord2*(unity_LightmapST).xy + (unity_LightmapST).zw);
 			float localASEDecodeDirectionalLightmap1_g86 = ( 0.0 );
 			half3 inputColor23_g86 = UNITY_SAMPLE_TEX2D( unity_Lightmap, staticUV55_g1 ).rgb;
@@ -65,9 +68,10 @@ Shader "DiffuseLightControl"
 				float4 staticSwitch226_g1 = UNITY_SAMPLE_TEX2D( unity_Lightmap, staticUV55_g1 );
 			#endif
 			half3 decodeLightMap2 = DecodeLightmap(staticSwitch226_g1);
-			half _Darkening_Instance = UNITY_ACCESS_INSTANCED_PROP(_Darkening_arr, _Darkening);
-			half4 lerpResult6 = lerp( tex2D( _MainTex, uv_MainTex ) , half4( ( float3( 0,0,0 ) * decodeLightMap2 ) , 0.0 ) , _Darkening_Instance);
+			half _ReadingDarkening_Instance = UNITY_ACCESS_INSTANCED_PROP(_ReadingDarkening_arr, _ReadingDarkening);
+			half4 lerpResult6 = lerp( tex2DNode1 , half4( ( float3( 0,0,0 ) * decodeLightMap2 ) , 0.0 ) , _ReadingDarkening_Instance);
 			o.Albedo = lerpResult6.rgb;
+			o.Emission = ( tex2DNode1 * _ReadingLightening ).rgb;
 			o.Alpha = 1;
 		}
 
@@ -155,16 +159,21 @@ Shader "DiffuseLightControl"
 Version=19202
 Node;AmplifyShaderEditor.DecodeLightmapHlpNode;2;-1059.154,169.7832;Inherit;True;2;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0,0,0,0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.FunctionNode;3;-1400.111,157.6708;Inherit;True;Sample Lightmap;1;;1;6976f0f966a01684ca0a6dde441141c2;6,209,0,195,0,196,0,238,0,191,0,249,0;2;71;FLOAT3;0,0,0;False;169;FLOAT3;0,0,0;False;2;COLOR;0;COLOR;178
-Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;0,0;Half;False;True;-1;2;ASEMaterialInspector;0;0;Lambert;DiffuseLightControl;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Back;0;False;;0;False;;False;0;False;;0;False;;False;0;Opaque;0.5;True;True;0;False;Opaque;;Geometry;All;12;all;True;True;True;True;0;False;;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;2;15;10;25;False;0.5;True;0;0;False;;0;False;;0;0;False;;0;False;;0;False;;0;False;;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;True;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;;-1;0;False;;0;1;;0;False;0.1;False;;0;False;;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;16;FLOAT4;0,0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;4;-563.7351,143.0048;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.LerpOp;6;-232.4493,115.1691;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.SamplerNode;1;-688,-59.5;Inherit;True;Property;_MainTex;MainTex;0;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.RangedFloatNode;5;-761.5502,340.8723;Inherit;False;InstancedProperty;_Darkening;Darkening;4;0;Create;True;0;0;0;True;0;False;0;0;0;1;0;1;FLOAT;0
+Node;AmplifyShaderEditor.SamplerNode;1;-688,-59.5;Inherit;True;Property;_MainTex;MainTex;0;0;Create;True;0;0;0;False;0;False;-1;None;ba90a9683127e044f8e0fdfe350143c8;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.RangedFloatNode;5;-761.5502,340.8723;Inherit;False;InstancedProperty;_ReadingDarkening;ReadingDarkening;5;0;Create;True;0;0;0;True;0;False;0;0;0;1;0;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;4;-563.7351,143.0048;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;158,136;Half;False;True;-1;2;ASEMaterialInspector;0;0;Lambert;DiffuseLightControl;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Back;0;False;;0;False;;False;0;False;;0;False;;False;0;Opaque;0.5;True;True;0;False;Opaque;;Geometry;All;12;all;True;True;True;True;0;False;;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;2;15;10;25;False;0.5;True;0;0;False;;0;False;;0;0;False;;0;False;;0;False;;0;False;;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;True;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;;-1;0;False;;0;1;;0;False;0.1;False;;0;False;;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;16;FLOAT4;0,0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;8;-149.825,312.3383;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
+Node;AmplifyShaderEditor.RangedFloatNode;7;-496.825,442.3383;Inherit;False;Property;_ReadingLightening;ReadingLightening;4;0;Create;True;0;0;0;False;0;False;0;0;0;1;0;1;FLOAT;0
 WireConnection;2;0;3;178
-WireConnection;0;0;6;0
-WireConnection;4;1;2;0
 WireConnection;6;0;1;0
 WireConnection;6;1;4;0
 WireConnection;6;2;5;0
+WireConnection;4;1;2;0
+WireConnection;0;0;6;0
+WireConnection;0;2;8;0
+WireConnection;8;0;1;0
+WireConnection;8;1;7;0
 ASEEND*/
-//CHKSM=E4A6F5C7E99026A742BA6A6D8C340EA09C3DA395
+//CHKSM=9B092AC13F361924C556CCCF07BFB950492CE91B
