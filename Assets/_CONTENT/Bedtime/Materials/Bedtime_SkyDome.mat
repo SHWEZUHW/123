@@ -122,7 +122,7 @@ Material:
     - _Tiling: 0.24
     - _UVSec: 0
     - _ZWrite: 1
-    - __dirty: 0
+    - __dirty: 1
     - _lerp: 0.82
     m_Colors:
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}

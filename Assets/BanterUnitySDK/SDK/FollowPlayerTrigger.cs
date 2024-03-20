@@ -7,7 +7,6 @@ using UnityEngine.AI;
 public class FollowPlayerTrigger : MonoBehaviour
 {
     public NavMeshAgent agent;
-    public UniqueObjectId uniqueObjectId;
     private TriggerEvent triggerEvent;
 
     private bool isTriggered;
@@ -17,9 +16,7 @@ public class FollowPlayerTrigger : MonoBehaviour
         triggerEvent = GetComponent<TriggerEvent>();
     }
     public void SetDestination(Transform destination){
-        if(triggerEvent != null) {
-            triggerEvent.uniqueObjectId.lastObject = destination;
-        }
+        triggerEvent.lastColliderEnter = destination;
         isTriggered = true;
     }
     // Update is called once per frame
@@ -33,7 +30,7 @@ public class FollowPlayerTrigger : MonoBehaviour
 
     void Update() {
         if(agent != null && isTriggered && agent.isOnNavMesh && agent.isActiveAndEnabled && agent.gameObject.activeSelf) {
-            agent.SetDestination(triggerEvent == null ? uniqueObjectId.lastObject.position : triggerEvent.uniqueObjectId.lastObject.position);
+            agent.SetDestination(triggerEvent.lastColliderEnter.position);
         }
     }
 }

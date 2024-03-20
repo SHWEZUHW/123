@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class ShaderPropertySetter : MonoBehaviour
 {
     // Shader property names and material index
@@ -15,6 +16,7 @@ public class ShaderPropertySetter : MonoBehaviour
     [SerializeField]
     [Tooltip("The index of the material on this GameObject.")]
     private int materialIndex;
+	
 
     [Header("Shader Properties to Apply")]
     [Tooltip("The name of the texture property in the shader.")]

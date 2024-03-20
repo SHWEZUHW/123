@@ -35,40 +35,24 @@ public class TriggerEvent : MonoBehaviour
     public bool isSynced;
     public bool adminOnly;
 
-    // [HideInInspector]
-    // public Transform lastColliderExit;
-
-    // [HideInInspector]
-    // public Transform lastColliderEnter;
+    [HideInInspector]
+    public Transform lastColliderExit;
 
     [HideInInspector]
-    public bool isLocal;
-
-    [HideInInspector]
-    public UniqueObjectId uniqueObjectId;
+    public Transform lastColliderEnter;
 
 #if BANTER_EDITOR 
     TriggerIndex index;
     void Start() {
-        uniqueObjectId = GetComponent<UniqueObjectId>();
-        uniqueObjectId.Gen();
+        var unique = GetComponent<UniqueObjectId>();
+        unique.Gen();
         index = GameObject.FindGameObjectWithTag("TriggerIndex").GetComponent<TriggerIndex>();
-        index?.AddTrigger(uniqueObjectId.Id, this);
+        index?.AddTrigger(unique.Id, this);
     }
     void OnDestroy() {
-        index?.RemoveTrigger(uniqueObjectId.Id);
+        index?.RemoveTrigger(GetComponent<UniqueObjectId>().Id);
     }
 #endif
-
-    public void SetIsSynced(bool on)
-    {
-        isSynced = on;
-    }
-
-    public void SetAdminOnly(bool on)
-    {
-        adminOnly = on;
-    }
 
     private bool CanActivate(Collider other, string type)
     {
@@ -82,36 +66,35 @@ public class TriggerEvent : MonoBehaviour
             _ => "Player"
         };
 
-        try{
+        //try{
             if (triggerType == TriggerType.ALL && (other.gameObject.CompareTag(tagToCheck) || other.gameObject.CompareTag("RemotePlayer")))
             {
                 if(type.Equals("sq-trigger-enter")) {
-                    uniqueObjectId.lastObject = other.transform;
+                    lastColliderEnter = other.transform;
                 }else{
-                    uniqueObjectId.lastObject = other.transform;
+                    lastColliderExit = other.transform;
                 }
                 return true;
             }
             else if (triggerType == TriggerType.LOCALONLY && other.gameObject.CompareTag(tagToCheck))
             {
-                uniqueObjectId.lastObject = other.transform;
-                // if(playerType == PlayerType.Player && playerType == PlayerType.PlayerHead && playerType == PlayerType.PlayerLocoBall) {
-                //     var me = GameObject.FindGameObjectWithTag("MyRemoteAvatar");
-                //     if(type.Equals("sq-trigger-enter")) {
-                //         uniqueObjectId.lastObject = me.transform;
-                //     }else{
-                //         uniqueObjectId.lastObject = me.transform;
-                //     }
-                // }else{
-                //     if(type.Equals("sq-trigger-enter")) {
-                //         uniqueObjectId.lastObject = other.transform;
-                //     }else{
-                //         uniqueObjectId.lastObject = other.transform;
-                //     }
-                // }
+                if(playerType == PlayerType.Player && playerType == PlayerType.PlayerHead && playerType == PlayerType.PlayerLocoBall) {
+                    var me = GameObject.FindGameObjectWithTag("MyRemoteAvatar");
+                    if(type.Equals("sq-trigger-enter")) {
+                        lastColliderEnter = me.transform;
+                    }else{
+                        lastColliderExit = me.transform;
+                    }
+                }else{
+                    if(type.Equals("sq-trigger-enter")) {
+                        lastColliderEnter = other.transform;
+                    }else{
+                        lastColliderExit = other.transform;
+                    }
+                }
 #if BANTER_EDITOR 
                 if(isSynced){
-                    index?.SyncTriggerEvent(type, uniqueObjectId.Id);
+                    index?.SyncTriggerEvent(type, GetComponent<UniqueObjectId>().Id);
                 }
 #endif
                 return true;
@@ -119,15 +102,15 @@ public class TriggerEvent : MonoBehaviour
             else if (triggerType == TriggerType.REMOTEONLY && other.gameObject.CompareTag("RemotePlayer"))
             {
                 if(type.Equals("sq-trigger-enter")) {
-                    uniqueObjectId.lastObject = other.transform;
+                    lastColliderEnter = other.transform;
                 }else{
-                    uniqueObjectId.lastObject = other.transform;
+                    lastColliderExit = other.transform;
                 }
                 return true;
             }
-        }catch{
-            Debug.Log("Error");
-	 }
+        //}catch{
+        //    Debug.Log("Error");
+        //}
         return false;
     }
 
@@ -139,7 +122,6 @@ public class TriggerEvent : MonoBehaviour
         if (CanActivate(other, "sq-trigger-enter"))
 #endif
         {
-            isLocal = true;
             onTriggerEnterEvent?.Invoke();
         }
     }
@@ -152,7 +134,6 @@ public class TriggerEvent : MonoBehaviour
         if (CanActivate(other, "sq-trigger-exit"))
 #endif
         {   
-            isLocal = true;
             onTriggerExitEvent?.Invoke();
         }
     }

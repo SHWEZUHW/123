@@ -8,10 +8,10 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ParalaxeBooks
-  m_Shader: {fileID: 4800000, guid: 7ea87dc28334d8f4c857218fea71de78, type: 3}
+  m_Shader: {fileID: 4800000, guid: 68157117ed6381e45a8090fa3a6a5e2c, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -28,6 +28,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: ba90a9683127e044f8e0fdfe350143c8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MainTex1:
+        m_Texture: {fileID: 2800000, guid: ba90a9683127e044f8e0fdfe350143c8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture0:
+        m_Texture: {fileID: 2800000, guid: c54643e29d815fd41acbe829d9a70983, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -39,11 +47,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _Darkening: 0
-    - _Float0: 0.1
+    - _Float0: 0.03
     - _Paralax: 0.0297
     - _ReadingDarkening: 0
     - _ReadingLightening: 0
+    - _RefPlane: 0.5
     - _TIling: 8.76
-    - __dirty: 1
+    - __dirty: 0
+    - _tile: 1
     m_Colors: []
   m_BuildTextureStacks: []
