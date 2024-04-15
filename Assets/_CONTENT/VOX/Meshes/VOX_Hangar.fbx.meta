@@ -263,7 +263,7 @@ ModelImporter:
     extraUserProperties:
     - '#BAKERY{"meshName":["Plane.002","Plane.001","Plane","User Pos.015","User Pos.014","User
       Pos.011","User Pos.010","User Pos.009","User Pos.007","User Pos.006","User
-      Pos.005","User Pos.004","User Pos.003","User Pos.002","User Pos.001","Tower_R_03","Tower_R_02","Tower_R_01","Hangar_Walls","Gate","Framework_02.003","Framework_02.002","Framework_02.001","Framework_02","Framework_01","Floor_Seg","Crane"],"padding":[117,117,27,238,256,256,256,256,141,256,256,256,251,68,6,9,5,8,1,1,25,7,7,1,1,2,1],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
+      Pos.005","User Pos.004","User Pos.003","User Pos.002","User Pos.001","Tower_R_03","Tower_R_02","Tower_R_01","Hangar_Walls","Gate","Framework_02.003","Framework_02.002","Framework_02.001","Framework_02","Framework_01","Floor_Seg","Crane"],"padding":[256,256,173,256,256,256,256,256,256,256,256,256,256,256,39,56,37,53,2,6,159,48,46,10,8,14,11],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

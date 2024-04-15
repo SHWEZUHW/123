@@ -8,13 +8,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: mushroms
-  m_Shader: {fileID: 4800000, guid: bff2b912d54bd8a4fb93c9b2bdc6b50a, type: 3}
+  m_Shader: {fileID: 4800000, guid: bba395a9be54e7048a31d7972045cfae, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3001
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -61,7 +61,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: ce7e9e9fe79a65b41bee0a44db77acce, type: 3}
+        m_Texture: {fileID: 8400000, guid: e350a7062e8f6aa4e80c8c9209580e9d, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:

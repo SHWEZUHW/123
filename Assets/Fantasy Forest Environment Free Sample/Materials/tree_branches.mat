@@ -80,9 +80,11 @@ Material:
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: 2.2
     - _SquashAmount: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _WaveHeight: 0.02
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:

@@ -14,6 +14,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: WoodPlank
     second: {fileID: 2100000, guid: 159089a04853ff449b2a3851fae2772e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodPlankProjector
+    second: {fileID: 2100000, guid: 55038a0e9e35a77448bc4cc6ee50428d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 1

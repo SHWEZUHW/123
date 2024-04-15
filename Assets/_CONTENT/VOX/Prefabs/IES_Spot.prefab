@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153304438934017982}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071065, w: 0.7071071}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -12.141, y: 27.603638, z: -56.808}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -47,9 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UID: 1045918092
   color: {r: 0.9198113, g: 0.9917537, b: 1, a: 1}
-  intensity: 15
+  intensity: 30
   shadowSpread: 0.05
-  cutoff: 20
+  cutoff: 30
   realisticFalloff: 0
   legacySampling: 1
   samples: 8
@@ -79,9 +79,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.9320564, b: 0.8915094, a: 1}
-  m_Intensity: 10
-  m_Range: 20
+  m_Color: {r: 0.9198113, g: 0.9917537, b: 1, a: 1}
+  m_Intensity: 30
+  m_Range: 30
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

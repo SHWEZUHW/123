@@ -45,11 +45,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex1:
-        m_Texture: {fileID: 8400000, guid: 9fcb8cf15a79d7949b513ea805fabad0, type: 2}
+        m_Texture: {fileID: 8400000, guid: daf2a63a9c1942047861dbc38a46f413, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask:
-        m_Texture: {fileID: 2800000, guid: a2c2aae89f092b54fa5b4a426456e458, type: 3}
+        m_Texture: {fileID: 2800000, guid: f4bbe2a5c741af640b7f81dfdd5119fb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -69,7 +69,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture0:
-        m_Texture: {fileID: 8400000, guid: 9fcb8cf15a79d7949b513ea805fabad0, type: 2}
+        m_Texture: {fileID: 8400000, guid: daf2a63a9c1942047861dbc38a46f413, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -84,6 +84,7 @@ Material:
     - _DstBlend: 0
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Layers: 8
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -92,9 +93,11 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - __dirty: 1
+    - __dirty: 0
     - _contrast: -0.05
-    - _scale: 0.1
+    - _layers: 18.1
+    - _scale: 0.08
+    - _softedge: 0.3
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

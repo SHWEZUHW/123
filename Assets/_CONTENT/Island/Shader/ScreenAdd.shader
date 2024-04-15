@@ -1,6 +1,6 @@
 // Upgrade NOTE: upgraded instancing buffer 'ScreenAdd' to new syntax.
 
-// Made with Amplify Shader Editor v1.9.2.2
+// Made with Amplify Shader Editor v1.9.3.2
 // Available at the Unity Asset Store - http://u3d.as/y3X 
 Shader "ScreenAdd"
 {
@@ -8,7 +8,8 @@ Shader "ScreenAdd"
 	{
 		_MainTex("MainTex", 2D) = "white" {}
 		_Mask("Mask", 2D) = "white" {}
-		_contrast("contrast", Range( -1 , 0)) = 1
+		_softedge("softedge", Range( 0 , 0.3)) = 0
+		_videocontrast("videocontrast", Range( -1 , 0)) = 0
 		[HideInInspector] _texcoord( "", 2D ) = "white" {}
 
 	}
@@ -71,14 +72,15 @@ Shader "ScreenAdd"
 			};
 
 			uniform sampler2D _MainTex;
+			uniform float _softedge;
 			uniform sampler2D _Mask;
 			UNITY_INSTANCING_BUFFER_START(ScreenAdd)
 				UNITY_DEFINE_INSTANCED_PROP(float4, _MainTex_ST)
 #define _MainTex_ST_arr ScreenAdd
 				UNITY_DEFINE_INSTANCED_PROP(float4, _Mask_ST)
 #define _Mask_ST_arr ScreenAdd
-				UNITY_DEFINE_INSTANCED_PROP(float, _contrast)
-#define _contrast_arr ScreenAdd
+				UNITY_DEFINE_INSTANCED_PROP(float, _videocontrast)
+#define _videocontrast_arr ScreenAdd
 			UNITY_INSTANCING_BUFFER_END(ScreenAdd)
 			float3 HSVToRGB( float3 c )
 			{
@@ -138,13 +140,14 @@ Shader "ScreenAdd"
 				float4 _MainTex_ST_Instance = UNITY_ACCESS_INSTANCED_PROP(_MainTex_ST_arr, _MainTex_ST);
 				float2 uv_MainTex = i.ase_texcoord1.xy * _MainTex_ST_Instance.xy + _MainTex_ST_Instance.zw;
 				float3 hsvTorgb9 = RGBToHSV( tex2D( _MainTex, uv_MainTex ).rgb );
-				float _contrast_Instance = UNITY_ACCESS_INSTANCED_PROP(_contrast_arr, _contrast);
-				float3 hsvTorgb10 = HSVToRGB( float3(hsvTorgb9.x,hsvTorgb9.y,(_contrast_Instance + (hsvTorgb9.z - 0.0) * (( 1.0 - _contrast_Instance ) - _contrast_Instance) / (1.0 - 0.0))) );
+				float _videocontrast_Instance = UNITY_ACCESS_INSTANCED_PROP(_videocontrast_arr, _videocontrast);
+				float3 hsvTorgb10 = HSVToRGB( float3(hsvTorgb9.x,hsvTorgb9.y,(_videocontrast_Instance + (hsvTorgb9.z - 0.0) * (( 1.0 - _videocontrast_Instance ) - _videocontrast_Instance) / (1.0 - 0.0))) );
 				float4 _Mask_ST_Instance = UNITY_ACCESS_INSTANCED_PROP(_Mask_ST_arr, _Mask_ST);
 				float2 uv_Mask = i.ase_texcoord1.xy * _Mask_ST_Instance.xy + _Mask_ST_Instance.zw;
+				float smoothstepResult18 = smoothstep( -0.0001 , _softedge , tex2D( _Mask, uv_Mask ).r);
 				
 				
-				finalColor = saturate( ( float4( hsvTorgb10 , 0.0 ) * tex2D( _Mask, uv_Mask ) ) );
+				finalColor = float4( saturate( ( hsvTorgb10 * smoothstepResult18 ) ) , 0.0 );
 				return finalColor;
 			}
 			ENDCG
@@ -155,28 +158,32 @@ Shader "ScreenAdd"
 	Fallback Off
 }
 /*ASEBEGIN
-Version=19202
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;3;184,-120.5;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
+Version=19302
+Node;AmplifyShaderEditor.SamplerNode;1;-798,-312.5;Inherit;True;Property;_MainTex;MainTex;0;0;Create;True;0;0;0;False;0;False;-1;None;9fcb8cf15a79d7949b513ea805fabad0;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.RangedFloatNode;5;-802.7328,-9.408203;Inherit;False;InstancedProperty;_videocontrast;videocontrast;3;0;Create;True;0;0;0;True;0;False;0;0;-1;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RGBToHSVNode;9;-507,-433.5;Inherit;False;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
-Node;AmplifyShaderEditor.HSVToRGBNode;10;-66,-409.5;Inherit;True;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
-Node;AmplifyShaderEditor.TFHCRemapNode;12;-295,-266.5;Inherit;False;5;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;4;FLOAT;1;False;1;FLOAT;0
-Node;AmplifyShaderEditor.SaturateNode;13;254,-272.5;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;4;401,-125;Float;False;True;-1;2;ASEMaterialInspector;100;5;ScreenAdd;0770190933193b94aaa3065e307002fa;True;Unlit;0;0;Unlit;2;True;True;4;1;False;;1;False;;0;1;False;;0;False;;True;0;False;;0;False;;False;False;False;False;False;False;False;False;False;True;0;False;;True;True;2;False;;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;1;RenderType=Opaque=RenderType;True;2;False;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;0;;0;0;Standard;1;Vertex Position,InvertActionOnDeselection;1;0;0;1;True;False;;False;0
-Node;AmplifyShaderEditor.SamplerNode;2;-187,-43.5;Inherit;True;Property;_Mask;Mask;1;0;Create;True;0;0;0;False;0;False;-1;None;a2c2aae89f092b54fa5b4a426456e458;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SamplerNode;1;-798,-312.5;Inherit;True;Property;_MainTex;MainTex;0;0;Create;True;0;0;0;False;0;False;-1;None;233630d4aa48c3f4fbaadc6960a7e705;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.OneMinusNode;15;-464,46.5;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;5;-802.7328,-9.408203;Inherit;False;InstancedProperty;_contrast;contrast;2;0;Create;True;0;0;0;True;0;False;1;0;-1;0;0;1;FLOAT;0
-WireConnection;3;0;10;0
-WireConnection;3;1;2;0
+Node;AmplifyShaderEditor.SamplerNode;2;-119,-155.5;Inherit;True;Property;_Mask;Mask;1;0;Create;True;0;0;0;False;0;False;-1;None;f4bbe2a5c741af640b7f81dfdd5119fb;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.TFHCRemapNode;12;-295,-266.5;Inherit;False;5;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;4;FLOAT;1;False;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;17;-108.476,31.2179;Inherit;False;Property;_softedge;softedge;2;0;Create;True;0;0;0;True;0;False;0;0.3;0;0.3;0;1;FLOAT;0
+Node;AmplifyShaderEditor.HSVToRGBNode;10;-66,-409.5;Inherit;True;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.SmoothstepOpNode;18;187.524,-130.7821;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;-0.0001;False;2;FLOAT;1;False;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;19;379.524,-187.7821;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.SaturateNode;13;529,-188.5;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;4;677,-191;Float;False;True;-1;2;ASEMaterialInspector;100;5;ScreenAdd;0770190933193b94aaa3065e307002fa;True;Unlit;0;0;Unlit;2;True;True;4;1;False;;1;False;;0;1;False;;0;False;;True;0;False;;0;False;;False;False;False;False;False;False;False;False;False;True;0;False;;True;True;2;False;;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;1;RenderType=Opaque=RenderType;True;2;False;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;0;;0;0;Standard;1;Vertex Position,InvertActionOnDeselection;1;0;0;1;True;False;;False;0
 WireConnection;9;0;1;0
-WireConnection;10;0;9;1
-WireConnection;10;1;9;2
-WireConnection;10;2;12;0
+WireConnection;15;0;5;0
 WireConnection;12;0;9;3
 WireConnection;12;3;5;0
 WireConnection;12;4;15;0
-WireConnection;13;0;3;0
+WireConnection;10;0;9;1
+WireConnection;10;1;9;2
+WireConnection;10;2;12;0
+WireConnection;18;0;2;1
+WireConnection;18;2;17;0
+WireConnection;19;0;10;0
+WireConnection;19;1;18;0
+WireConnection;13;0;19;0
 WireConnection;4;0;13;0
-WireConnection;15;0;5;0
 ASEEND*/
-//CHKSM=3C41A1B6C0EA29DC13AD0B6AC12090F48D9823B4
+//CHKSM=BDA2CB6AAE9D9F22AAE00363806647A8A8F61765

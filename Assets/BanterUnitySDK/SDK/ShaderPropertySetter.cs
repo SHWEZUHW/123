@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class ShaderPropertySetter : MonoBehaviour
 {
     // Shader property names and material index
@@ -16,7 +15,6 @@ public class ShaderPropertySetter : MonoBehaviour
     [SerializeField]
     [Tooltip("The index of the material on this GameObject.")]
     private int materialIndex;
-	
 
     [Header("Shader Properties to Apply")]
     [Tooltip("The name of the texture property in the shader.")]
@@ -68,6 +66,21 @@ public class ShaderPropertySetter : MonoBehaviour
             Debug.LogError("Material index out of range or Renderer not found.");
         }
     }
+	
+	public void UpdateMaterialReference()
+{
+    Renderer renderer = optionalMeshRenderer != null ? optionalMeshRenderer : GetComponent<Renderer>();
+    if (renderer != null && renderer.materials.Length > materialIndex)
+    {
+        material = renderer.materials[materialIndex];
+    }
+    else
+    {
+        Debug.LogError("Material index out of range or Renderer not found.");
+        material = null; 
+    }
+}
+
 
  public void SetTexture(Texture textureValue)
     {
