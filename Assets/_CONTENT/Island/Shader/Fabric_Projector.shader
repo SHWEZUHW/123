@@ -169,13 +169,13 @@ Shader "Banter/FabricProjector"
 }
 /*ASEBEGIN
 Version=19302
-Node;AmplifyShaderEditor.VertexColorNode;21;829.4816,-487.3912;Inherit;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SamplerNode;74;739.8364,-679.6627;Inherit;True;Property;_MainTex;MainTex;0;0;Create;True;0;0;0;False;0;False;-1;None;cbbcc705988ba6a4098103d6e3f20517;True;0;False;black;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.FunctionNode;34;402.2584,-86.43433;Inherit;True;Sample Lightmap;1;;1;6976f0f966a01684ca0a6dde441141c2;6,209,0,195,0,196,0,238,0,191,0,249,0;2;71;FLOAT3;0,0,0;False;169;FLOAT3;0,0,0;False;2;COLOR;0;COLOR;178
+Node;AmplifyShaderEditor.VertexColorNode;21;829.4816,-487.3912;Inherit;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;72;1204.305,-624.0011;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.DecodeLightmapHlpNode;35;743.2153,-74.32193;Inherit;True;2;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0,0,0,0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.TextureCoordinatesNode;81;130.7758,-410.5079;Inherit;False;2;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.RangedFloatNode;31;321.555,-211.047;Inherit;False;InstancedProperty;_screenprojection;screenprojection;5;0;Create;True;0;0;0;True;0;False;0.25;1.03;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;31;321.555,-211.047;Inherit;False;InstancedProperty;_screenprojection;screenprojection;5;0;Create;True;0;0;0;True;0;False;0.25;1;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;38;1074.031,17.95516;Inherit;False;InstancedProperty;_terrainlight;terrainlight;6;0;Create;True;0;0;0;True;0;False;0;0;0;2;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SamplerNode;27;412.2585,-422.4501;Inherit;True;Property;_Video;Video;4;0;Create;True;0;0;0;False;0;False;-1;None;9fcb8cf15a79d7949b513ea805fabad0;True;2;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleDivideOpNode;80;561.9015,-207.071;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;10;False;1;FLOAT;0
@@ -201,4 +201,4 @@ WireConnection;79;0;37;0
 WireConnection;79;1;30;0
 WireConnection;0;2;79;0
 ASEEND*/
-//CHKSM=A96386CEB965103D3C98052E057E3256437480ED
+//CHKSM=9B208EA3ACF519C9574FF2D417B98D12B5C24464

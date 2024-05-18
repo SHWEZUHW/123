@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 3460951310315813024}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Player
+  m_TagString: __BA_HexaBodyPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 3460951310957227841}
   m_Layer: 0
   m_Name: Feet
-  m_TagString: PlayerHead
+  m_TagString: __BA_PlayerLocoBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 3460951311384004198}
   m_Layer: 0
   m_Name: Head
-  m_TagString: PlayerHead
+  m_TagString: __BA_PlayerHead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

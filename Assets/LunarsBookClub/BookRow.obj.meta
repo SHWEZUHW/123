@@ -129,7 +129,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["SodomySpine","SodomyFace","RowofBookSpine","RowofBooks"],"padding":[256,200,153,55],"unwrapper":[0,0,0,0]}'
+    - '#BAKERY{"meshName":["SodomySpine","SodomyFace","RowofBookSpine","RowofBooks"],"padding":[256,200,153,55],"unwrapper":[1,1,1,1]}'
     clipAnimations: []
     isReadable: 1
   meshes:

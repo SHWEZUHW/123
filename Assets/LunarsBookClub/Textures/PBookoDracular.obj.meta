@@ -83,7 +83,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["SpineDracular","Scene_-_Root_0"],"padding":[256,154],"unwrapper":[0,0]}'
+    - '#BAKERY{"meshName":["SpineDracular","Scene_-_Root_0"],"padding":[256,154],"unwrapper":[1,1]}'
     clipAnimations: []
     isReadable: 1
   meshes:

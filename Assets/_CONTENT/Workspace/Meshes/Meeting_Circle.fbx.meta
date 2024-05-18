@@ -51,7 +51,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Cylinder.002","Cylinder","Column_01.002","Column_01.001","Column_01"],"padding":[13,3,42,33,14],"unwrapper":[0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["Cylinder.002","Cylinder","Column_01.002","Column_01.001","Column_01"],"padding":[13,2,42,33,14],"unwrapper":[0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

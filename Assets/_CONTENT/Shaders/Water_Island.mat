@@ -20,6 +20,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Day:
+        m_Texture: {fileID: 8900000, guid: c64bc3aff5756394dbee25ab056dea98, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainNormal:
         m_Texture: {fileID: 2800000, guid: 4695cdfbbb7dbd54ba973026a03261e8, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -34,7 +38,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Float0: 0.0304
+    - _DayBlend: 1
+    - _Float0: 0
     - _Gloss: 0.183
     - _IntersectIntensity: 1
     - _Speed: 0.0083

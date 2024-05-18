@@ -101,7 +101,7 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 1, g: 0.31603754, b: 0.31603754, a: 1}
+    - _Color: {r: 1, g: 0.3160375, b: 0.3160375, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _RippleCentre: {r: 0, g: 0, b: 8, a: 0}
   m_BuildTextureStacks: []

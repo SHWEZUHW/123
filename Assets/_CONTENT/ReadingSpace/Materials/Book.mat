@@ -36,6 +36,7 @@ Material:
     m_Floats:
     - _Darkening: 0
     - _ReadingDarkening: 0
-    - __dirty: 0
+    - _ReadingLightening: 0
+    - __dirty: 1
     m_Colors: []
   m_BuildTextureStacks: []
