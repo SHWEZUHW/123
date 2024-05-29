@@ -20,55 +20,19 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BackgroundTex:
-        m_Texture: {fileID: 2800000, guid: 8dcd69bfd603cf94790e3ba41be42568, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _CloseTexture:
         m_Texture: {fileID: 2800000, guid: edb9d079b48fef349a93fe4ab80346a2, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _CracksTex:
-        m_Texture: {fileID: 2800000, guid: cd7ff7a8b7a6c5e45b67c75f900d4840, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DepthTex:
-        m_Texture: {fileID: 2800000, guid: b8b411a44d2e66d45b7e2cf95448e601, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DisolveGuide:
         m_Texture: {fileID: 2800000, guid: 3a210310532f41d4aa236e1f27d32497, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DisolveGuide2:
-        m_Texture: {fileID: 2800000, guid: e9b6b77ff6269744f8ee731c9dd8e2c7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _FarTexture:
         m_Texture: {fileID: 2800000, guid: 02ab69a4da32b6747862edd2c534b7b7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: edb9d079b48fef349a93fe4ab80346a2, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Tex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureSample4:
-        m_Texture: {fileID: 2800000, guid: edb9d079b48fef349a93fe4ab80346a2, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureSample5:
-        m_Texture: {fileID: 2800000, guid: 02ab69a4da32b6747862edd2c534b7b7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord2:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}

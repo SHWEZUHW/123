@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18357661, g: 0.22909853, b: 0.30547908, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -632,7 +632,7 @@ MonoBehaviour:
     debug: 0
   _aoShader: {fileID: 4800000, guid: 65e203e5acda447acbf9dc1ef78c4a39, type: 3}
   _aoMaterial: {fileID: 0}
-  _quadMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  _quadMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 3}
   _OcclusionTexture: 180
   _Intensity: 242
   _Radius: 20
@@ -733,8 +733,6 @@ MonoBehaviour:
         edgeDetectionThreshold: 0.125
         minimumRequiredLuminance: 0.05
 , <validSourceFormat>k__BackingField: 0, m_QualitySettings: 255, m_ConsoleSettings: 256}
-  m_Method: 0
-  m_Camera: {fileID: 17020572}
 --- !u!114 &17020581
 MonoBehaviour:
   m_ObjectHideFlags: 0

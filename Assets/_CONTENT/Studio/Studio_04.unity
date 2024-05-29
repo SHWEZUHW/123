@@ -3936,6 +3936,7 @@ MonoBehaviour:
       m_Calls: []
   isSynced: 0
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &1960646234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3949,6 +3950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: bc691722-234c-4822-a1d9-90d8ee13d8dd
+  lastObject: {fileID: 0}
 --- !u!1 &1966254287
 GameObject:
   m_ObjectHideFlags: 0
@@ -4073,6 +4075,7 @@ MonoBehaviour:
   isSynced: 0
   adminOnly: 0
   _lobby: {fileID: 0}
+  isLocal: 0
 --- !u!114 &1970943345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4104,6 +4107,7 @@ MonoBehaviour:
   isSynced: 0
   adminOnly: 0
   _lobby: {fileID: 0}
+  isLocal: 0
 --- !u!114 &1970943346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4117,6 +4121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: dd2cb160-f396-430b-b3a5-b7e8b2265d48
+  lastObject: {fileID: 0}
 --- !u!114 &1970943347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4241,6 +4246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: cb17de96-1ac9-4ff5-b58f-08ebda7a8554
+  lastObject: {fileID: 0}
 --- !u!65 &2003323511
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -192,6 +192,7 @@ MonoBehaviour:
   shadowSpread: 0.05
   cutoff: 21
   realisticFalloff: 0
+  legacySampling: 1
   samples: 8
   projMode: 1
   cookie: {fileID: 2800000, guid: 3a66602b8cc7fdd4ab57d07b4176432b, type: 3}
@@ -207,6 +208,7 @@ MonoBehaviour:
   falloffMinRadius: 1
   shadowmaskGroupID: 0
   directionMode: 0
+  maskChannel: 0
 --- !u!4 &323907819
 Transform:
   m_ObjectHideFlags: 0
@@ -257,6 +259,7 @@ MonoBehaviour:
   shadowSpread: 0.05
   cutoff: 7.04
   realisticFalloff: 0
+  legacySampling: 1
   samples: 8
   projMode: 1
   cookie: {fileID: 2800000, guid: 3a66602b8cc7fdd4ab57d07b4176432b, type: 3}
@@ -272,6 +275,7 @@ MonoBehaviour:
   falloffMinRadius: 1
   shadowmaskGroupID: 0
   directionMode: 0
+  maskChannel: 0
 --- !u!4 &383844404
 Transform:
   m_ObjectHideFlags: 0
@@ -1186,6 +1190,7 @@ MonoBehaviour:
   shadowSpread: 0.05
   cutoff: 7.04
   realisticFalloff: 0
+  legacySampling: 1
   samples: 8
   projMode: 1
   cookie: {fileID: 2800000, guid: 3a66602b8cc7fdd4ab57d07b4176432b, type: 3}
@@ -1201,6 +1206,7 @@ MonoBehaviour:
   falloffMinRadius: 1
   shadowmaskGroupID: 0
   directionMode: 0
+  maskChannel: 0
 --- !u!4 &1049066124
 Transform:
   m_ObjectHideFlags: 0
@@ -6182,6 +6188,7 @@ MonoBehaviour:
   shadowSpread: 0.05
   cutoff: 7.04
   realisticFalloff: 0
+  legacySampling: 1
   samples: 8
   projMode: 1
   cookie: {fileID: 2800000, guid: 3a66602b8cc7fdd4ab57d07b4176432b, type: 3}
@@ -6197,6 +6204,7 @@ MonoBehaviour:
   falloffMinRadius: 1
   shadowmaskGroupID: 0
   directionMode: 0
+  maskChannel: 0
 --- !u!4 &1264672222
 Transform:
   m_ObjectHideFlags: 0
@@ -6622,6 +6630,7 @@ MonoBehaviour:
   shadowSpread: 0.05
   cutoff: 7.04
   realisticFalloff: 0
+  legacySampling: 1
   samples: 8
   projMode: 1
   cookie: {fileID: 2800000, guid: 3a66602b8cc7fdd4ab57d07b4176432b, type: 3}
@@ -6637,6 +6646,7 @@ MonoBehaviour:
   falloffMinRadius: 1
   shadowmaskGroupID: 0
   directionMode: 0
+  maskChannel: 0
 --- !u!4 &1693958510
 Transform:
   m_ObjectHideFlags: 0
@@ -6766,6 +6776,7 @@ MonoBehaviour:
   renderSettingsRenderDirMode: 0
   renderSettingsShowCheckerSettings: 0
   renderSettingsSamplesWarning: 1
+  renderSettingsSuppressPopups: 0
   renderSettingsPrefabWarning: 1
   renderSettingsSplitByScene: 0
   renderSettingsSplitByTag: 0
@@ -7318,6 +7329,7 @@ MonoBehaviour:
   shadowSpread: 0.05
   cutoff: 7.04
   realisticFalloff: 0
+  legacySampling: 1
   samples: 8
   projMode: 1
   cookie: {fileID: 2800000, guid: 3a66602b8cc7fdd4ab57d07b4176432b, type: 3}
@@ -7333,6 +7345,7 @@ MonoBehaviour:
   falloffMinRadius: 1
   shadowmaskGroupID: 0
   directionMode: 0
+  maskChannel: 0
 --- !u!4 &2116296227
 Transform:
   m_ObjectHideFlags: 0

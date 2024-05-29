@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Water_Island
-    second: {fileID: 2100000, guid: 1b361e4361bbf394ea8d2c7b3d615ec0, type: 2}
+    second: {fileID: 2100000, guid: 1c152dbb111222e4ebc13d0b256dfe5f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 1

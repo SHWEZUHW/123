@@ -1,3 +1,69 @@
+v1.9.4
+
+   Editor
+      * Template-restricted/specific nodes now show errors with Surface shader (#299)
+      * Fixed nodes sometimes missing attributes (#296)
+      * Fixed swizzle node preview (#292)
+      * Fixed "forwardadd" option added to URP/HDRP with "Instanced Terrain" (#300)
+
+   Templates 
+      * Added Lit/Unlit option for "Enable SSAO" URP 10-17x (#289)
+      * Added Lit/Unlit option for "Receive shadows" URP 10-17x (#233)
+      * Added Lighting Model option (PBR or Simple) to URP Lit 12-17x
+      * Fixed Lit/Unlit missing DOTS support in ExtraPrePass URP 10-17x (#286)
+      * Fixed Unlit missing FoveatedRenderingKeywords.hlsl URP 14-17x (#288)
+      * Fixed Lit LOD Cross Fade pragma in Forward and Gbuffer passes URP 16x
+      * Fixed Lit/Fabric Decal error in 2023.1.0 HDRP 15x (#293)
+      * Fixed Premultiply shader bug in URP Unlit template, all versions (#301)
+      * Fixed terrain instancing in BiRP templates
+      * Fixed foveated rendering related errors on macOS (URP 14) using Forward+ (#238)
+
+   Nodes
+      * Added "Object Bounds" node
+      * Added "Object Position" node
+      * Added "Compute Mip Level" node
+      * Added "Alpha Split" and "Alpha Merge" nodes
+      * Added "Flip" node work in progress
+      * Added "Nand" node
+      * Added "Not" node
+      * Added "Is Infinite"
+      * Added "Is NaN" node
+      * Added "Current Frame" output to "Flipbook UV Animation" node
+      * Added "Max Frame" property to "Flipbook UV Animation" node
+      * Added "Switch" node support for "dynamic_branch" pragma
+      * Renamed "Static Switch" node to "Switch"
+      * Updated "Light Attenuation" node for URP 14.0.9 to 17 (#238)
+      * Fixed "SRP Baked GI" and "Indirect Diffuse Light" nodes in HDRP 17x (#285)
+      * Fixed "If" node code generation to take proper advantage of dynamic branching
+      * Fixed "Billboard" node generating implicit vector casting
+      * Fixed "Dither" node causing crashes on PS5
+      * Fixed "SRP Baked GI" node in Unity 16x 2023.2.20+ (#298)
+      * Fixed "SRP Baked GI" node error in Unity 14x 2022.3.26+ (#297)
+      * Fixed "Flipbook" node to also work with Clamp wrap mode (#304)
+      * Fixed timing issues in "Flipbook UV Animation" node
+      * Fixed "Indirect Diffuse Lighting" generating code in "Meta" pass (#232)
+
+v1.9.3.3
+
+   Editor
+      * Added support for Unity 6 (preview)
+      * Split Preferences into User-level and Project-level settings
+      * Added template ase_unity_cond_begin/end replacement tags (Unity version)
+      * Added template ability to set port actions via LinkId instead of Id/Name
+
+   Templates
+      * SRP 17x templates updated per Unity 6.0.0b13
+      * Updated HDRP Hair templates
+      * Fixed Double Sided Mode in HDRP templates (#279)
+      * Added conservative depth option to HDRP templates
+      * Fixed decal error in Decal template in HDRP 12x 14x
+      * Added missing Dots include in URP Unlit DepthNormal pass (#267)
+      * Fixed incorrect include for Foveated Rendering in URP
+      * Updated all templates 10x to 17x
+
+   Nodes
+      * Fixed DepthFade and ScreenDepth code generation in URP (#271)
+
 v1.9.3.2
 
    Templates

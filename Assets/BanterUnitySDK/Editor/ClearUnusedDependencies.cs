@@ -13,37 +13,46 @@ public class ClearUnusedDependencies : EditorWindow
         foreach (string sceneGuid in allSceneGuids)
         {
             string scenePath = AssetDatabase.GUIDToAssetPath(sceneGuid);
-            EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Single);
 
-            // Find all materials in the scene
-            Material[] materials = Resources.FindObjectsOfTypeAll<Material>();
-            foreach (Material material in materials)
+            // Check if the scene is part of a read-only package
+            if (AssetDatabase.IsOpenForEdit(scenePath, StatusQueryOptions.UseCachedIfPossible))
             {
-                // Clear unused textures from materials
-                SerializedObject materialSO = new SerializedObject(material);
-                SerializedProperty textureProperty = materialSO.FindProperty("m_SavedProperties.m_TexEnvs");
-                if (textureProperty != null && textureProperty.isArray)
+                EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Single);
+
+                // Find all materials in the scene
+                Material[] materials = Resources.FindObjectsOfTypeAll<Material>();
+                foreach (Material material in materials)
                 {
-                    for (int i = textureProperty.arraySize - 1; i >= 0; i--)
+                    // Clear unused textures from materials
+                    SerializedObject materialSO = new SerializedObject(material);
+                    SerializedProperty textureProperty = materialSO.FindProperty("m_SavedProperties.m_TexEnvs");
+                    if (textureProperty != null && textureProperty.isArray)
                     {
-                        SerializedProperty element = textureProperty.GetArrayElementAtIndex(i);
-                        if (element.FindPropertyRelative("second.m_Texture").objectReferenceValue == null)
+                        for (int i = textureProperty.arraySize - 1; i >= 0; i--)
                         {
-                            textureProperty.DeleteArrayElementAtIndex(i);
+                            SerializedProperty element = textureProperty.GetArrayElementAtIndex(i);
+                            if (element.FindPropertyRelative("second.m_Texture").objectReferenceValue == null)
+                            {
+                                textureProperty.DeleteArrayElementAtIndex(i);
+                            }
                         }
                     }
+                    materialSO.ApplyModifiedProperties();
                 }
-                materialSO.ApplyModifiedProperties();
+
+                // Optionally, clear unused components or objects if needed
+                // Note: Implement additional checks and clearances as per your project requirements
+
+                EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene());
             }
-
-            // Optionally, clear unused components or objects if needed
-            // Note: Implement additional checks and clearances as per your project requirements
-
-            EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene());
+            else
+            {
+                Debug.LogWarning($"Skipping read-only scene: {scenePath}");
+            }
         }
 
         // Refresh the AssetDatabase
         AssetDatabase.Refresh();
-        Debug.Log("Cleared unused dependencies in all scenes.");
+        Debug.Log("Cleared unused dependencies in editable scenes.");
     }
 }

@@ -2,15 +2,24 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: HealthBox_Mat
   m_Shader: {fileID: 4800000, guid: b34654626c8ce6e439d2bdded5f33dc8, type: 3}
-  m_ShaderKeywords: V_CW_RANGE_FADE _ALPHATEST_ON _DISSOLVEALPHASOURCE_TWO_CUSTOM_MAPS
-    _DISSOLVEGLOBALCONTROL_ALL _DISSOLVEMAPPINGTYPE_TRIPLANAR _DISSOLVEMASK_PLANE
-    _EMISSION _NORMALMAP _USE_MASK_ON
+  m_ValidKeywords:
+  - V_CW_RANGE_FADE
+  - _ALPHATEST_ON
+  - _EMISSION
+  - _NORMALMAP
+  m_InvalidKeywords:
+  - _DISSOLVEALPHASOURCE_TWO_CUSTOM_MAPS
+  - _DISSOLVEGLOBALCONTROL_ALL
+  - _DISSOLVEMAPPINGTYPE_TRIPLANAR
+  - _DISSOLVEMASK_PLANE
+  - _USE_MASK_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -29,10 +38,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DetailBump:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _DetailMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -41,40 +46,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DissolveEdgeTexture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DissolveMap1:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DissolveMap2:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DissolveMap3:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Emission:
-        m_Texture: {fileID: 2800000, guid: cdc66261c4308f946843261245df3c0b, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 2800000, guid: 3d56a43464e112c478688f67d29bf8ba, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 6bac172767b85234399eb32b3ab59055, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicRough:
-        m_Texture: {fileID: 2800000, guid: b886a1fad462d95409b927b7fd72c9a2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -89,22 +66,7 @@ Material:
         m_Texture: {fileID: 2800000, guid: b237185a5b0e1dd468010c026e4b7b6f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _TopAlbedo:
-        m_Texture: {fileID: 2800000, guid: fd467bbf94d53bb499d3c3075cb021c9, type: 3}
-        m_Scale: {x: 0.7, y: 0.7}
-        m_Offset: {x: 0, y: 0}
-    - _TopMetallicRough:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TopNormal:
-        m_Texture: {fileID: 2800000, guid: 8d24d1cae6ab73546a92f7aeae5c2921, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TopNormal2:
-        m_Texture: {fileID: 2800000, guid: b5e52e512494f434c88a1675f0e9361d, type: 3}
-        m_Scale: {x: 3, y: 3}
-        m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - V_CW_RangeFadeDrawer: 0
     - _BumpScale: 1
@@ -170,3 +132,4 @@ Material:
     - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
     - _V_CW_DetailTex_Scroll: {r: 0, g: 0, b: 0, a: 0}
     - _V_CW_MainTex_Scroll: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

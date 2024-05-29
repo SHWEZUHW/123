@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -820,6 +820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: cb17de96-1ac9-4ff5-b58f-08ebda7a8554
+  lastObject: {fileID: 0}
 --- !u!65 &441832791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -979,6 +980,7 @@ MonoBehaviour:
       m_Calls: []
   isSynced: 0
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &499369474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -992,6 +994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: bc691722-234c-4822-a1d9-90d8ee13d8dd
+  lastObject: {fileID: 0}
 --- !u!65 &499369475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4264,6 +4267,7 @@ MonoBehaviour:
   isSynced: 0
   adminOnly: 0
   _lobby: {fileID: 0}
+  isLocal: 0
 --- !u!114 &1303807640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4295,6 +4299,7 @@ MonoBehaviour:
   isSynced: 0
   adminOnly: 0
   _lobby: {fileID: 0}
+  isLocal: 0
 --- !u!114 &1303807641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4308,6 +4313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: dd2cb160-f396-430b-b3a5-b7e8b2265d48
+  lastObject: {fileID: 0}
 --- !u!114 &1303807642
 MonoBehaviour:
   m_ObjectHideFlags: 0

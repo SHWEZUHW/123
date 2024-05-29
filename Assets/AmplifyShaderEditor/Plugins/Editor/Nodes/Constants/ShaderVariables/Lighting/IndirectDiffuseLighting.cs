@@ -211,6 +211,12 @@ namespace AmplifyShaderEditor
 				{
 					if( dataCollector.CurrentSRPType == TemplateSRPType.URP )
 					{
+						if ( !dataCollector.TemplateDataCollectorInstance.HasRawInterpolatorOfName( "lightmapUVOrVertexSH" ) )
+						{
+							finalValue = "0";
+							return finalValue;
+						}
+
 						string texcoord1 = string.Empty;
 
 						if( dataCollector.TemplateDataCollectorInstance.HasInfo( TemplateInfoOnSematics.TEXTURE_COORDINATES1, false, MasterNodePortCategory.Vertex ) )
@@ -221,37 +227,38 @@ namespace AmplifyShaderEditor
 						string vOutName = dataCollector.TemplateDataCollectorInstance.CurrentTemplateData.VertexFunctionData.OutVarName;
 						string fInName = dataCollector.TemplateDataCollectorInstance.CurrentTemplateData.FragmentFunctionData.InVarName;
 
-
-						if( !dataCollector.TemplateDataCollectorInstance.HasRawInterpolatorOfName( "lightmapUVOrVertexSH" ) )
-						{
-							string worldNormal = dataCollector.TemplateDataCollectorInstance.GetWorldNormal( PrecisionType.Float, false, MasterNodePortCategory.Vertex );
-							dataCollector.TemplateDataCollectorInstance.RequestNewInterpolator( WirePortDataType.FLOAT4, false, "lightmapUVOrVertexSH" );
-
-							dataCollector.AddToVertexLocalVariables( UniqueId, "OUTPUT_LIGHTMAP_UV( " + texcoord1 + ", unity_LightmapST, " + vOutName + ".lightmapUVOrVertexSH.xy );" );
-
-							if ( ASEPackageManagerHelper.PackageSRPVersion >= ( int )ASESRPBaseline.ASE_SRP_15 )
-							{
-								string worldPos = dataCollector.TemplateDataCollectorInstance.GetWorldPos( false, MasterNodePortCategory.Vertex );
-								dataCollector.AddToVertexLocalVariables( UniqueId, "#if !defined( OUTPUT_SH4 )" );
-								dataCollector.AddToVertexLocalVariables( UniqueId, "OUTPUT_SH( " + worldPos + ", " + worldNormal + ", GetWorldSpaceNormalizeViewDir( " + worldPos + " ), " + vOutName + ".lightmapUVOrVertexSH.xyz );" );
-								dataCollector.AddToVertexLocalVariables( UniqueId, "#else" );
-								dataCollector.AddToVertexLocalVariables( UniqueId, "OUTPUT_SH4( " + worldPos + ", " + worldNormal + ", GetWorldSpaceNormalizeViewDir( " + worldPos + " ), " + vOutName + ".lightmapUVOrVertexSH.xyz );" );
-								dataCollector.AddToVertexLocalVariables( UniqueId, "#endif" );
-							}								
-							else
-							{
-								dataCollector.AddToVertexLocalVariables( UniqueId, "OUTPUT_SH( " + worldNormal + ", " + vOutName + ".lightmapUVOrVertexSH.xyz );" );
-							}
-
-							dataCollector.AddToPragmas( UniqueId, "multi_compile _ DIRLIGHTMAP_COMBINED" );
-							dataCollector.AddToPragmas( UniqueId, "multi_compile _ LIGHTMAP_ON" );
-							dataCollector.AddToPragmas( UniqueId , "multi_compile _ _MIXED_LIGHTING_SUBTRACTIVE" );
-
-							dataCollector.AddToPragmas( UniqueId , "multi_compile _ _MAIN_LIGHT_SHADOWS" );
-							dataCollector.AddToPragmas( UniqueId , "multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE" );
-							dataCollector.AddToPragmas( UniqueId , "multi_compile _ _SHADOWS_SOFT" );
-
-						}
+						// @diogo: Disabled this piece of code for now since it was generating code only for Meta pass, where it's not even necessary
+						//         Keeping it commented for now, just in case.
+						//if( !dataCollector.TemplateDataCollectorInstance.HasRawInterpolatorOfName( "lightmapUVOrVertexSH" ) )
+						//{
+						//	string worldNormal = dataCollector.TemplateDataCollectorInstance.GetWorldNormal( PrecisionType.Float, false, MasterNodePortCategory.Vertex );
+						//	dataCollector.TemplateDataCollectorInstance.RequestNewInterpolator( WirePortDataType.FLOAT4, false, "lightmapUVOrVertexSH" );
+						//
+						//	dataCollector.AddToVertexLocalVariables( UniqueId, "OUTPUT_LIGHTMAP_UV( " + texcoord1 + ", unity_LightmapST, " + vOutName + ".lightmapUVOrVertexSH.xy );" );
+						//
+						//	if ( ASEPackageManagerHelper.PackageSRPVersion >= ( int )ASESRPBaseline.ASE_SRP_15 )
+						//	{
+						//		string worldPos = dataCollector.TemplateDataCollectorInstance.GetWorldPos( false, MasterNodePortCategory.Vertex );
+						//		dataCollector.AddToVertexLocalVariables( UniqueId, "#if !defined( OUTPUT_SH4 )" );
+						//		dataCollector.AddToVertexLocalVariables( UniqueId, "OUTPUT_SH( " + worldPos + ", " + worldNormal + ", GetWorldSpaceNormalizeViewDir( " + worldPos + " ), " + vOutName + ".lightmapUVOrVertexSH.xyz );" );
+						//		dataCollector.AddToVertexLocalVariables( UniqueId, "#else" );
+						//		dataCollector.AddToVertexLocalVariables( UniqueId, "OUTPUT_SH4( " + worldPos + ", " + worldNormal + ", GetWorldSpaceNormalizeViewDir( " + worldPos + " ), " + vOutName + ".lightmapUVOrVertexSH.xyz );" );
+						//		dataCollector.AddToVertexLocalVariables( UniqueId, "#endif" );
+						//	}								
+						//	else
+						//	{
+						//		dataCollector.AddToVertexLocalVariables( UniqueId, "OUTPUT_SH( " + worldNormal + ", " + vOutName + ".lightmapUVOrVertexSH.xyz );" );
+						//	}
+						//
+						//	dataCollector.AddToPragmas( UniqueId, "multi_compile _ DIRLIGHTMAP_COMBINED" );
+						//	dataCollector.AddToPragmas( UniqueId, "multi_compile _ LIGHTMAP_ON" );
+						//	dataCollector.AddToPragmas( UniqueId , "multi_compile _ _MIXED_LIGHTING_SUBTRACTIVE" );
+						//
+						//	dataCollector.AddToPragmas( UniqueId , "multi_compile _ _MAIN_LIGHT_SHADOWS" );
+						//	dataCollector.AddToPragmas( UniqueId , "multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE" );
+						//	dataCollector.AddToPragmas( UniqueId , "multi_compile _ _SHADOWS_SOFT" );
+						//
+						//}
 
 						string fragWorldNormal = string.Empty;
 						if( m_inputPorts[ 0 ].IsConnected )
@@ -325,7 +332,17 @@ namespace AmplifyShaderEditor
 						}
 
 						//SAMPLE_GI
-						dataCollector.AddLocalVariable( UniqueId, "float3 bakedGI" + OutputId + " = SampleBakedGI( " + worldPos + ", " + fragWorldNormal + ", " + fInName + ".ase_lightmapUVs.xy, " + fInName + ".ase_lightmapUVs.zw );" );
+						if ( ASEPackageManagerHelper.CurrentSRPVersion >= ( int )ASESRPBaseline.ASE_SRP_17 )
+						{
+							string screenPos = GeneratorUtils.GenerateScreenPosition( ref dataCollector, UniqueId, CurrentPrecisionType );
+							string positionSS = string.Format( "( uint2 )( {0}.xy / {0}.w * _ScreenSize.xy )", screenPos );
+
+							dataCollector.AddLocalVariable( UniqueId, "float3 bakedGI" + OutputId + " = SampleBakedGI( " + worldPos + ", " + fragWorldNormal + ", " + positionSS + ", " + fInName + ".ase_lightmapUVs.xy, " + fInName + ".ase_lightmapUVs.zw );" );
+						}
+						else
+						{
+							dataCollector.AddLocalVariable( UniqueId, "float3 bakedGI" + OutputId + " = SampleBakedGI( " + worldPos + ", " + fragWorldNormal + ", " + fInName + ".ase_lightmapUVs.xy, " + fInName + ".ase_lightmapUVs.zw );" );
+						}
 						finalValue = "bakedGI" + OutputId;
 						m_outputPorts[ 0 ].SetLocalValue( finalValue, dataCollector.PortCategory );
 						return finalValue;

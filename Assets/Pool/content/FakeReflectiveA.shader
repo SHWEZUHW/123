@@ -6,6 +6,7 @@ Shader "Banter/FakeReflectiveA"
 	{
 		_MainTex("MainTex", 2D) = "black" {}
 		_Gloss("Gloss", Range( 0 , 1)) = 0
+		[Toggle(_)]_InvertedGloss("InvertedGloss", Range( 0 , 1)) = 1
 		[HideInInspector] _texcoord( "", 2D ) = "white" {}
 		[HideInInspector] __dirty( "", Int ) = 1
 	}
@@ -25,6 +26,7 @@ Shader "Banter/FakeReflectiveA"
 
 		uniform sampler2D _MainTex;
 		uniform half4 _MainTex_ST;
+		uniform half _InvertedGloss;
 		uniform half _Gloss;
 
 		void surf( Input i , inout SurfaceOutputStandard o )
@@ -32,9 +34,9 @@ Shader "Banter/FakeReflectiveA"
 			float2 uv_MainTex = i.uv_texcoord * _MainTex_ST.xy + _MainTex_ST.zw;
 			half4 tex2DNode3 = tex2D( _MainTex, uv_MainTex );
 			o.Albedo = tex2DNode3.rgb;
-			half4 temp_output_18_0 = ( 1.0 - tex2DNode3 );
+			half4 lerpResult21 = lerp( tex2DNode3 , ( 1.0 - tex2DNode3 ) , _InvertedGloss);
 			half4 temp_cast_1 = (_Gloss).xxxx;
-			o.Smoothness = ( temp_output_18_0 - temp_cast_1 ).r;
+			o.Smoothness = ( lerpResult21 - temp_cast_1 ).r;
 			o.Alpha = 1;
 		}
 
@@ -45,10 +47,10 @@ Shader "Banter/FakeReflectiveA"
 }
 /*ASEBEGIN
 Version=19302
-Node;AmplifyShaderEditor.SamplerNode;3;-627,-199;Inherit;True;Property;_MainTex;MainTex;0;0;Create;True;0;0;0;False;0;False;-1;None;a9261dead2d74134bb0cc8e8919e4d41;True;0;False;black;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SamplerNode;3;-627,-199;Inherit;True;Property;_MainTex;MainTex;0;0;Create;True;0;0;0;False;0;False;-1;None;20db23556cdf77b41ab105238882024a;True;0;False;black;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.OneMinusNode;18;-229,33.70343;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.RangedFloatNode;14;-461.0117,135.5932;Inherit;False;Property;_Gloss;Gloss;1;0;Create;True;0;0;0;False;0;False;0;1;0;1;0;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;23;-334.4792,230.9336;Inherit;False;Property;_InvertedGloss;InvertedGloss;3;0;Create;True;0;0;0;False;1;Toggle(_);False;1;1;0;1;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;23;-471.4792,234.9336;Inherit;False;Property;_InvertedGloss;InvertedGloss;3;0;Create;True;0;0;0;False;1;Toggle(_);False;1;0;0;1;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;14;-461.0117,135.5932;Inherit;False;Property;_Gloss;Gloss;1;0;Create;True;0;0;0;False;0;False;0;0.036;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.LerpOp;21;-12.47919,-13.06641;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SimpleSubtractOpNode;20;45.5,143.2034;Inherit;False;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.ToggleSwitchNode;22;-409.4792,348.9336;Inherit;False;Property;_ToggleSwitch0;Toggle Switch0;2;0;Create;True;0;0;0;False;0;False;0;True;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
@@ -57,9 +59,9 @@ WireConnection;18;0;3;0
 WireConnection;21;0;3;0
 WireConnection;21;1;18;0
 WireConnection;21;2;23;0
-WireConnection;20;0;18;0
+WireConnection;20;0;21;0
 WireConnection;20;1;14;0
 WireConnection;0;0;3;0
 WireConnection;0;4;20;0
 ASEEND*/
-//CHKSM=81977657C4C09FB823659AC442AFCD46EC5B0D40
+//CHKSM=03BF782F64CE46EDF56C749DF35A9E832AFB502D

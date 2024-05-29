@@ -2,13 +2,18 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Crystal_Mat
   m_Shader: {fileID: 4800000, guid: 659dfd41c9b8f404390306092e32514c, type: 3}
-  m_ShaderKeywords: V_CW_RANGE_FADE _ALPHATEST_ON _EMISSION
+  m_ValidKeywords:
+  - V_CW_RANGE_FADE
+  - _ALPHATEST_ON
+  - _EMISSION
+  m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -47,38 +52,15 @@ Material:
         m_Texture: {fileID: 2800000, guid: 2e4213c0aeeca1349af64e36e9adaa37, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MetallicSmooth:
-        m_Texture: {fileID: 2800000, guid: 2e4213c0aeeca1349af64e36e9adaa37, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Normal:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: d2d4bdb34cdddef4da49ed820061bb94, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 2800000, guid: 86c00915fa0f72a49bb69ca2136f6c4d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _PackedMap:
-        m_Texture: {fileID: 2800000, guid: aa42ff65a5b0a524ba7a53c1de47de83, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Ramp:
-        m_Texture: {fileID: 2800000, guid: a08955f2306ff464183429e6c1f63a10, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Ramp2:
-        m_Texture: {fileID: 2800000, guid: a08955f2306ff464183429e6c1f63a10, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - V_CW_RangeFadeDrawer: 0
     - _BumpScale: 1
@@ -110,3 +92,4 @@ Material:
     - _ScrollUV: {r: 0, g: 0, b: 0, a: 0}
     - _V_CW_DetailTex_Scroll: {r: 0, g: 0, b: 0, a: 0}
     - _V_CW_MainTex_Scroll: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

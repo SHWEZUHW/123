@@ -10,7 +10,8 @@ Material:
   m_Name: Water_IslandDay
   m_Shader: {fileID: 4800000, guid: 956344a80e59b764b8b4c35e58bf8449, type: 3}
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _KEYWORD0_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,10 +21,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Day:
-        m_Texture: {fileID: 8900000, guid: c64bc3aff5756394dbee25ab056dea98, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainNormal:
         m_Texture: {fileID: 2800000, guid: 4695cdfbbb7dbd54ba973026a03261e8, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -45,6 +42,7 @@ Material:
     - _Speed: 0.0083
     - _Tiling: 0.3
     - _Transparent: 0.038
+    - _VertexColorMulti: 0
     - __dirty: 0
     - _depth: 11.5
     m_Colors:

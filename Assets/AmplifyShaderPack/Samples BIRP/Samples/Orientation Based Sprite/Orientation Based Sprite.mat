@@ -20,20 +20,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Atlas:
-        m_Texture: {fileID: 2800000, guid: 8bad0b0ea8a87cd4ab57ff281be3b6df, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _Spritesheet:
         m_Texture: {fileID: 2800000, guid: 8bad0b0ea8a87cd4ab57ff281be3b6df, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture0:
-        m_Texture: {fileID: 2800000, guid: 8bad0b0ea8a87cd4ab57ff281be3b6df, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureSheet:
-        m_Texture: {fileID: 2800000, guid: af1413e1f4cddc041a517895567be041, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []

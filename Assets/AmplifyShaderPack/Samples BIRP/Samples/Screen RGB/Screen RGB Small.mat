@@ -2,14 +2,16 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Screen RGB Small
   m_Shader: {fileID: 4800000, guid: 2d86906300360914a87a388cf4675c15, type: 3}
-  m_ShaderKeywords: _ADD_PRECOMPUTED_VELOCITY
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _ADD_PRECOMPUTED_VELOCITY
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -25,50 +27,15 @@ Material:
         m_Texture: {fileID: 2800000, guid: 109f6beb94e9454981d4600a7be9d87b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _NoiseMap:
-        m_Texture: {fileID: 2800000, guid: f801b5d60f6341cd885f97f23afdf8d8, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NoiseMap1:
-        m_Texture: {fileID: 2800000, guid: d63752d68809404caadcb720622cb7f9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NoiseTexture:
-        m_Texture: {fileID: 2800000, guid: b888983e73ae97d47a2ddcbf23bc4ccf, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NoiseTexture1:
-        m_Texture: {fileID: 2800000, guid: 80ee511a5808d8d499a8ca850b8a2129, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Overlay:
-        m_Texture: {fileID: 2800000, guid: 9680987116f4406785c50870a510900b, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _RGB:
         m_Texture: {fileID: 2800000, guid: ae2fc962c2d555344ae50444519518a3, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture0:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureSample1:
-        m_Texture: {fileID: 2800000, guid: 9580df54da1e4d87b0f89f2e36519caf, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _newyorkcity:
-        m_Texture: {fileID: 2800000, guid: 109f6beb94e9454981d4600a7be9d87b, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _newyorkcity1:
-        m_Texture: {fileID: 2800000, guid: 9580df54da1e4d87b0f89f2e36519caf, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AddPrecomputedVelocity: 1
     - _AlphaCutoff: 0.5
@@ -146,3 +113,4 @@ Material:
     - _RingPannerSpeed1: {r: 0.1, g: -1.27, b: 0, a: 0}
     - _Tint: {r: 3.9187057, g: 8.101142, b: 10.789165, a: 1}
     - _Vector1: {r: 350, g: 350, b: 0, a: 0}
+  m_BuildTextureStacks: []

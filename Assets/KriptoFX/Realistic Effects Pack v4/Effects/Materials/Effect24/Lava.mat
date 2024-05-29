@@ -2,15 +2,25 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Lava
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: BlendAlpha Clip_OFF FrameBlend_OFF SoftParticles_ON USE_NOISE_DISTORTION
-    VertLight_OFF _BLENDMODE_BLEND _EMISSION _ZWRITEMODE_ON _ZWRITE_ON
+  m_ValidKeywords:
+  - _EMISSION
+  m_InvalidKeywords:
+  - BlendAlpha
+  - Clip_OFF
+  - FrameBlend_OFF
+  - SoftParticles_ON
+  - USE_NOISE_DISTORTION
+  - VertLight_OFF
+  - _BLENDMODE_BLEND
+  - _ZWRITEMODE_ON
+  - _ZWRITE_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -21,10 +31,6 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _CutoutTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -40,10 +46,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DistortTex:
-        m_Texture: {fileID: 2800000, guid: 1931425b86a63f445b9a37c1830a5699, type: 3}
-        m_Scale: {x: 2, y: 0.5}
-        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 2800000, guid: 4925ee9198b00c8498b9d1e91b2c4b59, type: 3}
         m_Scale: {x: 2, y: 1}
@@ -52,17 +54,9 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1.64, y: 0.54}
         m_Offset: {x: 0, y: 0}
-    - _Mask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NoiseTex:
-        m_Texture: {fileID: 2800000, guid: 959861c33862ded44aca231d85a12ccc, type: 3}
-        m_Scale: {x: 5, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
@@ -72,10 +66,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - DstMode: 10
     - SrcMode: 5
@@ -132,3 +123,4 @@ Material:
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _Tiling: {r: 800, g: 800, b: 8, a: 8}
     - _TintColor: {r: 0.7370761, g: 0.4847425, b: 2.637, a: 1}
+  m_BuildTextureStacks: []

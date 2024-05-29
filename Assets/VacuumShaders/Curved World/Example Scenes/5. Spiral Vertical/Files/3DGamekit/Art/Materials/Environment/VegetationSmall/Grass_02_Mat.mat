@@ -2,15 +2,22 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Grass_02_Mat
   m_Shader: {fileID: 4800000, guid: b34654626c8ce6e439d2bdded5f33dc8, type: 3}
-  m_ShaderKeywords: V_CW_RANGE_FADE _ALPHATEST_ON _DISSOLVEALPHASOURCE_TWO_CUSTOM_MAPS
-    _DISSOLVEGLOBALCONTROL_ALL _DISSOLVEMAPPINGTYPE_TRIPLANAR _DISSOLVEMASK_PLANE
-    _NORMALMAP
+  m_ValidKeywords:
+  - V_CW_RANGE_FADE
+  - _ALPHATEST_ON
+  - _NORMALMAP
+  m_InvalidKeywords:
+  - _DISSOLVEALPHASOURCE_TWO_CUSTOM_MAPS
+  - _DISSOLVEGLOBALCONTROL_ALL
+  - _DISSOLVEMAPPINGTYPE_TRIPLANAR
+  - _DISSOLVEMASK_PLANE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -37,44 +44,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DissolveEdgeTexture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DissolveMap1:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DissolveMap2:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DissolveMap3:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: e6b8b628bc1ce3745ab8290082426185, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicSmooth:
-        m_Texture: {fileID: 2800000, guid: c0a9eef1ec7fa3e419681b073350a3e4, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Normal:
-        m_Texture: {fileID: 2800000, guid: e031e487d0803524b981dad56a1d90c6, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Occlusion:
-        m_Texture: {fileID: 2800000, guid: e19ec2a1f2c1df340aabaaaf1d8b6741, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -89,10 +64,7 @@ Material:
         m_Texture: {fileID: 2800000, guid: ecb4a0d842925304dbd7d8e8f8acd05b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _WindNoise:
-        m_Texture: {fileID: 2800000, guid: 1d82da1161341d847ba4841b7dcc59f8, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - V_CW_RangeFadeDrawer: 0
     - _BumpScale: 1
@@ -156,3 +128,4 @@ Material:
     - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
     - _V_CW_DetailTex_Scroll: {r: 0, g: 0, b: 0, a: 0}
     - _V_CW_MainTex_Scroll: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

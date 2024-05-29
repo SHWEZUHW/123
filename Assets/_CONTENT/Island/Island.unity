@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.003725466, g: 0.0028845428, b: 0.0069690337, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -565,6 +565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &48327593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1278,6 +1279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &98971141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2840,6 +2842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &218077039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9093,6 +9096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &323479684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18011,6 +18015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &520814890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25019,6 +25024,7 @@ MonoBehaviour:
         m_CallState: 2
   isSynced: 1
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &722630402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29755,6 +29761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &1067144390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30346,6 +30353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &1093445859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31329,6 +31337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &1168444051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39707,6 +39716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &1318085838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40572,6 +40582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &1355349052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41455,6 +41466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &1472203970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41630,6 +41642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &1480715078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43262,6 +43275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a53b8004d40b9542b56805fe8986b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  optionalMeshRenderer: {fileID: 0}
   propertyName: _terrainlight
   materialIndex: 0
   texturePropertyName: 
@@ -43290,6 +43304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a53b8004d40b9542b56805fe8986b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  optionalMeshRenderer: {fileID: 0}
   propertyName: _screenprojection
   materialIndex: 0
   texturePropertyName: 
@@ -50139,6 +50154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &1758532418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50550,6 +50566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &1793685486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51403,6 +51420,7 @@ MonoBehaviour:
         m_CallState: 2
   isSynced: 1
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &1834155512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51694,6 +51712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &1846221123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52097,6 +52116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &1869011409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52951,9 +52971,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 0}
-  lockXAxis: 0
-  lockYAxis: 0
-  lockZAxis: 0
 --- !u!114 &1898242771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52967,9 +52984,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 0}
-  lockXAxis: 0
-  lockYAxis: 0
-  lockZAxis: 0
 --- !u!23 &1898242772 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 8352138336687296101, guid: 064e95ce03805b14d9e5a31f7146be77, type: 3}

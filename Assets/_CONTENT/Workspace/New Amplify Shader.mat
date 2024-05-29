@@ -24,10 +24,6 @@ Material:
         m_Texture: {fileID: 8400000, guid: c9a7669de8a64484eb1dea5d4a34e0e7, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - __dirty: 0

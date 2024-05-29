@@ -310,23 +310,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onPointerToggleEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1568698385}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   isSynced: 1
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &758458036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,6 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 1ac3ef59-efb7-4c73-8836-bacd7ffde48b
+  lastObject: {fileID: 0}
 --- !u!65 &758458037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -724,11 +711,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onPointerToggleEvent:
-    m_PersistentCalls:
-      m_Calls: []
   isSynced: 1
   adminOnly: 1
+  isLocal: 0
 --- !u!114 &1387835802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -742,6 +727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 1ac3ef59-efb7-4c74-8836-bacd7ffde48b
+  lastObject: {fileID: 0}
 --- !u!65 &1387835803
 BoxCollider:
   m_ObjectHideFlags: 0

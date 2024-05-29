@@ -24,14 +24,6 @@ Material:
         m_Texture: {fileID: 18700000, guid: 30179dcf5e07d9f40b6e3a7c7ce7592a, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _TextureArrayGamma:
-        m_Texture: {fileID: 18700000, guid: 2a1e45aec61cb9b41830e680aef0d4bf, type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureArrayLinear:
-        m_Texture: {fileID: 18700000, guid: 18abd59f757787242ac884d340d0718c, type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _TextureArrayNormal:
         m_Texture: {fileID: 18700000, guid: 93cf16b497772504b8ad75eaf569f4d5, type: 2}
         m_Scale: {x: 1, y: 1}

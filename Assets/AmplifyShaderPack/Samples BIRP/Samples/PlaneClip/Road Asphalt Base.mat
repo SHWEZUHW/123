@@ -2,14 +2,16 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Road Asphalt Base
   m_Shader: {fileID: 4800000, guid: a20b92c0fd2e9d74185708432a7458bb, type: 3}
-  m_ShaderKeywords: _ACTIVATECLIP_ON
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _ACTIVATECLIP_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -19,10 +21,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - <noninit>:
-        m_Texture: {fileID: 2800000, guid: 7b705e3c0dd4d4240acdbee5cfcd62c8, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _Smoothness:
         m_Texture: {fileID: 2800000, guid: 990b5224ab6b406487e7328c391ad210, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -35,6 +33,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - <noninit>: 1
     - _ActivateClip: 1
@@ -43,3 +42,4 @@ Material:
     - <noninit>: {r: 0.10196079, g: 0.121568635, b: 0.10980393, a: 0}
     - _CutoffColor: {r: 0.10196067, g: 0.12156849, b: 0.10980379, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

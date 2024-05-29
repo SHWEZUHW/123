@@ -20,6 +20,17 @@ namespace AmplifyShaderEditor
 			"}\n"
 		};
 
+		private const string HDBakedGIHeader2 = "ASEBakedGI( {0}, {1}, {2}, {3}, {4} )";
+		private readonly string[] HDBakedGIBody2 =
+		{
+			"float3 ASEBakedGI( float3 positionWS, float3 normalWS, uint2 positionSS, float2 uvStaticLightmap, float2 uvDynamicLightmap )\n",
+			"{\n",
+			"\tfloat3 positionRWS = GetCameraRelativePositionWS( positionWS );\n",
+			"\tbool needToIncludeAPV = true;\n",
+			"\treturn SampleBakedGI( positionRWS, normalWS, positionSS, uvStaticLightmap, uvDynamicLightmap, needToIncludeAPV );\n",
+			"}\n"
+		};
+
 		private readonly string LWBakedGIHeader = "ASEBakedGI( {0}, {1}, {2})";
 		private readonly string[] LWBakedGIBody =
 		{
@@ -77,8 +88,22 @@ namespace AmplifyShaderEditor
 
 			if( dataCollector.TemplateDataCollectorInstance.IsHDRP )
 			{
-				dataCollector.AddFunction( HDBakedGIBody[ 0 ], HDBakedGIBody, false );
-				RegisterLocalVariable( 0, string.Format( HDBakedGIHeader, positionWS, normalWS, uvStaticLightmap, uvDynamicLightmap ), ref dataCollector, localVarName );
+				int unityVersion = TemplateHelperFunctions.GetUnityVersion();
+				if ( ( ASEPackageManagerHelper.CurrentHDRPBaseline == ASESRPBaseline.ASE_SRP_14 && unityVersion >= 20220326 ) ||
+					( ASEPackageManagerHelper.CurrentHDRPBaseline == ASESRPBaseline.ASE_SRP_16 && unityVersion >= 20230220 ) ||
+					ASEPackageManagerHelper.CurrentSRPVersion >= ( int )ASESRPBaseline.ASE_SRP_17 )
+				{
+					string screenPos = GeneratorUtils.GenerateScreenPosition( ref dataCollector, UniqueId, CurrentPrecisionType );
+					string positionSS = string.Format( "( uint2 )( {0}.xy / {0}.w * _ScreenSize.xy )", screenPos );
+
+					dataCollector.AddFunction( HDBakedGIBody2[ 0 ], HDBakedGIBody2, false );
+					RegisterLocalVariable( 0, string.Format( HDBakedGIHeader2, positionWS, normalWS, positionSS, uvStaticLightmap, uvDynamicLightmap ), ref dataCollector, localVarName );
+				}
+				else
+				{
+					dataCollector.AddFunction( HDBakedGIBody[ 0 ], HDBakedGIBody, false );
+					RegisterLocalVariable( 0, string.Format( HDBakedGIHeader, positionWS, normalWS, uvStaticLightmap, uvDynamicLightmap ), ref dataCollector, localVarName );
+				}
 			}
 			else
 			{

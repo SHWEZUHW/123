@@ -2,15 +2,25 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: FireBorder
   m_Shader: {fileID: 4800000, guid: 18cc8fe7d50c89741b56c1ae6a5baa66, type: 3}
-  m_ShaderKeywords: BlendAlpha Clip_ON FrameBlend_ON SoftParticles_ON USE_CUTOUT VertLight_OFF
-    _ALPHABLEND_ON _BLENDMODE_BLEND _FADING_ON _FLIPBOOK_BLENDING
+  m_ValidKeywords:
+  - USE_CUTOUT
+  - _BLENDMODE_BLEND
+  - _FADING_ON
+  - _FLIPBOOK_BLENDING
+  m_InvalidKeywords:
+  - BlendAlpha
+  - Clip_ON
+  - FrameBlend_ON
+  - SoftParticles_ON
+  - VertLight_OFF
+  - _ALPHABLEND_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -20,27 +30,7 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _CutoutTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -48,22 +38,11 @@ Material:
         m_Texture: {fileID: 2800000, guid: 204b306d6ca7fb449adebd165e5acb70, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _NoiseTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - DstMode: 10
     - SrcMode: 5
@@ -115,3 +94,4 @@ Material:
     - _SpecColor: {r: 1, g: 1, b: 1, a: 0}
     - _Tiling: {r: 800, g: 400, b: 8, a: 4}
     - _TintColor: {r: 1.490187, g: 0.47842845, b: 0, a: 0.26666668}
+  m_BuildTextureStacks: []

@@ -13,14 +13,14 @@ namespace AmplifyShaderEditor
 	public sealed class ConditionalIfNode : ParentNode
 	{
 		private const string UseUnityBranchesStr = "Dynamic Branching";
-		private const string UnityBranchStr = "UNITY_BRANCH ";
+		private const string UnityBranchStr = "UNITY_BRANCH";
 
-		private readonly string[] IfOps = { "if( {0} > {1} )",
-											"if( {0} == {1} )",
-											"if( {0} < {1} )",
-											"if( {0} >= {1} )",
-											"if( {0} <= {1} )",
-											"if( {0} != {1} )" };
+		private readonly string[] IfOps = { "{0} if( {1}  > {2} ) {{",
+											"{0} if( {1} == {2} ) {{",
+											"{0} if( {1}  < {2} ) {{",
+											"{0} if( {1} >= {2} ) {{",
+											"{0} if( {1} <= {2} ) {{",
+											"{0} if( {1} != {2} ) {{" };
 
 		//private WirePortDataType m_inputMainDataType = WirePortDataType.FLOAT;
 		private WirePortDataType m_outputMainDataType = WirePortDataType.FLOAT;
@@ -140,10 +140,6 @@ namespace AmplifyShaderEditor
 			string AValue = m_inputPorts[ 0 ].GeneratePortInstructions( ref dataCollector);
 			string BValue = m_inputPorts[ 1 ].GeneratePortInstructions( ref dataCollector );
 
-			m_results[ 0 ] = m_inputPorts[ 2 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true );
-			m_results[ 1 ] = m_inputPorts[ 3 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true );
-			m_results[ 2 ] = m_inputPorts[ 4 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true );
-
 			string localVarName = "ifLocalVar" + OutputId;
 			string localVarDec = string.Format( "{0} {1} = 0;", UIUtils.PrecisionWirePortToCgType( CurrentPrecisionType, m_outputPorts[ 0 ].DataType ), localVarName );
 
@@ -193,60 +189,70 @@ namespace AmplifyShaderEditor
 			}
 
 			dataCollector.AddLocalVariable( UniqueId, localVarDec, true );
-			if ( m_useUnityBranch && !( lequal && gequal ) && !( !greater && !midCon && !lesser ) )
-				dataCollector.AddLocalVariable( UniqueId, UnityBranchStr, true );
+			//if ( m_useUnityBranch && !( lequal && gequal ) && !( !greater && !midCon && !lesser ) )
+			//	dataCollector.AddLocalVariable( UniqueId, UnityBranchStr, true );
+			string branchPrefix = m_useUnityBranch ? UnityBranchStr : string.Empty;
 
-			if( lequal && gequal ) // all equal
+			if ( lequal && gequal ) // all equal
 			{
-				dataCollector.AddLocalVariable( UniqueId, string.Format( "{0} = {1};", localVarName, m_results[ 1 ] ), true );
+				dataCollector.AddLocalVariable( UniqueId, string.Format( "    {0} = {1};", localVarName, m_inputPorts[ 3 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true ) ), true );
 			}
-			else if( !lequal && gequal ) // greater or equal
+			else if ( !lequal && gequal ) // greater or equal
 			{
-				dataCollector.AddLocalVariable( UniqueId, string.Format( IfOps[ 3 ], AValue, BValue ), true );
-				dataCollector.AddLocalVariable( UniqueId, string.Format( "\t{0} = {1};", localVarName, m_results[ 0 ] ), true );
+				dataCollector.AddLocalVariable( UniqueId, string.Format( IfOps[ 3 ], branchPrefix, AValue, BValue ), true );
+				dataCollector.AddLocalVariable( UniqueId, string.Format( "    \t{0} = {1};", localVarName, m_inputPorts[ 2 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true ) ), true );
+				dataCollector.AddLocalVariable( UniqueId, "}", true );
 
-				if( welse )
+				if ( welse )
 				{
-					dataCollector.AddLocalVariable( UniqueId, "else", true );
-					dataCollector.AddLocalVariable( UniqueId, string.Format( "\t{0} = {1};", localVarName, m_results[ 2 ] ), true );
+					dataCollector.AddLocalVariable( UniqueId, "else {", true );
+					dataCollector.AddLocalVariable( UniqueId, string.Format( "    \t{0} = {1};", localVarName, m_inputPorts[ 4 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true ) ), true );
+					dataCollector.AddLocalVariable( UniqueId, "}", true );
 				}
 			}
-			else if( lequal && !gequal )// lesser or equal
+			else if ( lequal && !gequal )// lesser or equal
 			{
-				dataCollector.AddLocalVariable( UniqueId, string.Format( IfOps[ 4 ], AValue, BValue ), true );
-				dataCollector.AddLocalVariable( UniqueId, string.Format( "\t{0} = {1};", localVarName, m_results[ 2 ] ), true );
+				dataCollector.AddLocalVariable( UniqueId, string.Format( IfOps[ 4 ], branchPrefix, AValue, BValue ), true );
+				dataCollector.AddLocalVariable( UniqueId, string.Format( "    \t{0} = {1};", localVarName, m_inputPorts[ 4 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true ) ), true );
+				dataCollector.AddLocalVariable( UniqueId, "}", true );
 
-				if( welse )
+				if ( welse )
 				{
-					dataCollector.AddLocalVariable( UniqueId, "else", true );
-					dataCollector.AddLocalVariable( UniqueId, string.Format( "\t{0} = {1};", localVarName, m_results[ 0 ] ), true );
+					dataCollector.AddLocalVariable( UniqueId, "else {", true );
+					dataCollector.AddLocalVariable( UniqueId, string.Format( "    \t{0} = {1};", localVarName, m_inputPorts[ 2 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true ) ), true );
+					dataCollector.AddLocalVariable( UniqueId, "}", true );
 				}
 			}
 			else if( nequal )// not equal
 			{
-				dataCollector.AddLocalVariable( UniqueId, string.Format( IfOps[ 5 ], AValue, BValue ), true );
-				dataCollector.AddLocalVariable( UniqueId, string.Format( "\t{0} = {1};", localVarName, m_results[ 0 ] ), true );
+				dataCollector.AddLocalVariable( UniqueId, string.Format( IfOps[ 5 ], branchPrefix, AValue, BValue ), true );
+				dataCollector.AddLocalVariable( UniqueId, string.Format( "    \t{0} = {1};", localVarName, m_inputPorts[ 2 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true ) ), true );
+				dataCollector.AddLocalVariable( UniqueId, "}", true );
 			}
 			else if( equal )// equal
 			{
-				dataCollector.AddLocalVariable( UniqueId, string.Format( IfOps[ 1 ], AValue, BValue ), true );
-				dataCollector.AddLocalVariable( UniqueId, string.Format( "\t{0} = {1};", localVarName, m_results[ 1 ] ), true );
+				dataCollector.AddLocalVariable( UniqueId, string.Format( IfOps[ 1 ], branchPrefix, AValue, BValue ), true );
+				dataCollector.AddLocalVariable( UniqueId, string.Format( "    \t{0} = {1};", localVarName, m_inputPorts[ 3 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true ) ), true );
+				dataCollector.AddLocalVariable( UniqueId, "}", true );
 
-				if( welse )
+				if ( welse )
 				{
-					dataCollector.AddLocalVariable( UniqueId, "else", true );
-					dataCollector.AddLocalVariable( UniqueId, string.Format( "\t{0} = {1};", localVarName, m_results[ 0 ] ), true );
+					dataCollector.AddLocalVariable( UniqueId, "else {", true );
+					dataCollector.AddLocalVariable( UniqueId, string.Format( "    \t{0} = {1};", localVarName, m_inputPorts[ 2 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true ) ), true );
+					dataCollector.AddLocalVariable( UniqueId, "}", true );
 				}
 			}
 			else if( lesser && !midCon && !greater ) // lesser
 			{
-				dataCollector.AddLocalVariable( UniqueId, string.Format( IfOps[ 2 ], AValue, BValue ), true );
-				dataCollector.AddLocalVariable( UniqueId, string.Format( "\t{0} = {1};", localVarName, m_results[ 2 ] ), true );
+				dataCollector.AddLocalVariable( UniqueId, string.Format( IfOps[ 2 ], branchPrefix, AValue, BValue ), true );
+				dataCollector.AddLocalVariable( UniqueId, string.Format( "    \t{0} = {1};", localVarName, m_inputPorts[ 4 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true ) ), true );
+				dataCollector.AddLocalVariable( UniqueId, "}", true );
 			}
 			else if( greater && !midCon && !lesser ) // greater
 			{
-				dataCollector.AddLocalVariable( UniqueId, string.Format( IfOps[ 0 ], AValue, BValue ), true );
-				dataCollector.AddLocalVariable( UniqueId, string.Format( "\t{0} = {1};", localVarName, m_results[ 0 ] ), true );
+				dataCollector.AddLocalVariable( UniqueId, string.Format( IfOps[ 0 ], branchPrefix, AValue, BValue ), true );
+				dataCollector.AddLocalVariable( UniqueId, string.Format( "    \t{0} = {1};", localVarName, m_inputPorts[ 2 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true ) ), true );
+				dataCollector.AddLocalVariable( UniqueId, "}", true );
 			}
 			else if( !greater && !midCon && !lesser ) // none
 			{
@@ -257,22 +263,25 @@ namespace AmplifyShaderEditor
 				bool ifStarted = false;
 				if( greater )
 				{
-					dataCollector.AddLocalVariable( UniqueId, string.Format( IfOps[ 0 ], AValue, BValue ), true );
-					dataCollector.AddLocalVariable( UniqueId, string.Format( "\t{0} = {1};", localVarName, m_results[ 0 ] ), true );
+					dataCollector.AddLocalVariable( UniqueId, string.Format( IfOps[ 0 ], branchPrefix, AValue, BValue ), true );
+					dataCollector.AddLocalVariable( UniqueId, string.Format( "    \t{0} = {1};", localVarName, m_inputPorts[ 2 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true ) ), true );
+					dataCollector.AddLocalVariable( UniqueId, "}", true );
 					ifStarted = true;
 				}
 
 				if( midCon )
 				{
-					dataCollector.AddLocalVariable( UniqueId, ( ifStarted ? "else " : string.Empty ) +string.Format( IfOps[ 1 ], AValue, BValue ), true );
-					dataCollector.AddLocalVariable( UniqueId, string.Format( "\t{0} = {1};", localVarName, m_results[ 1 ] ), true );
+					dataCollector.AddLocalVariable( UniqueId, ( ifStarted ? "else " : string.Empty ) + string.Format( IfOps[ 1 ], branchPrefix, AValue, BValue ), true );
+					dataCollector.AddLocalVariable( UniqueId, string.Format( "    \t{0} = {1};", localVarName, m_inputPorts[ 3 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true ) ), true );
+					dataCollector.AddLocalVariable( UniqueId, "}", true );
 					ifStarted = true;
 				}
 
 				if( lesser )
 				{
-					dataCollector.AddLocalVariable( UniqueId, "else " + string.Format( IfOps[ 2 ], AValue, BValue ), true );
-					dataCollector.AddLocalVariable( UniqueId, string.Format( "\t{0} = {1};", localVarName, m_results[ 2 ] ), true );
+					dataCollector.AddLocalVariable( UniqueId, "else " + string.Format( IfOps[ 2 ], branchPrefix, AValue, BValue ), true );
+					dataCollector.AddLocalVariable( UniqueId, string.Format( "    \t{0} = {1};", localVarName, m_inputPorts[ 4 ].GenerateShaderForOutput( ref dataCollector, m_outputMainDataType, ignoreLocalvar, true ) ), true );
+					dataCollector.AddLocalVariable( UniqueId, "}", true );
 				}
 			}
 

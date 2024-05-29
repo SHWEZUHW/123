@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43240744, g: 0.44073403, b: 0.37363356, a: 1}
+  m_IndirectSpecularColor: {r: 0.9965357, g: 1.0157223, b: 0.86118275, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16402,6 +16402,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 800970114}
   isTrigger: 1
+  stopVelocity: 1
+  alignToDestination: 0
 --- !u!65 &1002964266
 BoxCollider:
   m_ObjectHideFlags: 0

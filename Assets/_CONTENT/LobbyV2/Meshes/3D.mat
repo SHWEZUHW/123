@@ -20,20 +20,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Grid:
-        m_Texture: {fileID: 2800000, guid: 1d12fa396a3563b41b9ae11b0fb0b986, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 592f975f66ed20240bb05e8784909947, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ReflectionTexLeft:
-        m_Texture: {fileID: 2800000, guid: a6d4755741c07e8449004f7559cf1940, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ReflectionTexRight:
-        m_Texture: {fileID: 2800000, guid: 212fb47d22adf99459aa91e665994a21, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:

@@ -2,13 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Paint_Exterior2
   m_Shader: {fileID: 4800000, guid: eb6edfaef3d4fa440a958c1fb60e0470, type: 3}
-  m_ShaderKeywords: 
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -30,50 +32,6 @@ Material:
         m_Texture: {fileID: 2800000, guid: 455f0c20b84fcd74ea25d07ccf73b73e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Dirt:
-        m_Texture: {fileID: -1178654205, guid: f01b779c7c3cd9940bcb17237accdad1, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DirtMetalRSmoothGHeightB:
-        m_Texture: {fileID: 1087980258, guid: f01b779c7c3cd9940bcb17237accdad1, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DirtNormal:
-        m_Texture: {fileID: -1581977925, guid: f01b779c7c3cd9940bcb17237accdad1, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Grass:
-        m_Texture: {fileID: -1071021506, guid: 9cfa1b8574d632e4cbf73804f28f5c3d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _GrassMetalRSmoothGHeightB:
-        m_Texture: {fileID: 197941020, guid: 9cfa1b8574d632e4cbf73804f28f5c3d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _GrassNormal:
-        m_Texture: {fileID: -2138766289, guid: 9cfa1b8574d632e4cbf73804f28f5c3d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _Height1:
         m_Texture: {fileID: 2800000, guid: 486d63440f35c1f4bbc6598f570333ad, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -84,10 +42,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Height3:
         m_Texture: {fileID: 2800000, guid: 783fbed214d9e8c4495c5e5219ed09c0, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Metallic1:
@@ -102,10 +56,6 @@ Material:
         m_Texture: {fileID: 2800000, guid: 4caa38d14cd925e4384e289292946209, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _Normal1:
         m_Texture: {fileID: 2800000, guid: 9ba515a7ccaada044a133fded7081229, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -118,30 +68,11 @@ Material:
         m_Texture: {fileID: 2800000, guid: f645ce01fc31ac34cb03d731d06f15c5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Rock:
-        m_Texture: {fileID: -1057896494, guid: 97d3a6d88f6e70f489b228de559996de, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _RockMetalRSmoothGHeightB:
-        m_Texture: {fileID: -1644411699, guid: 97d3a6d88f6e70f489b228de559996de, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _RockNormal:
-        m_Texture: {fileID: 1853353780, guid: 97d3a6d88f6e70f489b228de559996de, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _BumpScale: 1
     - _Color2Offset: 1
@@ -194,3 +125,4 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []

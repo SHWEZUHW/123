@@ -2,14 +2,22 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: StoolMaterial
   m_Shader: {fileID: 4800000, guid: b34654626c8ce6e439d2bdded5f33dc8, type: 3}
-  m_ShaderKeywords: V_CW_SPECULAR _EMISSION _LIGHTMAPPING_DYNAMIC_LIGHTMAPS _LIGHTMAPPING_REALTIME
-    _NORMALMAP _SPECGLOSSMAP _UVSEC_UV1
+  m_ValidKeywords:
+  - _EMISSION
+  - _NORMALMAP
+  - _SPECGLOSSMAP
+  m_InvalidKeywords:
+  - V_CW_SPECULAR
+  - _LIGHTMAPPING_DYNAMIC_LIGHTMAPS
+  - _LIGHTMAPPING_REALTIME
+  - _UVSEC_UV1
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -44,10 +52,6 @@ Material:
         m_Texture: {fileID: 2800000, guid: b75c17f964e69fb4fa26775bbb3b8bbe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Occlusion:
-        m_Texture: {fileID: 2800000, guid: f0b885155cd32d2478fb7c78b5a98c53, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 2800000, guid: f0b885155cd32d2478fb7c78b5a98c53, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -60,6 +64,7 @@ Material:
         m_Texture: {fileID: 2800000, guid: 36a3c1c0711fe9f4f89dba21529eb883, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - V_CW_RangeFadeDrawer: 0
     - _AlphaTestRef: 0.5
@@ -93,3 +98,4 @@ Material:
     - _V_CW_DetailTex_Scroll: {r: 0, g: 0, b: 0, a: 0}
     - _V_CW_MainTex_Scroll: {r: 0, g: 0, b: 0, a: 0}
     - _V_CW_Rim_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

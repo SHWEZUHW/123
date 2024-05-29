@@ -7,11 +7,6 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Water_Island
-    second: {fileID: 2100000, guid: 1b361e4361bbf394ea8d2c7b3d615ec0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: WoodPlank
     second: {fileID: 2100000, guid: 159089a04853ff449b2a3851fae2772e, type: 2}
   materials:

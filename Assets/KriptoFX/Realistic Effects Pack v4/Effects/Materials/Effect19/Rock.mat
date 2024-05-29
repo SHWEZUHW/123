@@ -2,15 +2,22 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Rock
   m_Shader: {fileID: 4800000, guid: 4f726be83ba72084792ae45251375596, type: 3}
-  m_ShaderKeywords: USE_CUTOUT USE_CUTOUT_THRESHOLD USE_FRESNEL _ALPHATEST_ON _BLENDMODE_BLEND
-    _NORMALMAP _ZWRITEMODE_ON
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - USE_CUTOUT
+  - USE_CUTOUT_THRESHOLD
+  - USE_FRESNEL
+  - _ALPHATEST_ON
+  - _BLENDMODE_BLEND
+  - _NORMALMAP
+  - _ZWRITEMODE_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -20,34 +27,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 91a3e0da2e044804e83ae61f10d37518, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BumpTex:
-        m_Texture: {fileID: 2800000, guid: 91a3e0da2e044804e83ae61f10d37518, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _CutoutTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _EmissionTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -56,26 +35,7 @@ Material:
         m_Texture: {fileID: 2800000, guid: c098fe8a666c4c04e89a3806760d1d11, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NoiseTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _BlendMode: 1
     - _BumpScale: 1
@@ -124,3 +84,4 @@ Material:
     - _FresnelColor: {r: 0.5955882, g: 0.1601926, b: 0, a: 1}
     - _SpecColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 1}
     - _TintColor: {r: 0.08088237, g: 0.08088237, b: 0.08088237, a: 1}
+  m_BuildTextureStacks: []
