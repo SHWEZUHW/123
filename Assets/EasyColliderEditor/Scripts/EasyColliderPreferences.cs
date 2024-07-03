@@ -153,6 +153,22 @@ namespace ECE
     /// Default scale of displayed vertices used along with the common scaling multiplier.
     /// </summary>
     [SerializeField] public float DefaultScale = 0.01f;
+    /// <summary>
+    /// scale for vertices that are hovered / will be added to the selected vertices
+    /// </summary>
+    [SerializeField] public float HoveredScaleMult = 1.0f;
+    /// <summary>
+    /// scale multiplier for vertices when using display all vertices
+    /// </summary>
+    [SerializeField] public float DisplayAllScaleMult = 1.0f;
+    /// <summary>
+    /// scale multiplier for vertices that will be removed from the selected vertices
+    /// </summary>
+    [SerializeField] public float OverlapScaleMult = 1.0f;
+    /// <summary>
+    /// scale multiplier for vertices that are currently selected.
+    /// </summary>
+    [SerializeField] public float SelectedScaleMult = 1.0f;
 
     /// <summary>
     /// The method to use when creating a collider: if and how a gameobject should be made to hold the collider.
@@ -454,6 +470,11 @@ namespace ECE
       #region drawing
       CommonScalingMultiplier = 1.0f;
       DefaultScale = 0.01f;
+      HoveredScaleMult = 1.0f;
+      DisplayAllScaleMult = 1.0f;
+      OverlapScaleMult = 1.0f;
+      SelectedScaleMult = 1.0f;
+
       DisplayVerticesColour = Color.blue;
       GizmoType = GIZMO_TYPE.SPHERE;
       HoverVertColour = Color.cyan;

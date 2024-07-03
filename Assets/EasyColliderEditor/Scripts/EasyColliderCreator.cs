@@ -300,9 +300,7 @@ namespace ECE
         obj.transform.SetParent(parent);
 #endif
         obj.transform.localScale = Vector3.one;
-#if (UNITY_EDITOR)
         PostColliderCreationProcess(collider, properties);
-#endif
       }
       return CreatedColliders;
     }
@@ -1673,6 +1671,12 @@ namespace ECE
     #endregion
 
     #region PostCreationProcessing
+
+    /// <summary>
+    /// can be used at runtime to set a specific custom post processor if desired, otherwise defaults to EasyColliderPostProccessor
+    /// </summary>
+    public static IEasyColliderPostProcessor EasyColliderPostProcessor;
+
     /// <summary>
     /// Can add any custom processing to a manually created collider here.
     /// Current this handles re-centering the pivot of colliders if specified in preferences. (IE: always make collider holders & pivot at center)
@@ -1683,11 +1687,14 @@ namespace ECE
     /// <param name="properties"></param>
     public void PostColliderCreationProcess(Collider createdCollider, EasyColliderProperties properties)
     {
-#if (UNITY_EDITOR)
+      // set to default if null
+      if (EasyColliderPostProcessor == null) { EasyColliderPostProcessor = new EasyColliderPostProccessor(); }
+
       if (createdCollider is BoxCollider)
       {
         // adjust pivot to the center of the collider if specified.
         BoxCollider bc = (BoxCollider)createdCollider;
+#if(UNITY_EDITOR)
         if (ECEPreferences.RotatedColliderPivotAtCenter && properties.Orientation == COLLIDER_ORIENTATION.ROTATED)
         {
           bc.transform.position = bc.transform.TransformPoint(bc.center);
@@ -1695,21 +1702,34 @@ namespace ECE
           // bc.transform.localPosition = bc.center;
           // bc.center = Vector3.zero;
         }
+#endif
         // handle other box related things in future here.
+        if (EasyColliderPostProcessor != null)
+        {
+          EasyColliderPostProcessor.PostProcessCollider(bc, properties);
+        }
+
       }
       else if (createdCollider is SphereCollider)
       {
         SphereCollider sc = (SphereCollider)createdCollider;
+#if(UNITY_EDITOR)
         if (ECEPreferences.RotatedColliderPivotAtCenter && properties.Orientation == COLLIDER_ORIENTATION.ROTATED)
         {
           sc.transform.position = sc.transform.TransformPoint(sc.center);
           sc.center = Vector3.zero;
         }
+#endif
         //handle other sphere collider things here.
+        if (EasyColliderPostProcessor != null)
+        {
+          EasyColliderPostProcessor.PostProcessCollider(sc, properties);
+        }
       }
       else if (createdCollider is CapsuleCollider)
       {
         CapsuleCollider cc = (CapsuleCollider)createdCollider;
+#if (UNITY_EDITOR)
         Transform t = cc.transform;
         if (ECEPreferences.RotatedColliderPivotAtCenter && properties.Orientation == COLLIDER_ORIENTATION.ROTATED)
         {
@@ -1767,6 +1787,7 @@ namespace ECE
                 up = t.transform.forward;
               }
             }
+
             if (!cc.transform.name.Contains("Rotated Capsule Collider"))
             {
               // need to create a collider holder to align if it's not a rotated collider.
@@ -1807,8 +1828,20 @@ namespace ECE
             }
           }
         }
-      }
 #endif
+        if (EasyColliderPostProcessor != null)
+        {
+          EasyColliderPostProcessor.PostProcessCollider(cc, properties);
+        }
+      }
+      else if (createdCollider is MeshCollider)
+      {
+        MeshCollider mc = (MeshCollider)createdCollider;
+        if (EasyColliderPostProcessor != null)
+        {
+          EasyColliderPostProcessor.PostProcessCollider(mc, properties);
+        }
+      }
     }
     #endregion
 
@@ -1967,12 +2000,10 @@ namespace ECE
     private void PostColliderCreation(Collider collider, EasyColliderProperties properties, bool postProcess = true)
     {
       SetPropertiesOnCollider(collider, properties);
-#if (UNITY_EDITOR)
       if (postProcess)
       {
         PostColliderCreationProcess(collider, properties);
       }
-#endif
     }
 
     private void SetPropertiesOnCollider(Collider collider, EasyColliderProperties properties)

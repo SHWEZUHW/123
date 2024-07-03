@@ -239,6 +239,11 @@ namespace ECE
     private bool _EditPreferences;
 
     /// <summary>
+    /// bool for toggle for dropdown on editing additional vertex scales.
+    /// </summary>
+    bool _editExtraVertexScales;
+
+    /// <summary>
     /// Keeps track of when the last raycast was done when enabled, so that we aren't constantly raycasting / drag selecting
     /// </summary>
     private double _LastSelectionTime = 0.0f;
@@ -411,18 +416,48 @@ namespace ECE
       EditorWindow ece = EditorWindow.GetWindow(typeof(EasyColliderWindow), false, "Easy Collider Editor");
       ece.Show();
       ece.autoRepaintOnSceneChange = true;
+      _eceWindow = ece as EasyColliderWindow;
       if (Selection.activeGameObject != null)
       {
-        EasyColliderWindow w = ece as EasyColliderWindow;
-        w.ChangeToNewObject(Selection.activeGameObject);
-        if (w.CurrentTab == ECE_WINDOW_TAB.None)
+        _eceWindow.ChangeToNewObject(Selection.activeGameObject);
+        if (_eceWindow.CurrentTab == ECE_WINDOW_TAB.None)
         {
-          w.CurrentTab = ECE_WINDOW_TAB.Creation;
-          w.ECEditor.VertexSelectEnabled = true;
+          _eceWindow.CurrentTab = ECE_WINDOW_TAB.Creation;
+          _eceWindow.ECEditor.VertexSelectEnabled = true;
         }
       }
     }
 
+    // Additional methods for using with external tools.
+
+    /// <summary>
+    /// the current open ece window if one exists
+    /// </summary>
+    public static EasyColliderWindow _eceWindow;
+
+    /// <summary>
+    /// opens and returns an EasyColliderEditor window.
+    /// </summary>
+    /// <returns>current easy collider editor window</returns>
+    public static EasyColliderWindow OpenWindow()
+    {
+      Init();
+      return _eceWindow;
+    }
+
+    /// <summary>
+    /// Changes to the selected object and automatically changes to creation tab if a window was just opened.
+    /// </summary>
+    /// <param name="gameObject">gameobject to be selected for collider editing</param>
+    public void SetSelectedGameObject(GameObject gameObject)
+    {
+      ChangeToNewObject(gameObject);
+      if (CurrentTab == ECE_WINDOW_TAB.None)
+      {
+        CurrentTab = ECE_WINDOW_TAB.Creation;
+        ECEditor.VertexSelectEnabled = true;
+      }
+    }
 
     void OnDestroy()
     {
@@ -785,6 +820,8 @@ namespace ECE
         }
       }
 #endif
+
+      DrawCursorForVertexSnapInSceneView(sceneView);
     }
 
     /// <summary>
@@ -1016,6 +1053,8 @@ namespace ECE
     /// </summary>
     List<KeyCode> KeyCodePressOrder = new List<KeyCode>();
 
+
+
     /// <summary>
     /// Updates the vertex snap method in preferences based on the last keycode KeyCodePressOrder
     /// </summary>
@@ -1025,6 +1064,8 @@ namespace ECE
       KeyCode last = KeyCodePressOrder.LastOrDefault();
       if (last == KeyCode.LeftAlt || last == ECEPreferences.BoxSelectMinusKey)
       {
+        //Debug.Log("Add cursor rect?");
+        //EditorGUIUtility.AddCursorRect(new Rect(20, 20, 140, 40), MouseCursor.ArrowMinus);
         if (ECEPreferences.VertexSnapMethod != VERTEX_SNAP_METHOD.Remove)
         {
           ECEPreferences.VertexSnapMethod = VERTEX_SNAP_METHOD.Remove;
@@ -1033,6 +1074,8 @@ namespace ECE
       }
       else if (last == KeyCode.LeftControl || last == ECEPreferences.BoxSelectPlusKey)
       {
+        //Debug.Log("Add cursor rect?");
+        //EditorGUIUtility.AddCursorRect(new Rect(20, 20, 140, 40), MouseCursor.ArrowPlus);
         if (ECEPreferences.VertexSnapMethod != VERTEX_SNAP_METHOD.Add)
         {
           ECEPreferences.VertexSnapMethod = VERTEX_SNAP_METHOD.Add;
@@ -1048,6 +1091,22 @@ namespace ECE
         }
       }
       return false;
+    }
+
+    void DrawCursorForVertexSnapInSceneView(SceneView sceneView)
+    {
+      // just do a full screen rect based on whatever the last key press order was for selection.
+      KeyCode last = KeyCodePressOrder.LastOrDefault();
+      if (last == KeyCode.LeftAlt || last == ECEPreferences.BoxSelectMinusKey)
+      {
+        Rect fullRect = new Rect(0, 0, sceneView.position.width, sceneView.position.height);
+        EditorGUIUtility.AddCursorRect(fullRect, MouseCursor.ArrowMinus);
+      }
+      else if (last == KeyCode.LeftControl || last == ECEPreferences.BoxSelectPlusKey)
+      {
+        Rect fullRect = new Rect(0, 0, sceneView.position.width, sceneView.position.height);
+        EditorGUIUtility.AddCursorRect(fullRect, MouseCursor.ArrowPlus);
+      }
     }
 
     /// <summary>
@@ -1169,7 +1228,9 @@ namespace ECE
     GameObject _lastSelectionGameobject;
     void CheckSelChangedForDrag()
     {
-#if UNITY_2022_3_14 || UNITY_2022_3_15 || UNITY_2022_3_16 || UNITY_2022_3_17 || UNITY_2022_3_18 || UNITY_2022_3_19 || UNITY_2022_3_20 || UNITY_2022_3_21 || UNITY_2022_3_22 || UNITY_2022_3_23 || UNITY_2022_3_24 || UNITY_2022_3_25 || UNITY_2023_1_OR_NEWER
+      // because something was changed that specifically changed functionality in 2022.3.14 compared to every previous version, we'll have to do this.
+      // currently goes up to 2022_3_50.
+#if UNITY_2022_3_14 || UNITY_2022_3_15 || UNITY_2022_3_16 || UNITY_2022_3_17 || UNITY_2022_3_18 || UNITY_2022_3_19 || UNITY_2022_3_20 || UNITY_2022_3_21 || UNITY_2022_3_22 || UNITY_2022_3_23 || UNITY_2022_3_24 || UNITY_2022_3_25 || UNITY_2022_3_26 || UNITY_2022_3_27 || UNITY_2022_3_28 || UNITY_2022_3_29   || UNITY_2022_3_30 ||UNITY_2022_3_31 ||UNITY_2022_3_32 ||UNITY_2022_3_33 || UNITY_2022_3_34 || UNITY_2022_3_35 || UNITY_2022_3_36 || UNITY_2022_3_37 || UNITY_2022_3_38 || UNITY_2022_3_39 || UNITY_2022_3_40 || UNITY_2022_3_41 || UNITY_2022_3_42 || UNITY_2022_3_43 || UNITY_2022_3_44 || UNITY_2022_3_45 || UNITY_2022_3_46 || UNITY_2022_3_47 || UNITY_2022_3_48 || UNITY_2022_3_49 || UNITY_2022_3_50 || UNITY_2023_1_OR_NEWER 
 #else
       if (_trackedMouseDownEvent != null)
       {
@@ -1266,7 +1327,7 @@ namespace ECE
               IsMouseDraggedModified = true;
             }
           }
-#if UNITY_2022_3_14 || UNITY_2022_3_15 || UNITY_2022_3_16 || UNITY_2022_3_17 || UNITY_2022_3_18 || UNITY_2022_3_19 || UNITY_2022_3_20 || UNITY_2022_3_21 || UNITY_2022_3_22 || UNITY_2022_3_23 || UNITY_2022_3_24 || UNITY_2022_3_25 || UNITY_2023_1_OR_NEWER
+#if UNITY_2022_3_14 || UNITY_2022_3_15 || UNITY_2022_3_16 || UNITY_2022_3_17 || UNITY_2022_3_18 || UNITY_2022_3_19 || UNITY_2022_3_20 || UNITY_2022_3_21 || UNITY_2022_3_22 || UNITY_2022_3_23 || UNITY_2022_3_24 || UNITY_2022_3_25 || UNITY_2022_3_26 || UNITY_2022_3_27 || UNITY_2022_3_28 || UNITY_2022_3_29   || UNITY_2022_3_30 ||UNITY_2022_3_31 ||UNITY_2022_3_32 ||UNITY_2022_3_33 || UNITY_2022_3_34 || UNITY_2022_3_35 || UNITY_2022_3_36 || UNITY_2022_3_37 || UNITY_2022_3_38 || UNITY_2022_3_39 || UNITY_2022_3_40 || UNITY_2022_3_41 || UNITY_2022_3_42 || UNITY_2022_3_43 || UNITY_2022_3_44 || UNITY_2022_3_45 || UNITY_2022_3_46 || UNITY_2022_3_47 || UNITY_2022_3_48 || UNITY_2022_3_49 || UNITY_2022_3_50 || UNITY_2023_1_OR_NEWER 
           if (Event.current.type == EventType.MouseDown && (GUIUtility.hotControl == 0 || Event.current.modifiers == EventModifiers.Alt)) // alt automatically does a hot control it appears, this fixes that.
           {
             //Debug.Log("Mouse down.");
@@ -2568,6 +2629,20 @@ namespace ECE
         ECUI.ToggleLeftUndoable(ECEPreferences, new GUIContent("Display Tips", "Disable to stop helpful tips from displaying at the bottom of this window."), "Toggle display tips", ref ECEPreferences.DisplayTips);
         EditorGUILayout.EndHorizontal();
         EditorGUILayout.BeginHorizontal();
+        _editExtraVertexScales = EditorGUILayout.Foldout(_editExtraVertexScales, "Additional Scale Multipliers");
+        EditorGUILayout.EndHorizontal();
+        if (_editExtraVertexScales)
+        {
+          EditorGUILayout.BeginHorizontal();
+          ECUI.FloatFieldUndoable(ECEPreferences, new GUIContent("Selected:", "Multiplier to vertices that are currently selected"), "Change common multiplier", ref ECEPreferences.SelectedScaleMult, 85);
+          ECUI.FloatFieldUndoable(ECEPreferences, new GUIContent("Overlapped:", "Multiplier to vertices that will be removed"), "Change common multiplier", ref ECEPreferences.OverlapScaleMult, 85);
+          EditorGUILayout.EndHorizontal();
+          EditorGUILayout.BeginHorizontal();
+          ECUI.FloatFieldUndoable(ECEPreferences, new GUIContent("Hovered:", "Multiplier to vertices that are currently being hovered"), "Change common multiplier", ref ECEPreferences.HoveredScaleMult, 85);
+          ECUI.FloatFieldUndoable(ECEPreferences, new GUIContent("Display All:", "Multiplier to vertices shown when display all vertices is enabled"), "Change common multiplier", ref ECEPreferences.DisplayAllScaleMult, 85);
+          EditorGUILayout.EndHorizontal();
+        }
+        EditorGUILayout.BeginHorizontal();
         ECUI.ToggleLeftUndoable(ECEPreferences, new GUIContent("Rotated on Selected's Layer", "When enabled uses the selected gameobject's layer when creating rotated colliders. When disabled lets you choose the layer from a dropdown menu."), "Toggle rotated on selected layer", ref ECEPreferences.RotatedOnSelectedLayer);
         ECUI.ToggleLeftUndoable(ECEPreferences, new GUIContent("Include Child Skinned Meshes", "Automatically includes skinned meshes when include child meshes is enabled."), "Toggle auto include child skinned meshes", ref ECEPreferences.AutoIncludeChildSkinnedMeshes);
         EditorGUILayout.EndHorizontal();
@@ -2653,7 +2728,7 @@ namespace ECE
     /// <summary>
     /// Draws the collider duplication tools ui
     /// </summary>
-    public void DrawColliderDuplicationTools()
+    void DrawColliderDuplicationTools()
     {
       EditorGUI.BeginChangeCheck();
       showDuplicationTools = ECUI.FoldoutBold("Collider Duplication Tools", ref showDuplicationTools, "Allows creating multiple colliders around at once in a ring shape.");
@@ -2991,7 +3066,7 @@ namespace ECE
       Ring,
     }
 
-    public void UseVertexSelectionTool(VertexSelectionTool tool)
+    void UseVertexSelectionTool(VertexSelectionTool tool)
     {
       Undo.RegisterCompleteObjectUndo(ECEditor, tool.ToString() + " vertices tool");
       int group = Undo.GetCurrentGroup();

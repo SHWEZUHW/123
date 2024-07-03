@@ -837,10 +837,10 @@ namespace ECE
         {
           OnlyDeselectableColliders.Clear();
           // lets store things.
-        //  List<EasyColliderVertex> selectedVertsBeforeChange = new List<EasyColliderVertex>(SelectedVertices);
+          //  List<EasyColliderVertex> selectedVertsBeforeChange = new List<EasyColliderVertex>(SelectedVertices);
           //HashSet<EasyColliderVertex> selectedNonVerts = new HashSet<EasyColliderVertex>(SelectedNonVerticesSet);
           HashSet<Collider> selectedChildColliders = new HashSet<Collider>(SelectedColliders);
-          if (!value && SelectedGameObject!=null)
+          if (!value && SelectedGameObject != null)
           {
             selectedChildColliders.ExceptWith(SelectedGameObject.GetComponents<Collider>());
           }
@@ -849,15 +849,15 @@ namespace ECE
           GameObject attach = AttachToObject;
           SelectedGameObject = null;
           _IncludeChildMeshes = value;
-         //OnIncludeChildMeshesChanged(value);
+          //OnIncludeChildMeshesChanged(value);
           SelectedGameObject = selected;
           AttachToObject = attach;
 
-     /*     foreach(var v in selectedVertsBeforeChange)
-          {
-            SelectVertex(v, true);
-          }*/
-          foreach(var c in selectedChildColliders)
+          /*     foreach(var v in selectedVertsBeforeChange)
+               {
+                 SelectVertex(v, true);
+               }*/
+          foreach (var c in selectedChildColliders)
           {
             SelectCollider(c);
             OnlyDeselectableColliders.Add(c);
@@ -868,25 +868,25 @@ namespace ECE
         // CalculateDensity();
         if (value == false)
         {
-         // CleanChildSelectedVertices();
+          // CleanChildSelectedVertices();
         }
       }
     }
 
     public HashSet<Collider> OnlyDeselectableColliders = new HashSet<Collider>();
 
- /*   void OnIncludeChildMeshesChanged(bool value)
-    {
-      HashSet<MeshFilter> rootMeshFilters = new HashSet<MeshFilter>();
-      HashSet<MeshFilter> childMeshFilters = new HashSet<MeshFilter>();
-      rootMeshFilters.UnionWith(SelectedGameObject.GetComponents<MeshFilter>());
-      childMeshFilters.UnionWith(SelectedGameObject.GetComponentsInChildren<MeshFilter>());
-      childMeshFilters.ExceptWith
-      if (!value)
-      {
-   //     CleanUpObject()
-      }
-    }*/
+    /*   void OnIncludeChildMeshesChanged(bool value)
+       {
+         HashSet<MeshFilter> rootMeshFilters = new HashSet<MeshFilter>();
+         HashSet<MeshFilter> childMeshFilters = new HashSet<MeshFilter>();
+         rootMeshFilters.UnionWith(SelectedGameObject.GetComponents<MeshFilter>());
+         childMeshFilters.UnionWith(SelectedGameObject.GetComponentsInChildren<MeshFilter>());
+         childMeshFilters.ExceptWith
+         if (!value)
+         {
+      //     CleanUpObject()
+         }
+       }*/
 
     [SerializeField]
     private bool _IsTrigger;
@@ -1573,6 +1573,17 @@ namespace ECE
         {
           selectedColliders.UnionWith(SelectedGameObject.GetComponents<Collider>());
           selectedColliders.UnionWith(AttachToObject.GetComponents<Collider>());
+          // "child meshes" toggle would ennable this, but collider holders don't have meshes, but generally should be selectable.
+          for (int i = 0; i < SelectedGameObject.transform.childCount; i++)
+          {
+            Transform t = SelectedGameObject.transform.GetChild(i);
+            // special names are Rotated X (x = box, capsule), VHACDCollider, and EasyColliderHolder
+            if ((t.name.Contains("Rotated") && t.name.Contains("Collider")) || t.name.Contains("VHACDCollider") || t.name.Contains("EasyColliderHolder"))
+            {
+              // collider holders can also hold rotated colliders, so get children as well.
+              selectedColliders.UnionWith(t.gameObject.GetComponentsInChildren<Collider>());
+            }
+          }
         }
         selectedColliders.ExceptWith(RaycastableColliders);
         // Allow selecting colliders from selected gameobject, and it's children, and attach to / it's children.

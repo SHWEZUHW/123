@@ -56,7 +56,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Wolf3D_Outfit_Top.001","Plane.006","Plane.005","Plane.004","Cube.014","Cube.013","Cube.012","Cube.011","Cube.010","Cube.009","Cube.008","Cube.007","Cube.006","Cube.005","Cube.004","Cube.003","Cube.002","Cube","Climb_01.010","Climb_01.009","Climb_01.008","Climb_01.007","Climb_01.006","Climb_01.005","Climb_01.004","Climb_01.003","Climb_01.002","Climb_01.001","Climb_01","Circle.006","Circle.005","Circle.002","Circle.001","BezierCurve.001","Slide"],"padding":[256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,71,113,96,18,61,103],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["Wolf3D_Outfit_Top.001","Plane.006","Plane.005","Plane.004","Cube.014","Cube.013","Cube.012","Cube.011","Cube.010","Cube.009","Cube.008","Cube.007","Cube.006","Cube.005","Cube.004","Cube.003","Cube.002","Cube","Climb_01.010","Climb_01.009","Climb_01.008","Climb_01.007","Climb_01.006","Climb_01.005","Climb_01.004","Climb_01.003","Climb_01.002","Climb_01.001","Climb_01","Circle.006","Circle.005","Circle.002","Circle.001","BezierCurve.001","Slide","Circle.007"],"padding":[256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,71,113,96,18,61,103,256],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

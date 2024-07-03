@@ -1,4 +1,4 @@
-// Made with Amplify Shader Editor v1.9.3.2
+// Made with Amplify Shader Editor v1.9.4
 // Available at the Unity Asset Store - http://u3d.as/y3X 
 Shader "AmplifyShaderPack/Glint Sparkle"
 {
@@ -85,11 +85,11 @@ Shader "AmplifyShaderPack/Glint Sparkle"
 			o.Normal = tangentNormal561;
 			o.Albedo = _Albedo.rgb;
 			float3 ase_vertex3Pos = mul( unity_WorldToObject, float4( i.worldPos , 1 ) );
-			#if defined(_DIRECTION_X)
+			#if defined( _DIRECTION_X )
 				float staticSwitch495 = ase_vertex3Pos.x;
-			#elif defined(_DIRECTION_Y)
+			#elif defined( _DIRECTION_Y )
 				float staticSwitch495 = ase_vertex3Pos.y;
-			#elif defined(_DIRECTION_Z)
+			#elif defined( _DIRECTION_Z )
 				float staticSwitch495 = ase_vertex3Pos.z;
 			#else
 				float staticSwitch495 = ase_vertex3Pos.y;
@@ -216,12 +216,12 @@ Shader "AmplifyShaderPack/Glint Sparkle"
 	CustomEditor "ASEMaterialInspector"
 }
 /*ASEBEGIN
-Version=19302
+Version=19400
 Node;AmplifyShaderEditor.CommentaryNode;429;1352.417,-1965.659;Inherit;False;3595.187;815.0569;;31;488;495;492;505;499;494;440;497;447;466;491;439;504;489;442;478;470;463;468;477;484;483;473;424;486;487;401;431;400;390;562;Glint Effect;0.9986145,1,0.4103774,1;0;0
 Node;AmplifyShaderEditor.PosVertexDataNode;488;1440,-1856;Inherit;True;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.StaticSwitch;495;1696,-1840;Float;False;Property;_Direction;Direction;3;0;Create;True;0;0;0;False;0;False;0;1;1;True;;KeywordEnum;3;X;Y;Z;Create;False;True;All;9;1;FLOAT;0;False;0;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.Vector3Node;505;1440,-1664;Float;False;Property;_SizeSpeedInterval;Size Speed Interval;5;0;Create;True;0;0;0;False;0;False;1,1,1;0.5,10,5;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
-Node;AmplifyShaderEditor.NegateNode;492;1936,-1776;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.NegateNode;492;1920,-1760;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.StaticSwitch;494;2064,-1840;Float;False;Property;_InvertDirection;Invert Direction;4;0;Create;True;0;0;0;False;0;False;0;1;1;True;;Toggle;2;X;Y;Create;False;True;All;9;1;FLOAT;0;False;0;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;499;1920,-1632;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.CommentaryNode;570;2400,-656;Inherit;False;2555;885;;28;510;355;354;555;554;366;360;511;359;365;508;507;515;524;557;525;556;363;364;367;369;346;347;536;368;564;571;419;Sparkles Effect;1,1,1,1;0;0
@@ -272,8 +272,8 @@ Node;AmplifyShaderEditor.Vector3Node;571;4208,0;Float;False;Property;_SparkleFre
 Node;AmplifyShaderEditor.OneMinusNode;486;3984,-1664;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;363;3984,-240;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.Vector3Node;572;4264.248,588.1351;Float;False;Property;_MainGlowFresnel;Fresnel Bias, Scale, Power;19;0;Create;False;0;0;0;False;0;False;0,0,0;0.02,1,5;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
-Node;AmplifyShaderEditor.GetLocalVarNode;564;4218.197,-93.65095;Inherit;False;567;worldNormal;1;0;OBJECT;0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.GetLocalVarNode;562;3868,-1426;Inherit;False;567;worldNormal;1;0;OBJECT;0;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.GetLocalVarNode;564;4218.197,-93.65095;Inherit;False;567;worldNormal;1;0;OBJECT;0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.FresnelNode;370;4584.248,572.1351;Inherit;True;Standard;WorldNormal;ViewDir;False;True;5;0;FLOAT3;0,0,0;False;4;FLOAT3;0,0,0;False;1;FLOAT;0.02;False;2;FLOAT;1;False;3;FLOAT;5;False;1;FLOAT;0
 Node;AmplifyShaderEditor.FresnelNode;536;4528,-48;Inherit;True;Standard;WorldNormal;ViewDir;False;True;5;0;FLOAT3;0,0,0;False;4;FLOAT3;0,0,0;False;1;FLOAT;0.01;False;2;FLOAT;0.8;False;3;FLOAT;2;False;1;FLOAT;0
 Node;AmplifyShaderEditor.FresnelNode;400;4187.048,-1422.668;Inherit;True;Standard;WorldNormal;ViewDir;False;True;5;0;FLOAT3;0,0,0;False;4;FLOAT3;0,0,0;False;1;FLOAT;0.01;False;2;FLOAT;1;False;3;FLOAT;4;False;1;FLOAT;0
@@ -387,4 +387,4 @@ WireConnection;594;2;374;0
 WireConnection;594;3;345;0
 WireConnection;594;4;345;0
 ASEEND*/
-//CHKSM=1E163D92BE12151D9D246CE0FB6C6334BE10AE6C
+//CHKSM=8E926B30875655876DFFD513678B0FAF3E6BAE5E

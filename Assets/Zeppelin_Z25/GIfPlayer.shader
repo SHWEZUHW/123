@@ -1,4 +1,4 @@
-// Made with Amplify Shader Editor v1.9.3.2
+// Made with Amplify Shader Editor v1.9.4
 // Available at the Unity Asset Store - http://u3d.as/y3X 
 Shader "GIfPlayer"
 {
@@ -66,7 +66,7 @@ Shader "GIfPlayer"
 			float2 fbtiling1 = float2(fbcolsoffset1, fbrowsoffset1);
 			// UV Offset - calculate current tile linear index, and convert it to (X * coloffset, Y * rowoffset)
 			// Calculate current tile linear index
-			float fbcurrenttileindex1 = round( fmod( fbspeed1 + 0.0, fbtotaltiles1) );
+			float fbcurrenttileindex1 = floor( fmod( fbspeed1 + 0.0, fbtotaltiles1) );
 			fbcurrenttileindex1 += ( fbcurrenttileindex1 < 0) ? fbtotaltiles1 : 0;
 			// Obtain Offset X coordinate from current tile linear index
 			float fblinearindextox1 = round ( fmod ( fbcurrenttileindex1, (float)_Column ) );
@@ -83,6 +83,7 @@ Shader "GIfPlayer"
 			// Flipbook UV
 			half2 fbuv1 = i.uv_texcoord * fbtiling1 + fboffset1;
 			// *** END Flipbook UV Animation vars ***
+			int flipbookFrame1 = ( ( int )fbcurrenttileindex1);
 			half4 tex2DNode2 = tex2D( _MainTex, fbuv1 );
 			o.Emission = tex2DNode2.rgb;
 			o.Alpha = tex2DNode2.a;
@@ -93,15 +94,15 @@ Shader "GIfPlayer"
 	CustomEditor "ASEMaterialInspector"
 }
 /*ASEBEGIN
-Version=19302
+Version=19400
 Node;AmplifyShaderEditor.TextureCoordinatesNode;3;-944,-97.5;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.IntNode;5;-894,24.5;Inherit;False;Property;_Column;Column;2;0;Create;True;0;0;0;False;0;False;0;0;False;0;1;INT;0
-Node;AmplifyShaderEditor.IntNode;6;-903,93.5;Inherit;False;Property;_Row;Row;3;0;Create;True;0;0;0;False;0;False;0;0;False;0;1;INT;0
-Node;AmplifyShaderEditor.RangedFloatNode;4;-891,164.5;Inherit;False;Property;_Speed;Speed;1;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.TFHCFlipBookUVAnimation;1;-685,56.5;Inherit;False;0;0;6;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;20;False;3;FLOAT2;0;FLOAT;1;FLOAT;2
-Node;AmplifyShaderEditor.SamplerNode;2;-433,52.5;Inherit;True;Property;_MainTex;MainTex;0;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.IntNode;5;-894,24.5;Inherit;False;Property;_Column;Column;2;0;Create;True;0;0;0;False;0;False;0;8;False;0;1;INT;0
+Node;AmplifyShaderEditor.IntNode;6;-903,93.5;Inherit;False;Property;_Row;Row;3;0;Create;True;0;0;0;False;0;False;0;4;False;0;1;INT;0
+Node;AmplifyShaderEditor.RangedFloatNode;4;-891,164.5;Inherit;False;Property;_Speed;Speed;1;0;Create;True;0;0;0;False;0;False;0;20;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.TFHCFlipBookUVAnimation;1;-685,56.5;Inherit;False;0;0;7;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;20;False;6;FLOAT;-1;False;4;FLOAT2;0;FLOAT;1;FLOAT;2;INT;3
+Node;AmplifyShaderEditor.SamplerNode;2;-433,52.5;Inherit;True;Property;_MainTex;MainTex;0;0;Create;True;0;0;0;False;0;False;-1;None;f200254e6d84e8146bddc66a263170db;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.DynamicAppendNode;10;-132,69.5;Inherit;True;COLOR;4;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.StandardSurfaceOutputNode;12;106,136;Half;False;True;-1;2;ASEMaterialInspector;0;0;Unlit;GIfPlayer;False;False;False;False;True;True;True;True;True;True;True;True;False;False;True;False;False;False;False;False;False;Back;0;False;;0;False;;False;0;False;;0;False;;False;0;Transparent;0.5;True;False;0;False;Transparent;;Transparent;All;6;d3d11;glcore;gles;gles3;metal;vulkan;True;True;True;True;0;False;;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;2;15;10;25;False;0.5;False;2;5;False;;10;False;;0;0;False;;0;False;;0;False;;0;False;;0;False;0;0,0,0,0;VertexOffset;True;True;Spherical;False;True;Relative;0;;0;-1;-1;-1;0;False;0;0;False;;-1;0;False;;0;0;0;False;0.1;False;;0;False;;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;16;FLOAT4;0,0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
+Node;AmplifyShaderEditor.StandardSurfaceOutputNode;12;106,136;Half;False;True;-1;2;ASEMaterialInspector;0;0;Unlit;GIfPlayer;False;False;False;False;True;True;True;True;True;True;True;True;False;False;True;False;False;False;False;False;False;Back;0;False;;0;False;;False;0;False;;0;False;;False;0;Transparent;0.5;True;False;0;False;Transparent;;Transparent;All;6;d3d11;glcore;gles;gles3;metal;vulkan;True;True;True;True;0;False;;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;2;15;10;25;False;0.5;False;2;5;False;;10;False;;0;0;False;;0;False;;0;False;;0;False;;0;False;0;0,0,0,0;VertexOffset;True;True;Spherical;False;True;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;;-1;0;False;;0;0;0;False;0.1;False;;0;False;;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;16;FLOAT4;0,0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
 WireConnection;1;0;3;0
 WireConnection;1;1;5;0
 WireConnection;1;2;6;0
@@ -111,6 +112,5 @@ WireConnection;10;0;2;0
 WireConnection;10;3;2;4
 WireConnection;12;2;2;0
 WireConnection;12;9;2;4
-WireConnection;12;10;2;4
 ASEEND*/
-//CHKSM=DC4DA69F5BA5E8C7BA39A1E21F292D6A9DC77826
+//CHKSM=6B7C467D3C8787E75651510B5222BF6116F6ED3B

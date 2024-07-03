@@ -27,6 +27,10 @@ namespace ECE
     public Color DisplayAllColor { get { return ECEPreferences.DisplayVerticesColour; } }
     public float DefaultScale { get { return ECEPreferences.DefaultScale; } }
     public float CommonScale { get { return ECEPreferences.CommonScalingMultiplier; } }
+    public float HoveredScale { get { return ECEPreferences.HoveredScaleMult; } }
+    public float SelectedScale { get { return ECEPreferences.SelectedScaleMult; } }
+    public float DisplayAllScale { get { return ECEPreferences.DisplayAllScaleMult; } }
+    public float OverlapScale { get { return ECEPreferences.OverlapScaleMult; } }
     public bool DisplayAllVertices { get { return ECEPreferences.DisplayAllVertices; } }
   #endregion
 
@@ -179,7 +183,7 @@ namespace ECE
 #endif
       {
         _DisplayAllMaterial.SetColor("_Color", DisplayAllColor);
-        _DisplayAllMaterial.SetFloat("_Size", size);
+        _DisplayAllMaterial.SetFloat("_Size", size * DisplayAllScale);
         _DisplayAllMaterial.SetBuffer("worldPositions", _DisplayAllBuffer);
         _DisplayAllMaterial.SetPass(0);
 #if (UNITY_2019_1_OR_NEWER)
@@ -205,7 +209,7 @@ namespace ECE
 #endif
       {
         _SelectedMaterial.SetColor("_Color", SelectedColor);
-        _SelectedMaterial.SetFloat("_Size", size);
+        _SelectedMaterial.SetFloat("_Size", size * SelectedScale);
         _SelectedMaterial.SetBuffer("worldPositions", _SelectedBuffer);
         _SelectedMaterial.SetPass(0);
 #if (UNITY_2019_1_OR_NEWER)
@@ -222,7 +226,7 @@ namespace ECE
 #endif
       {
         _HoveredMaterial.SetColor("_Color", HoveredColor);
-        _HoveredMaterial.SetFloat("_Size", size);
+        _HoveredMaterial.SetFloat("_Size", size * HoveredScale);
         _HoveredMaterial.SetPass(0);
 #if (UNITY_2019_1_OR_NEWER)
         Graphics.DrawProceduralNow(MeshTopology.Points, _HoveredBuffer.count);
@@ -238,7 +242,7 @@ namespace ECE
       {
         _OverlapMaterial.SetColor("_Color", OverlapColor);
         // scale overlap to be always larger than currently selected so they are always visible.
-        _OverlapMaterial.SetFloat("_Size", size);
+        _OverlapMaterial.SetFloat("_Size", size * OverlapScale);
         _OverlapMaterial.SetPass(0);
         // draw the topology as points. the squares are drawn in the shader by triangles from the points passed in through the overlap buffer when it is updated.
 #if (UNITY_2019_1_OR_NEWER)
@@ -467,6 +471,10 @@ namespace ECE
     public Color DisplayAllColor { get { return ECEPreferences.DisplayVerticesColour; } }
     public float DefaultScale { get { return ECEPreferences.DefaultScale; } }
     public float CommonScale { get { return ECEPreferences.CommonScalingMultiplier; } }
+    public float HoveredScale { get { return ECEPreferences.HoveredScaleMult; } }
+    public float SelectedScale { get { return ECEPreferences.SelectedScaleMult; } }
+    public float DisplayAllScale { get { return ECEPreferences.DisplayAllScaleMult; } }
+    public float OverlapScale { get { return ECEPreferences.OverlapScaleMult; } }
     public bool DisplayAllVertices { get { return ECEPreferences.DisplayAllVertices; } }
     #endregion
 
@@ -615,7 +623,7 @@ namespace ECE
 #endif
       {
         _DisplayAllMaterial.SetColor("_Color", DisplayAllColor);
-        _DisplayAllMaterial.SetFloat("_Size", size);
+        _DisplayAllMaterial.SetFloat("_Size", size * DisplayAllScale);
         _DisplayAllMaterial.SetBuffer("worldPositions", _DisplayAllBuffer);
         _DisplayAllMaterial.SetPass(0);
 #if (UNITY_2019_1_OR_NEWER)
@@ -637,7 +645,7 @@ namespace ECE
 #endif
       {
         _SelectedMaterial.SetColor("_Color", SelectedColor);
-        _SelectedMaterial.SetFloat("_Size", size);
+        _SelectedMaterial.SetFloat("_Size", size * SelectedScale);
         _SelectedMaterial.SetBuffer("worldPositions", _SelectedBuffer);
         _SelectedMaterial.SetPass(0);
 #if (UNITY_2019_1_OR_NEWER)
@@ -668,7 +676,7 @@ namespace ECE
 #endif
       {
         _HoveredMaterial.SetColor("_Color", HoveredColor);
-        _HoveredMaterial.SetFloat("_Size", size);
+        _HoveredMaterial.SetFloat("_Size", size * HoveredScale);
         _HoveredMaterial.SetPass(0);
 #if (UNITY_2019_1_OR_NEWER)
         Graphics.DrawProceduralNow(MeshTopology.Points, _HoveredBuffer.count);
@@ -684,7 +692,7 @@ namespace ECE
       {
         _OverlapMaterial.SetColor("_Color", OverlapColor);
         // scale overlap to be always larger than currently selected so they are always visible.
-        _OverlapMaterial.SetFloat("_Size", size);
+        _OverlapMaterial.SetFloat("_Size", size * OverlapScale);
         _OverlapMaterial.SetPass(0);
         // draw the topology as points. the squares are drawn in the shader by triangles from the points passed in through the overlap buffer when it is updated.
 #if (UNITY_2019_1_OR_NEWER)

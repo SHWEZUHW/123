@@ -121,7 +121,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Wolf3D_Outfit_Top","Text.006","Text.005","Text.004","Text.003","Text.002","Text.001","Text","Circle.004","Circle.003","Circle.002","Circle.001","Circle","Text.011","Text.010","Text.009","Text.008","Text.007","Cylinder","Icosphere","Cylinder.002","Cylinder.004","BezierCurve","Cylinder.001","Circle.011","Circle.010","Circle.009","Plane.002","Plane.001","Plane","Circle.013","Circle.012","Curve.001"],"padding":[256,256,256,256,256,256,256,256,138,138,230,89,12,256,256,256,256,256,95,15,39,39,69,138,45,55,10,256,256,256,113,55,35],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["Wolf3D_Outfit_Top","Text.006","Text.005","Text.004","Text.003","Text.002","Text.001","Text","Circle.004","Circle.003","Circle.002","Circle.001","Circle","Text.011","Text.010","Text.009","Text.008","Text.007","Cylinder","Icosphere","Cylinder.002","Cylinder.004","BezierCurve","Cylinder.001","Circle.011","Circle.010","Circle.009","Plane.002","Plane.001","Plane","Circle.013","Circle.012","Curve.001"],"padding":[256,256,256,256,256,256,256,256,138,138,230,89,12,256,256,256,256,256,95,15,39,39,69,138,45,256,10,256,256,256,113,55,35],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

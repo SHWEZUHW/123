@@ -1064,10 +1064,10 @@ MonoBehaviour:
   renderSettingsCompressVolumes: 0
   renderSettingsSector: {fileID: 0}
   renderSettingsRTPVExport: 1
-  renderSettingsRTPVSceneView: 0
+  renderSettingsRTPVSceneView: 1
   renderSettingsRTPVHDR: 0
-  renderSettingsRTPVWidth: 640
-  renderSettingsRTPVHeight: 360
+  renderSettingsRTPVWidth: 1262
+  renderSettingsRTPVHeight: 856
   lastBakeTime: 61
   enlightenWarningShown: 0
   enlightenWarningShown2: 0
@@ -12865,23 +12865,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5940435034069726382, guid: 37611d55a7f74844c9b52b282fdfd4af, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.00000058114523
       objectReference: {fileID: 0}
     - target: {fileID: 5940435034069726382, guid: 37611d55a7f74844c9b52b282fdfd4af, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5940435034069726382, guid: 37611d55a7f74844c9b52b282fdfd4af, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5940435034069726382, guid: 37611d55a7f74844c9b52b282fdfd4af, type: 3}
       propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940435034069726382, guid: 37611d55a7f74844c9b52b282fdfd4af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5940435034069726382, guid: 37611d55a7f74844c9b52b282fdfd4af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 5986452267877464008, guid: 37611d55a7f74844c9b52b282fdfd4af, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15327,8 +15331,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9996585, y: 2.4377892, z: 0.20614703}
-  m_Center: {x: -1.183022, y: 0.0074750185, z: 0.0044657364}
+  m_Size: {x: 2.254918, y: 2.4377892, z: 0.20614703}
+  m_Center: {x: 1.158937, y: 0.0074750185, z: 0.0044657364}
 --- !u!1 &1356226808
 GameObject:
   m_ObjectHideFlags: 0

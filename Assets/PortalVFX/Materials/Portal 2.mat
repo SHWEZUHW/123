@@ -94,7 +94,7 @@ Material:
     - _uv1VMin: 0.4
     m_Colors:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 0.008477211, g: 1, b: 0, a: 1}
+    - _Color: {r: 1, g: 0, b: 0.35102272, a: 1}
     - _Color0: {r: 0, g: 0.11489657, b: 0.6698113, a: 0}
     - _Color1: {r: 0.5149856, g: 1.3379041, b: 2.322914, a: 0}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
