@@ -1,0 +1,383 @@
+fileFormatVersion: 2
+guid: 781b020e41e6aee4d8aaeb1af451b182
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Airlock_1
+    second: {fileID: 2100000, guid: 2a23a85aa7b0dff48bb05cf928042b52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Airlock_2
+    second: {fileID: 2100000, guid: e6445046820796b4e97c2b05af6b3065, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Columbus_Bulkhead
+    second: {fileID: 2100000, guid: 557f278624d0029498f28767f4cf75e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Columbus_Racks01
+    second: {fileID: 2100000, guid: e68e4721669d1f443a172dec669158ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Columbus_Racks02
+    second: {fileID: 2100000, guid: 5771493ebc79377419cfc9eda82bde65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Columbus_Racks03
+    second: {fileID: 2100000, guid: 3ee190d4acb9cbe4fbb938f92e983954, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cupola_Diffuse
+    second: {fileID: 2100000, guid: 474bfef5fa7255b43b75a180d1e5c0e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cupola_Glass
+    second: {fileID: 2100000, guid: 1fd30a9649ce5ff45978d0c6fdf8b005, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Generic_Hub
+    second: {fileID: 2100000, guid: 1c107a773a161974b966aac4b77edbf2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Generic_Lights
+    second: {fileID: 2100000, guid: 21e397a8cb4701c4684fb758599db371, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Generic_Metals
+    second: {fileID: 2100000, guid: 2e38c1296e407924dbdeb9a59f847534, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Generic_Misc_Details
+    second: {fileID: 2100000, guid: da90e783253ee6c4cbe5bbcf30100c4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Generic_Misc_Details_LIGHTS
+    second: {fileID: 2100000, guid: 35c80581d505dfd40a04a8c4db1b452b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JLP_Int_Bulkhead
+    second: {fileID: 2100000, guid: 5e6e3349cbf9d1542a0a9bc14c3bb13c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JLP_Racks
+    second: {fileID: 2100000, guid: 16c7ac197d2e4dc4981301bd3da045c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JPM_Bulkhead
+    second: {fileID: 2100000, guid: e6f24405d12819d489343eac947adf79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JPM_Racks_01
+    second: {fileID: 2100000, guid: 8887af929b45bc84f9cdf77f5861a37f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JPM_Racks_02
+    second: {fileID: 2100000, guid: f2773ef5960184a45bf7ce0f4756de80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JPM_Racks_03
+    second: {fileID: 2100000, guid: 22567ac88c36e3245b393c37e7fea7d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 0bc5f1dac401ae14980afa574cde83b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Node1_Int_Bulkhead
+    second: {fileID: 2100000, guid: 40aeac2ed828001478108844f53f1075, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Node1_Int_Rack
+    second: {fileID: 2100000, guid: a825df106f30b9942a46c15d9ec27001, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Node2_Bulkhead
+    second: {fileID: 2100000, guid: 9198a2d5288f74841906dc74783382a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Node2_Rack
+    second: {fileID: 2100000, guid: 462a9192a24299c4486590c09b55543b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Node3_Bulkhead
+    second: {fileID: 2100000, guid: f2fb1480bb629604abc85f1de7c73d61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Node3_Int_Rack_01
+    second: {fileID: 2100000, guid: 2cdf6aa35f371be418728074f93abe32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Node3_Int_Rack_02
+    second: {fileID: 2100000, guid: 6ebe1f1baf81f574087297ec5ce7228c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PMM_01
+    second: {fileID: 2100000, guid: 587b24e3af939ff43b45b1326b164736, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: USLab_AFT_Bulkhead
+    second: {fileID: 2100000, guid: 19a115fad5e5efe48b77e4a77bafc292, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: USLab_FWD_Bulkhead
+    second: {fileID: 2100000, guid: f9d042ead83001549a7e3a10086218c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: USLab_Racks_01
+    second: {fileID: 2100000, guid: bfcccc71acf704242899a0aa073c002d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: USLab_Racks_02
+    second: {fileID: 2100000, guid: 4a40e656f0bcc7647b39684013ba3d50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: USLab_Racks_03
+    second: {fileID: 2100000, guid: f892305cd1d4145439f74abd610df2e5, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Airlock_01
+    second: {fileID: 2800000, guid: 5c61eb1a1c71dbf4982061e0c3974138, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Columbus_01
+    second: {fileID: 2800000, guid: 8b9307bff2569574b84a7564adfcb6f8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Columbus_02
+    second: {fileID: 2800000, guid: 5dccbed2918a8a14c8a556443e678f3b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Columbus_03
+    second: {fileID: 2800000, guid: b6bd535edbbd3aa4cb6b77aaa13d5e4f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Columbus_Int_Bulkhead
+    second: {fileID: 2800000, guid: c4b17aa8177ecf8408e9338f9fe929a9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Generic_Int_Hub
+    second: {fileID: 2800000, guid: 586786a44e6e90a4085a17a97e077097, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Generic_Misc_Details
+    second: {fileID: 2800000, guid: 3c23a82556c047c45a7a9574ba1f92e9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: JPM_Bulkhead
+    second: {fileID: 2800000, guid: 53979f379a834a845b40aa6eadbc214b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: JPM_Racks_01
+    second: {fileID: 2800000, guid: a866cc1afcb2dab42a5b62f847ac4a81, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: JPM_Racks_02
+    second: {fileID: 2800000, guid: a9818c86d803dfd4d8425b34e702b12f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: JPM_Racks_03
+    second: {fileID: 2800000, guid: a240a6f9c1254014ca62d4e61abb8e7c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Node1_Int_Bulkhead
+    second: {fileID: 2800000, guid: 785fd23c7e3ac684bbf7dbdd0c116732, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Node1_Int_Rack
+    second: {fileID: 2800000, guid: 94a480753abda204da7cb3492ff5ff40, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Node2_Int_Bulkhead
+    second: {fileID: 2800000, guid: b8503d5764f6a364ba8e83aab0a8be99, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Node2_Int_Rack
+    second: {fileID: 2800000, guid: 8dd82361fa236434a9da62dccc7c8281, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Node3_Int_Bulkhead
+    second: {fileID: 2800000, guid: cd1331583cf4c64479670b638dd3fb7c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Node3_Int_Rack_01
+    second: {fileID: 2800000, guid: f651d024eb4baa249978f27c38b6504d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Node3_Int_Rack_02
+    second: {fileID: 2800000, guid: 8db34e8ca39a2364bb67ff39808b877a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PMM_01
+    second: {fileID: 2800000, guid: 8d864cdef058f7642a316676cecd1cbc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: USLab_Racks_01
+    second: {fileID: 2800000, guid: 0fb38d9038b928e4db3024b4ad58f23f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: USLab_Racks_02
+    second: {fileID: 2800000, guid: cc9ef1cd50de2774aa0a4ffb2a9636a7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: USLab_Racks_03
+    second: {fileID: 2800000, guid: 1126881619030a14796a9867747e3fb0, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 1
+    materialSearch: 2
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["USLab.Hatch.Fwd.Open","USLab.Hatch.Aft.Open","US_Lab_Int_Racks_006.001","US_Lab_Int_Racks_006","US_Lab_Int_Racks_005","US_Lab_Int_Racks_004","US_Lab_Int_Racks_003.003","US_Lab_Int_Racks_003.002","US_Lab_Int_Racks_003.001","US_Lab_Int_Racks_003","US_Lab_Int_Racks_002","US_Lab_Int_Racks_001.001","US_Lab_Int_Racks_001","US_Lab_Int_MSS_AV","US_Lab_Int_Metals_FWD","US_Lab_Int_Metals_AFT","US_Lab_Int_MainFrame_Upper_Stbd","US_Lab_Int_MainFrame_Upper_Port","US_Lab_Int_MainFrame_Lower_Stbd","US_Lab_Int_MainFrame_Lower_Port","US_Lab_Int_MainFrame","US_Lab_Int_Lights_EndCaps","US_Lab_Int_Lights_Emissive","US_Lab_Int_FWD_Bulkhead","US_Lab_Int_Elbow_Screens","US_Lab_Int_AFT_Bulkhead","PMM_Racks_Zenith","PMM_Racks_Stbd","PMM_Racks_Port","PMM_Racks_Nadir","PMM_PressureHull","PMM_AftBulkhead","PMM.Hatch.Aft","PMM.CTB_Bags","Node3_Int_Rack.ZNH","Node3_Int_Rack.NDR","Node3_Int_Rack.MID","Node3_Int_Rack.LIGHTS.001","Node3_Int_Rack.FWD","Node3_Int_Metals.001","Node3_Int_Metals","Node3_Int_Metal_Hatch_Zenith","Node3_Int_Metal_Hatch_Stbd","Node3_Int_Metal_Hatch_Port","Node3_Int_Metal_Hatch_Nadir","Node3_Int_Metal_Hatch_Fwd","Node3_Int_Metal_Hatch_Aft","Node3_Int_Hub.ZNH","Node3_Int_Hub.SBD","Node3_Int_Hub.PRT","Node3_Int_Hub.NDR","Node3_Int_Hub.FWD","Node3_Int_Hub.AFT","Node3_Int
+      _Bulkhead.SBD","Node3_Int _Bulkhead.PRT","Node2_Int_Rack.ZNH","Node2_Int_Rack.SBD","Node2_Int_Rack.PRT","Node2_Int_Rack.NDR","Node2_Int_Rack.LIGHTS","Node2_Int_Metals.001","Node2_Int_Metals","Node2_Int_Metal_Hatch_Zenith","Node2_Int_Metal_Hatch_Stbd","Node2_Int_Metal_Hatch_Port","Node2_Int_Metal_Hatch_Nadir","Node2_Int_Metal_Hatch_Fwd","Node2_Int_Metal_Hatch_Aft","Node2_Int_Hub.ZNH","Node2_Int_Hub.SBD","Node2_Int_Hub.PRT","Node2_Int_Hub.NDR","Node2_Int_Hub.FWD","Node2_Int_Hub.AFT","Node2_Int_CrwQtr_RgtDoor.ZNH","Node2_Int_CrwQtr_RgtDoor.SBD","Node2_Int_CrwQtr_RgtDoor.PRT","Node2_Int_CrwQtr_RgtDoor.NDR","Node2_Int_CrwQtr_LftDoor.ZNH","Node2_Int_CrwQtr_LftDoor.SBD","Node2_Int_CrwQtr_LftDoor.PRT","Node2_Int_CrwQtr_LftDoor.NDR","Node2_Int_Bulkhead.FWD","Node2_Int_Bulkhead.AFT","Node1_Int_Rack.ZNH","Node1_Int_Rack.SBD","Node1_Int_Rack.PRT","Node1_Int_Rack.NDR","Node1_Int_Metals","Node1_Int_Metal_Hatch_Zenith","Node1_Int_Metal_Hatch_Stbd","Node1_Int_Metal_Hatch_Port","Node1_Int_Metal_Hatch_Nadir","Node1_Int_Metal_Hatch_Fwd","Node1_Int_Metal_Hatch_Aft_Close","Node1_Int_LightsEndcaps","Node1_Int_Lights","Node1_Int_Hub.ZNH","Node1_Int_Hub.SBD","Node1_Int_Hub.PRT","Node1_Int_Hub.NDR","Node1_Int_Hub.FWD","Node1_Int_Hub.AFT","Node1_Int_Bulkhead.FWD","Node1_Int_Bulkhead.AFT","Module_Connect.007","Module_Connect.006","Module_Connect.005","Module_Connect.004","Module_Connect.003","Module_Connect.002","Module_Connect.001","Module_Connect.000","JPM_Hatch_Stbd.Open","JPM_Hatch_Nadir.Open","JPM_CollapsedForUnity.Zenith.Backing","JPM_CollapsedForUnity.Zenith","JPM_CollapsedForUnity.Starboard","JPM_CollapsedForUnity.Port","JPM_CollapsedForUnity.Nadir.Backing","JPM_CollapsedForUnity.Nadir","JPM_CollapsedForUnity.Forward.Backing","JPM_CollapsedForUnity.Forward","JPM_CollapsedForUnity.Airlock","JPM_CollapsedForUnity.Aft.Backing","JPM_CollapsedForUnity.Aft","JPM_Airlock_ExteriorDoor","JLP_Metal_Hatch_Nadir","JLP_Int_Racks","JLP_Int_Metals","JLP_Int_Lights","JLP_Int_Bulkhead","Cupola_WC_07","Cupola_WC_06","Cupola_WC_05","Cupola_WC_04","Cupola_WC_03","Cupola_WC_02","Cupola_WC_01","Cupola_Int_MSS_AV","Cupola_Int_Metal","Cupola_Int_Glass","Cupola_Int_Cabin","Columbus_Rack.ER3","Columbus_Hatch_Rails","Columbus_Hatch_Port.Open","Columbus_CollapsedForUnity.Zenith","Columbus_CollapsedForUnity.Starboard","Columbus_CollapsedForUnity.Port","Columbus_CollapsedForUnity.Nadir.001","Columbus_CollapsedForUnity.Nadir","Columbus_CollapsedForUnity.Forward","Columbus_CollapsedForUnity.Aft","Cevis.Mount","CEVIS.Bike","Airlock_Int_Wall_Starboard","Airlock_Int_se_191_stowage_rack_1","Airlock_Int_Lights_Illum","Airlock_Int_Hatch_Stbd","Airlock_Int_Handles_Metallics","Airlock_Int_Enclosure","Airlock_Int_CrewLock_Simp_Door"],"padding":[182,182,164,97,98,96,256,171,244,99,97,125,94,139,210,210,253,254,256,256,86,256,256,99,256,108,72,73,74,73,33,63,182,53,151,115,68,256,156,256,71,182,182,182,182,182,182,189,120,125,185,185,189,106,92,87,96,97,86,256,254,70,182,182,182,178,182,182,183,183,183,179,129,128,256,256,256,256,256,256,256,256,105,103,132,175,175,150,80,182,182,182,182,182,182,256,256,179,183,183,179,129,128,112,91,256,256,256,256,256,256,256,256,182,182,72,79,70,56,70,70,69,72,55,69,70,205,182,73,125,256,42,256,256,256,256,256,256,244,180,256,181,64,256,256,182,75,75,67,166,86,74,78,202,255,77,63,256,182,170,42,209],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

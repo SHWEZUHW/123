@@ -230,7 +230,7 @@ ModelImporter:
       4 a (14).001","plint 1.002","pictures.001","lamp 3.001","glass 3.001","floor
       4.001","chandelier","chair b.005","chair b side (2).002","chair b side (1).002","chair
       b (15).005","chair b (15).002","chair b (11).005","chair b (8).005","chair
-      b (8).002","carpet.002","Stage","lamp 1 (15)"],"padding":[16,26,27,8,133,17,27,256,11,9,35,31,28,28,43,38,31,43,38,22,29,240],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
+      b (8).002","carpet.002","Stage","lamp 1 (15)","Stage.002"],"padding":[16,26,27,8,133,17,27,256,11,9,35,31,28,28,43,38,31,43,38,22,29,240,61],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
