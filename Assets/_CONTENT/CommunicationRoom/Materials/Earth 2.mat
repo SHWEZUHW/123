@@ -12,7 +12,7 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 0
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -85,7 +85,7 @@ Material:
     - _Water_Speed: 0.0277
     - _Water_Tiling: 72.23
     - _ZWrite: 1
-    - __dirty: 0
+    - __dirty: 1
     - _lightMin: -0.95
     - _max: -12.82
     - _min: 0.29

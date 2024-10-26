@@ -1,0 +1,12 @@
+(async function(){
+    const videoPlayer = new BS.GameObject("test");
+    const transform = await videoPlayer.AddComponent(new BS.Transform());
+    transform.position = new BS.Vector3(0, 1.964, 1.5);
+    await videoPlayer.AddComponent(new BS.BanterGeometry(BS.GeometryType.PlaneGeometry, 0, 2, 1));
+    await videoPlayer.AddComponent(new BS.BanterMaterial("Unlit/Diffuse", "", new BS.Vector4(1,1,1,1)));
+
+    // Youtube video ID, i.e https://www.youtube.com/watch?v=VYOjWnS4cMY
+    const info = await videoPlayer.scene.YtInfo("VYOjWnS4cMY"); 
+
+    await videoPlayer.AddComponent(new BS.BanterVideoPlayer(info.streamingData.formats[0].url));  // This should just play!
+})();

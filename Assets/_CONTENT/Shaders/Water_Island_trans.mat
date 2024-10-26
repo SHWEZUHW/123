@@ -25,7 +25,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ReflectionTex:
-        m_Texture: {fileID: 8900000, guid: a940d6cd3cca6b948b49f578fb559762, type: 3}
+        m_Texture: {fileID: 8900000, guid: a940d6cd3cca6b948b49f578fb559763, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -35,13 +35,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _Float0: 0.13
-    - _Gloss: 0.295
+    - _Gloss: 0.367
     - _IntersectIntensity: 1
     - _Speed: 0.0083
     - _Tiling: 0.33
-    - _Trans: 0.954
+    - _Trans: 0.593
     - _Transparent: 0.038
-    - __dirty: 0
+    - __dirty: 1
     - _depth: 11.5
     m_Colors:
     - _Color0: {r: 0, g: 0.6576613, b: 0.735849, a: 0}

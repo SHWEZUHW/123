@@ -30,7 +30,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: b36d82dce1944357b33e03f7e2975b06, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -46,8 +46,8 @@ Material:
     - _DiffuseCellshadeOffset: 0
     - _DiffuseCellshadeSharpness: 0.01
     - _Float0: 1
-    - _HighlightCellOffset: -0.904
-    - _HighlightCellSharpness: 0.029
+    - _HighlightCellOffset: -0.784
+    - _HighlightCellSharpness: 0.055
     - _IndirectContribution: 0.762
     - _IndirectDiffuseContribution: 1
     - _IndirectSpecularContribution: 1
@@ -56,7 +56,7 @@ Material:
     - _OutlineWidth: 0.02
     - _OutlineWidth1: 0.04
     - _RimOff: 0.6
-    - _RimOffset: 0.4
+    - _RimOffset: 0.032
     - _RimPower: 1
     - _ShadowContribution: 0.9
     - _SpecularOffset: -0.95
@@ -65,12 +65,12 @@ Material:
     - _TessMax: 25
     - _TessMin: 10
     - _TessPhongStrength: 0.5
-    - _TessValue: 4
+    - _TessValue: 1
     - __dirty: 0
     m_Colors:
     - _BaseTint: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightTint: {r: 3, g: 3, b: 3, a: 1}
-    - _OutlineTint: {r: 1, g: 0.13383718, b: 0, a: 1}
+    - _OutlineTint: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 0.22941168, g: 0.3505882, b: 0.4, a: 1}
     - _SpecularTint: {r: 1, g: 1, b: 1, a: 1}
     - _TintBaseColor: {r: 1, g: 1, b: 1, a: 0}

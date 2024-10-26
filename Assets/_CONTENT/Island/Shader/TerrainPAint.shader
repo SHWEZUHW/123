@@ -2,7 +2,7 @@
 // Upgrade NOTE: replaced tex2D unity_LightmapInd with UNITY_SAMPLE_TEX2D_SAMPLER
 // Upgrade NOTE: upgraded instancing buffer 'BanterTerrainPaint' to new syntax.
 
-// Made with Amplify Shader Editor v1.9.3.2
+// Made with Amplify Shader Editor v1.9.4
 // Available at the Unity Asset Store - http://u3d.as/y3X 
 Shader "Banter/TerrainPaint"
 {
@@ -73,39 +73,39 @@ Shader "Banter/TerrainPaint"
 		UNITY_INSTANCING_BUFFER_END(BanterTerrainPaint)
 
 
-		float2 voronoihash70( float2 p )
-		{
-			
-			p = float2( dot( p, float2( 127.1, 311.7 ) ), dot( p, float2( 269.5, 183.3 ) ) );
-			return frac( sin( p ) *43758.5453);
-		}
+float2 voronoihash70( float2 p )
+{
+	
+	p = float2( dot( p, float2( 127.1, 311.7 ) ), dot( p, float2( 269.5, 183.3 ) ) );
+	return frac( sin( p ) *43758.5453);
+}
 
 
-		float voronoi70( float2 v, float time, inout float2 id, inout float2 mr, float smoothness, inout float2 smoothId )
-		{
-			float2 n = floor( v );
-			float2 f = frac( v );
-			float F1 = 8.0;
-			float F2 = 8.0; float2 mg = 0;
-			for ( int j = -1; j <= 1; j++ )
-			{
-				for ( int i = -1; i <= 1; i++ )
-			 	{
-			 		float2 g = float2( i, j );
-			 		float2 o = voronoihash70( n + g );
-					o = ( sin( time + o * 6.2831 ) * 0.5 + 0.5 ); float2 r = f - g - o;
-					float d = 0.5 * dot( r, r );
-			 		if( d<F1 ) {
-			 			F2 = F1;
-			 			F1 = d; mg = g; mr = r; id = o;
-			 		} else if( d<F2 ) {
-			 			F2 = d;
-			
-			 		}
-			 	}
-			}
-			return F1;
-		}
+float voronoi70( float2 v, float time, inout float2 id, inout float2 mr, float smoothness, inout float2 smoothId )
+{
+	float2 n = floor( v );
+	float2 f = frac( v );
+	float F1 = 8.0;
+	float F2 = 8.0; float2 mg = 0;
+	for ( int j = -1; j <= 1; j++ )
+	{
+		for ( int i = -1; i <= 1; i++ )
+	 	{
+	 		float2 g = float2( i, j );
+	 		float2 o = voronoihash70( n + g );
+			o = ( sin( time + o * 6.2831 ) * 0.5 + 0.5 ); float2 r = f - g - o;
+			float d = 0.5 * dot( r, r );
+	 		if( d<F1 ) {
+	 			F2 = F1;
+	 			F1 = d; mg = g; mr = r; id = o;
+	 		} else if( d<F2 ) {
+	 			F2 = d;
+	
+	 		}
+	 	}
+	}
+	return F1;
+}
 
 
 		half3 HSVToRGB( half3 c )
@@ -277,10 +277,10 @@ Shader "Banter/TerrainPaint"
 	CustomEditor "ASEMaterialInspector"
 }
 /*ASEBEGIN
-Version=19302
+Version=19400
 Node;AmplifyShaderEditor.SamplerNode;19;-456.6293,-600.601;Inherit;True;Property;_Red;Red;5;0;Create;True;0;0;0;False;0;False;-1;None;2115c7e1c47aeb04ebf73124ce80013c;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SamplerNode;48;-920.5737,-1040.526;Inherit;True;Property;_Splat;Splat;0;0;Create;True;0;0;0;False;0;False;-1;None;42b70c781a9c0e047a4662320d476205;True;1;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SamplerNode;18;-184.8157,-837.7715;Inherit;True;Property;_Black;Black;1;0;Create;True;0;0;0;False;0;False;-1;None;38e077ea0da267f4b8ad9b4327ef347a;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SamplerNode;48;-920.5737,-1040.526;Inherit;True;Property;_Splat;Splat;0;0;Create;True;0;0;0;False;0;False;-1;None;42b70c781a9c0e047a4662320d476205;True;1;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.LerpOp;22;206.3908,-543.6591;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SamplerNode;20;-479.6626,-338.8741;Inherit;True;Property;_Green;Green;6;0;Create;True;0;0;0;False;0;False;-1;None;87965f2573be6e8488ae108b18543ff8;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleTimeNode;83;-425.3656,238.7686;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0
@@ -288,8 +288,8 @@ Node;AmplifyShaderEditor.LerpOp;23;206.5271,-377.7694;Inherit;False;3;0;COLOR;0,
 Node;AmplifyShaderEditor.SamplerNode;26;-983.9072,-253.4779;Inherit;True;Property;_Blue;Blue;7;0;Create;True;0;0;0;False;0;False;-1;None;da49e0cea73007c44b2b49ec8236eb66;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleAddOpNode;56;1186.134,-496.3282;Inherit;False;3;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.VoronoiNode;70;1138.912,-743.4716;Inherit;False;0;0;1;0;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;2;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2
-Node;AmplifyShaderEditor.RangedFloatNode;31;410.9495,-284.5104;Inherit;False;InstancedProperty;_screenprojection;screenprojection;9;0;Create;True;0;0;0;True;0;False;0.25;1;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SamplerNode;27;398.1687,-896.7855;Inherit;True;Property;_Video;Video;8;0;Create;True;0;0;0;False;0;False;-1;None;9fcb8cf15a79d7949b513ea805fabad0;True;2;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.RangedFloatNode;31;410.9495,-284.5104;Inherit;False;InstancedProperty;_screenprojection;screenprojection;9;0;Create;True;0;0;0;True;0;False;0.25;1;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.LerpOp;24;81.627,-172.8571;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.TFHCRemapNode;62;1357.006,-471.0146;Inherit;False;5;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0.5;False;4;FLOAT;-0.15;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;30;726.161,-358.2863;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
@@ -313,10 +313,10 @@ Node;AmplifyShaderEditor.SimpleSubtractOpNode;94;1716.247,370.4156;Inherit;False
 Node;AmplifyShaderEditor.HSVToRGBNode;98;1804.876,562.8547;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0.8;False;2;FLOAT;0.8;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.SaturateNode;104;1487.774,105.4331;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.DecodeLightmapHlpNode;35;165.5619,454.2799;Inherit;True;2;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0,0,0,0;False;1;FLOAT3;0
-Node;AmplifyShaderEditor.RangedFloatNode;38;2062.665,-198.1528;Inherit;False;InstancedProperty;_terrainlight;terrainlight;11;0;Create;True;0;0;0;True;0;False;0;0;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.LerpOp;77;2182.93,-33.43167;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;96;2156.213,338.4968;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;41;701.7031,433.1211;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT3;0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.RangedFloatNode;38;1808,-288;Inherit;False;InstancedProperty;_terrainlight;terrainlight;11;0;Create;True;0;0;0;True;0;False;0;0;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.LerpOp;37;2370.757,-351.2314;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;95;2423.063,-60.07449;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT3;0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;110;2545.872,-190.033;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
@@ -378,4 +378,4 @@ WireConnection;110;0;37;0
 WireConnection;110;1;95;0
 WireConnection;0;2;110;0
 ASEEND*/
-//CHKSM=0CF4B1799FAEB4772FA759B38E1136698660D79B
+//CHKSM=12DD2A45C4CFB76B34B7345451C53453948297C0

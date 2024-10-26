@@ -37,7 +37,7 @@ Material:
     - _ReadingLightening: 0
     - _RefPlane: 0.5
     - _TIling: 8.76
-    - __dirty: 0
+    - __dirty: 1
     - _tile: 1
     m_Colors: []
   m_BuildTextureStacks: []
