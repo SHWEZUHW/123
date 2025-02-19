@@ -152,7 +152,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties:
     - "#BAKERY{\"meshName\":[\"staue1\",\"Room\",\"SM_AltarTable\",\"SM_AltarTable.001\",\"\u0421urtain
-      tied\",\"Bar\",\"Chairs\",\"defaultMaterial.001\",\"defaultMaterial\",\"Outer\",\"Door\",\"Head\",\"SM_AltarTable.002\",\"Graveyard\",\"Cage\",\"OuterClimb\",\"Door_R\",\"Door_L\",\"Column\"],\"padding\":[76,4,26,75,64,30,92,42,42,2,61,28,17,9,33,48,85,85,15],\"unwrapper\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}"
+      tied\",\"Bar\",\"Chairs\",\"defaultMaterial.001\",\"defaultMaterial\",\"Outer\",\"Door\",\"Head\",\"SM_AltarTable.002\",\"Graveyard\",\"Cage\",\"OuterClimb\",\"Door_R\",\"Door_L\",\"Column\"],\"padding\":[76,4,26,75,64,30,92,42,42,2,61,28,17,9,33,48,85,85,15],\"unwrapper\":[1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,1,1,1]}"
     clipAnimations: []
     isReadable: 0
   meshes:

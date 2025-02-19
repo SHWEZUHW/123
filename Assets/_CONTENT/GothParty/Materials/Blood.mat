@@ -36,7 +36,7 @@ Material:
     - _DstBlend: 0
     - _Float0: 8.09
     - _Float4: 1
-    - _Gloss: 0.34
+    - _Gloss: 5
     - _Gloss2: 0.34
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -57,7 +57,7 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 1, g: 0.3160375, b: 0.3160375, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _RippleCentre: {r: 0, g: 0, b: 8, a: 0}
   m_BuildTextureStacks: []

@@ -1,4 +1,4 @@
-// Made with Amplify Shader Editor v1.9.1.5
+// Made with Amplify Shader Editor v1.9.4
 // Available at the Unity Asset Store - http://u3d.as/y3X 
 Shader "FlipboardBillboard"
 {
@@ -70,7 +70,7 @@ Shader "FlipboardBillboard"
 			float2 fbtiling2 = float2(fbcolsoffset2, fbrowsoffset2);
 			// UV Offset - calculate current tile linear index, and convert it to (X * coloffset, Y * rowoffset)
 			// Calculate current tile linear index
-			float fbcurrenttileindex2 = round( fmod( fbspeed2 + 0.0, fbtotaltiles2) );
+			float fbcurrenttileindex2 = floor( fmod( fbspeed2 + 0.0, fbtotaltiles2) );
 			fbcurrenttileindex2 += ( fbcurrenttileindex2 < 0) ? fbtotaltiles2 : 0;
 			// Obtain Offset X coordinate from current tile linear index
 			float fblinearindextox2 = round ( fmod ( fbcurrenttileindex2, (float)_Columns ) );
@@ -87,6 +87,7 @@ Shader "FlipboardBillboard"
 			// Flipbook UV
 			half2 fbuv2 = i.uv_texcoord * fbtiling2 + fboffset2;
 			// *** END Flipbook UV Animation vars ***
+			int flipbookFrame2 = ( ( int )fbcurrenttileindex2);
 			half4 tex2DNode3 = tex2D( _TextureSample0, fbuv2 );
 			o.Emission = ( tex2DNode3 + _Tint ).rgb;
 			o.Alpha = 1;
@@ -99,27 +100,37 @@ Shader "FlipboardBillboard"
 	CustomEditor "ASEMaterialInspector"
 }
 /*ASEBEGIN
-Version=19105
+Version=19400
 Node;AmplifyShaderEditor.TextureCoordinatesNode;5;-948,-436;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.IntNode;6;-950,-314;Inherit;False;Property;_Columns;Columns;2;0;Create;True;0;0;0;False;0;False;0;8;False;0;1;INT;0
-Node;AmplifyShaderEditor.TFHCFlipBookUVAnimation;2;-659,-195;Inherit;False;0;0;6;0;FLOAT2;0,0;False;1;FLOAT;8;False;2;FLOAT;8;False;3;FLOAT;25;False;4;FLOAT;0;False;5;FLOAT;0;False;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.IntNode;7;-945,-221;Inherit;False;Property;_Rows;Rows;3;0;Create;True;0;0;0;False;0;False;0;8;False;0;1;INT;0
 Node;AmplifyShaderEditor.RangedFloatNode;9;-940,-125;Inherit;False;Property;_Speed;Speed;4;0;Create;True;0;0;0;False;0;False;0;25;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleTimeNode;4;-941,-27;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;13;-888.3967,127.36;Inherit;False;Property;_Billboard;Billboard;5;0;Create;True;0;0;0;False;1;Billboard;False;0;0;0;1;0;1;FLOAT;0
+Node;AmplifyShaderEditor.TFHCFlipBookUVAnimation;2;-659,-195;Inherit;False;0;0;7;0;FLOAT2;0,0;False;1;FLOAT;8;False;2;FLOAT;8;False;3;FLOAT;25;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;-1;False;4;FLOAT2;0;FLOAT;1;FLOAT;2;INT;3
 Node;AmplifyShaderEditor.SamplerNode;3;-391,-216;Inherit;True;Property;_TextureSample0;Texture Sample 0;0;0;Create;True;0;0;0;False;0;False;-1;None;10b816ca971c6804cad875b9ea9a780a;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;270,-138;Half;False;True;-1;2;ASEMaterialInspector;0;0;Unlit;FlipboardBillboard;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Back;0;False;;0;False;;False;0;False;;0;False;;False;0;Custom;0.5;True;True;0;True;TransparentCutout;;Geometry;All;12;all;True;True;True;True;0;False;;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;2;15;10;25;False;0.5;True;0;0;False;;0;False;;0;0;False;;0;False;;0;False;;0;False;;0;False;0;0,0,0,0;VertexOffset;True;True;Cylindrical;False;True;Relative;0;Mobile/Diffuse;1;-1;-1;-1;0;False;0;0;False;;-1;0;False;;0;0;0;False;0.1;False;;0;False;;False;15;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
-Node;AmplifyShaderEditor.SimpleAddOpNode;18;18.60303,-340.64;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.ColorNode;19;-274.397,-447.64;Inherit;False;Property;_Tint;Tint;6;0;Create;True;0;0;0;False;0;False;0,0,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.ColorNode;19;-274.397,-447.64;Inherit;False;Property;_Tint;Tint;6;0;Create;True;0;0;0;False;0;False;0,0,0,0;0.6061766,0.9245283,0.7977654,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.RGBToHSVNode;20;-448,80;Inherit;False;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.RangedFloatNode;22;-352,0;Inherit;False;Property;_Hue;Hue;7;0;Create;True;0;0;0;False;0;False;0;0.258;0;1;0;1;FLOAT;0
+Node;AmplifyShaderEditor.HSVToRGBNode;21;-64,96;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.RangedFloatNode;13;-888.3967,127.36;Inherit;False;Property;_Billboard;Billboard;5;0;Create;True;0;0;0;False;1;Billboard;False;0;0;0;1;0;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleAddOpNode;18;16,-256;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;23;128,-400;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;270,-138;Half;False;True;-1;2;ASEMaterialInspector;0;0;Unlit;FlipboardBillboard;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Back;0;False;;0;False;;False;0;False;;0;False;;False;0;Custom;0.5;True;True;0;True;TransparentCutout;;Geometry;All;12;all;True;True;True;True;0;False;;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;2;15;10;25;False;0.5;True;0;0;False;;0;False;;0;0;False;;0;False;;0;False;;0;False;;0;False;0;0,0,0,0;VertexOffset;True;True;Cylindrical;False;True;Relative;0;Mobile/Diffuse;1;-1;-1;-1;0;False;0;0;False;;-1;0;False;;0;0;0;False;0.1;False;;0;False;;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;16;FLOAT4;0,0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
 WireConnection;2;0;5;0
 WireConnection;2;1;6;0
 WireConnection;2;2;7;0
 WireConnection;2;3;9;0
 WireConnection;2;5;4;0
 WireConnection;3;1;2;0
-WireConnection;0;2;18;0
-WireConnection;0;10;3;4
+WireConnection;20;0;3;0
+WireConnection;21;0;20;1
+WireConnection;21;1;22;0
+WireConnection;21;2;20;3
 WireConnection;18;0;3;0
 WireConnection;18;1;19;0
+WireConnection;23;0;3;0
+WireConnection;23;1;19;0
+WireConnection;0;2;18;0
+WireConnection;0;10;3;4
 ASEEND*/
-//CHKSM=30B70E1FBD0F66C63AE1AEEE4F72A1E16B3155A0
+//CHKSM=AA28031BD324FEAEF3778D04F8B1DA8B31FB2048

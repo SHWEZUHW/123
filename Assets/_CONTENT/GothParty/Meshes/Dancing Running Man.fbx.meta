@@ -49,7 +49,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["GoatGuard"],"padding":[48],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["GoatGuard"],"padding":[48],"unwrapper":[1]}'
     clipAnimations:
     - serializedVersion: 16
       name: mixamo.com

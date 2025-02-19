@@ -32,6 +32,7 @@ Material:
     m_Floats:
     - _Columns: 8
     - _Cutoff: 0.5
+    - _Hue: 0.258
     - _Rows: 8
     - _Speed: 25
     - __dirty: 0

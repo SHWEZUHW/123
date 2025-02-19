@@ -34,8 +34,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ChromaticAberration: 0.2
-    - _IndexofRefraction: 2
+    - _ChromaticAberration: 0.172
+    - _IndexofRefraction: -3
     - _NormalScale: 0.25
     - _Opacity: 0.25
     - __dirty: 0
