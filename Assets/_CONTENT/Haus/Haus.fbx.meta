@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Baumschwarte
+    second: {fileID: 2100000, guid: 029c3410491886c41924c916bccb0970, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: BettKasten
     second: {fileID: 2100000, guid: 56924dfa0d80f6f48b20c2b7f1fb0874, type: 2}
   - first:
@@ -47,13 +52,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: FensterRahmenGoldeOak
+    second: {fileID: 2100000, guid: 9432b71bbf4127149bc86839a44ab2cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Glossy
     second: {fileID: 2100000, guid: d61186dbb0aa7574a8182e62bcd9dd0b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: HolzHell
+    second: {fileID: 2100000, guid: d50f8b429f35eac41995f6633cc0943b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Metal
     second: {fileID: 2100000, guid: e6ee3667f34d52d40ba3f55ad8de011f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Regips
+    second: {fileID: 2100000, guid: a239ddc06d8902749afee69f7faa1bf1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -112,7 +132,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties:
     - '#BAKERY{"meshName":["Plane.012","Plane.011","Plane.010","Plane.009","Plane.008","Plane.007","Plane.006","Plane.005","Plane.004","Plane.003","Plane.002","Plane.001","Plane","Object_4.002","Object_4.001","Object_2","Obergeschoss.001","Obergeschoss","Mesh3____SING________QQ___469733580___173_14_0","low_base_Chair_0.001","low_base_Chair_0","Kittcxhen.007","Kittcxhen.006","Kittcxhen.005","Kittcxhen.004","Kittcxhen.003","Kittcxhen.002","Kittcxhen.001","Kittcxhen","Frame_wood_wood_0","Door.001","Door_Frame.001","Door","Door_Frame","dishwasher_dishwasher_0","defaultMaterial.003","defaultMaterial","Cylinder.002","Cylinder","base_geladeira_low_0.001","base_geladeira_low_0","_gltfNode_11","_gltfNode_8","Plane_SInk_0","Object_2.002","Object_2.001","Expresso
-      chair001","defaultMaterial.001","Cube","Circle.001","Circle","Tu ao_01 - Default_0","Object_4","defaultMaterial.004","defaultMaterial.002","Cube.001","Door.002","Door_Frame.002","defaultMaterial.007","defaultMaterial.006","defaultMaterial.005","Cylinder.004","Cube.004","Cube.003","Cube.002","Cylinder.003","Cube.005","Stairs","Cube.007","Cube.006","Obergeschoss.003","Obergeschoss.002","Plane.014","Door_Frame.004","Door_Frame.003","SmallBed.001","Door.005","Door_Frame.005","Cube.016","Cube.014","Cylinder.010","Cylinder.009","Cylinder.008","Cube.028","Cube.025","Cube.024","Cube.023","Cube.021","Cylinder.007","Cube.022","Cube.020","Cube.018","Obergeschoss.004","Plane.015","Plane.013","Cube.037","Cube.036","Cube.035"],"padding":[213,23,44,60,57,12,210,152,47,17,18,123,13,78,74,51,24,11,30,119,108,92,132,69,78,256,82,70,19,45,81,95,75,89,86,49,97,176,56,52,52,56,61,126,41,37,156,138,113,140,56,23,51,139,139,198,75,90,139,139,139,256,126,126,36,256,81,51,159,159,53,13,85,85,73,51,77,95,65,92,256,256,256,256,8,256,129,112,63,41,13,103,64,163,82,28,27,112],"unwrapper":[1,1,1,1,0,1,1,1,0,1,1,0,1,0,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,1,0,0,0,1,1,1,1,1,1,1]}'
+      chair001","defaultMaterial.001","Cube","Circle.001","Circle","Tu ao_01 - Default_0","Object_4","defaultMaterial.004","defaultMaterial.002","Cube.001","Door.002","Door_Frame.002","defaultMaterial.007","defaultMaterial.006","defaultMaterial.005","Cylinder.004","Cube.004","Cube.003","Cube.002","Cylinder.003","Cube.005","Stairs","Cube.007","Cube.006","Obergeschoss.003","Obergeschoss.002","Plane.014","Door_Frame.004","Door_Frame.003","SmallBed.001","Door.005","Door_Frame.005","Cube.016","Cube.014","Cylinder.010","Cylinder.009","Cylinder.008","Cube.028","Cube.025","Cube.024","Cube.023","Cube.021","Cylinder.007","Cube.022","Cube.020","Cube.018","Obergeschoss.004","Plane.015","Plane.013","Cube.037","Cube.036","Cube.035","Plane.019","Plane.018","Plane.016","Cube.033","Plane.017","Cube.040","Cube.026"],"padding":[221,20,60,71,57,12,210,152,59,17,13,123,13,78,74,51,24,11,30,119,108,92,132,69,78,256,82,70,19,45,81,95,75,89,86,49,97,176,56,52,52,56,61,126,41,37,156,138,113,140,56,23,51,139,139,198,75,90,139,139,139,256,126,126,36,256,81,51,159,159,53,13,85,85,73,51,81,97,65,19,256,256,256,70,26,256,129,120,63,41,13,81,64,163,82,95,74,95,41,45,35,104,61,82,97],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

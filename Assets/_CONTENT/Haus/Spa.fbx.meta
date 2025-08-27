@@ -71,7 +71,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Cylinder","Cube.019","Cube.017","Cube.016","Cube.015","Cube.014","_gltfNode_21","Cube.020","Cylinder.007","Cube.022","Cube.027","Cube.007"],"padding":[48,65,76,40,16,32,24,13,57,46,77,100],"unwrapper":[0,1,1,0,1,0,1,1,1,1,0,1]}'
+    - '#BAKERY{"meshName":["Cylinder","Cube.019","Cube.017","Cube.016","Cube.015","Cube.014","_gltfNode_21","Cube.020","Cylinder.007","Cube.022","Cube.027","Cube.007"],"padding":[48,65,76,40,16,32,24,13,57,46,77,100],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
