@@ -57,7 +57,7 @@ Material:
     - _AlphaToMask: 0
     - _AlphaToMaskInspectorValue: 0
     - _BlendMode: 0
-    - _Brightness: 1
+    - _Brightness: 2
     - _Cull: 2
     - _CullMode: 2
     - _CullModeForward: 2

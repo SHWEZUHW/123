@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Bild_SW
+    second: {fileID: 2100000, guid: 84ca940d57568b04e885c8d27b2d2b7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Boden
     second: {fileID: 2100000, guid: 56924dfa0d80f6f48b20c2b7f1fb0874, type: 2}
   - first:
@@ -14,6 +19,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: BodenBad
     second: {fileID: 2100000, guid: 3d0cf540211043f4da25d5ee75a810dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carpet
+    second: {fileID: 2100000, guid: 2eab4d4b4eab3704e9f278306d062a56, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -29,6 +39,36 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Glossy
     second: {fileID: 2100000, guid: d61186dbb0aa7574a8182e62bcd9dd0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gray
+    second: {fileID: 2100000, guid: 7afcbd97bed49224895365f9e82549ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green
+    second: {fileID: 2100000, guid: 1f20e06975966364083a3d155d84ec90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HolzDunkel
+    second: {fileID: 2100000, guid: 4c9150f4cca73f749bcad832f7ebf59b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HolzHell
+    second: {fileID: 2100000, guid: d50f8b429f35eac41995f6633cc0943b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LampeNeutral
+    second: {fileID: 2100000, guid: c88793274927d5a4cbffb8b5e8ee50c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "LampeWarmwei\xDF"
+    second: {fileID: 2100000, guid: 84c9be4540f67de429b2a819e91be233, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -52,8 +92,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Screen
+    second: {fileID: 2100000, guid: adcdc23c179ab2549b63b1efa8509698, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TableWood
+    second: {fileID: 2100000, guid: c94eb3e0d81af874ab0fad1e6d351488, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Waende
     second: {fileID: 2100000, guid: e493ea88d1f4796458287d67302ee927, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: f122372d0f39608408e0bcc2c25bd1fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow
+    second: {fileID: 2100000, guid: d7c5d3c6793ffa143905aca94a9661c0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -62,8 +122,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: gold
+    second: {fileID: 2100000, guid: 2f3d6e3f7ae97bb45adccfecf1b45670, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: material1
     second: {fileID: 2100000, guid: 6e9b0a1b1c9ec984db54d90d62a3afe0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: e6ee3667f34d52d40ba3f55ad8de011f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white
+    second: {fileID: 2100000, guid: f122372d0f39608408e0bcc2c25bd1fa, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -96,7 +171,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Plane_SInk_0","Plane.006","Plane.004","Plane.001","Object_2.001","Object_2","Kittcxhen.007","Kittcxhen.006","Kittcxhen.005","Kittcxhen.004","Kittcxhen.002","Kittcxhen.001","Kittcxhen","Frame_wood_wood_0","Door.004","Door.003","Door.002","dishwasher_dishwasher_0","defaultMaterial.001","defaultMaterial","Cylinder.003","Cylinder.002","Cube.013","Cube.012","Cube.011","Cube.010","Cube.009","Cube.008","Cube.007","Cube.006","Cube.005","Cube.004","Cube.003","Cube.002","Cube.001","Cube","base_geladeira_low_0","_gltfNode_8","Object_2.002","Object_4","Cube.038","Plane_White_0.001","Plane_White_0","Door.006","Cube.034","Cube.033","Cube.032","Cube.031","Cube.030","Cube.027","Cube.023","Object_7"],"padding":[114,122,142,68,44,44,84,38,16,44,38,32,19,39,69,73,68,86,144,88,256,175,195,195,75,126,118,119,159,163,103,116,117,33,180,103,52,55,45,62,93,107,107,72,29,41,33,39,156,156,105,64],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["Plane_SInk_0","Plane.006","Plane.004","Plane.001","Object_2.001","Object_2","Kittcxhen.007","Kittcxhen.006","Kittcxhen.005","Kittcxhen.004","Kittcxhen.002","Kittcxhen.001","Kittcxhen","Frame_wood_wood_0","Door.004","Door.003","Door.002","dishwasher_dishwasher_0","defaultMaterial.001","defaultMaterial","Cylinder.003","Cylinder.002","Cube.013","Cube.012","Cube.011","Cube.010","Cube.009","Cube.008","Cube.007","Cube.006","Cube.005","Cube.004","Cube.003","Cube.002","Cube.001","Cube","base_geladeira_low_0","_gltfNode_8","Object_2.002","Object_4","Cube.038","Plane_White_0.001","Plane_White_0","Door.006","Cube.034","Cube.033","Cube.032","Cube.031","Cube.030","Cube.027","Cube.023","Object_7","TV","Object_2.008","Object_2.007","Object_2.006","Object_2.005","Object_2.004","Object_2.003","Cube.061","Cube.060","Cube.059","Cube.044","Cube.043","Cube.042","Cube.016","SmallBed"],"padding":[114,122,142,68,44,45,84,38,16,44,38,32,19,39,69,73,68,86,144,88,256,175,195,195,75,126,118,119,159,163,103,116,117,33,180,103,52,55,45,62,93,107,107,72,29,41,35,39,156,156,129,64,50,65,57,53,155,85,45,133,201,166,166,236,236,40,40],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
