@@ -58,7 +58,7 @@ public class InstanceGenerator : MonoBehaviour
                 Rigidbody rb = instance.GetComponent<Rigidbody>();
                 if (rb)
                 {
-                    rb.velocity = transform.forward * m_InitialVelocityMagnitude; // Velocity in the forward direction
+                    rb.linearVelocity = transform.forward * m_InitialVelocityMagnitude; // Velocity in the forward direction
                 }
             }
 

@@ -63,7 +63,7 @@ public class FeatherFall : MonoBehaviour {
 	}
 
 	private void Puff() {
-		float velocity = m_Rigidbody.velocity.y < 0 ? m_Rigidbody.velocity.magnitude : -m_Rigidbody.velocity.magnitude;
+		float velocity = m_Rigidbody.linearVelocity.y < 0 ? m_Rigidbody.linearVelocity.magnitude : -m_Rigidbody.linearVelocity.magnitude;
 
 		if (Mathf.Abs(velocity) < 0.001f) {
 			return;
@@ -100,7 +100,7 @@ public class FeatherFall : MonoBehaviour {
 	private bool IsLeadingEdge(Vector3 globalPoint) {
 		Vector3 globalCenter = m_Collider.bounds.center;
 		Vector3 pointDirection = globalPoint - globalCenter;
-		return Vector3.Dot(pointDirection, m_Rigidbody.velocity) > 0;
+		return Vector3.Dot(pointDirection, m_Rigidbody.linearVelocity) > 0;
 	}
 
 	private Vector3 GetAntigravityForce() {

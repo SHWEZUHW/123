@@ -295,7 +295,7 @@ namespace MagicLightProbes
                     case LightType.Point:
                         lightType = MLPLightType.Point;
                         break;
-                    case LightType.Area:
+                    case LightType.Rectangle:
                         lightType = MLPLightType.Area;
                         break;
                 }

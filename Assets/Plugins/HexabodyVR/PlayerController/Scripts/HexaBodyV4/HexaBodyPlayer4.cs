@@ -559,8 +559,8 @@ namespace HexabodyVR.PlayerController
         {
             CalcJumpHeight();
 
-            _verticalSpeed = Pelvis.velocity.y;
-            var flat = Pelvis.velocity;
+            _verticalSpeed = Pelvis.linearVelocity.y;
+            var flat = Pelvis.linearVelocity;
             flat.y = 0f;
             _actualSpeed = flat.magnitude;
 
@@ -985,7 +985,7 @@ namespace HexabodyVR.PlayerController
             if (locoGrounderJustUncollided || tiptoeing)
             {
                 JumpHeightActual = -10f;
-                JumpVelActual = Pelvis.velocity.y;
+                JumpVelActual = Pelvis.linearVelocity.y;
                 StartRetracting();
                 ApplyJumpMass();
             }
@@ -1007,7 +1007,7 @@ namespace HexabodyVR.PlayerController
         {
             JumpStage = JumpStage.Retracting;
             CrouchSpeed = 0f;
-            _timeToPeak = Kinematics.SolveTime(Pelvis.velocity.y - Gravity * Time.deltaTime * Time.deltaTime, Gravity);
+            _timeToPeak = Kinematics.SolveTime(Pelvis.linearVelocity.y - Gravity * Time.deltaTime * Time.deltaTime, Gravity);
 
             _jumpTimer = 0f;
             _jumpCrouchStart = CrouchAmount;
@@ -1024,7 +1024,7 @@ namespace HexabodyVR.PlayerController
 
             _jumpTimer += Time.deltaTime;
 
-            if (Pelvis.velocity.y < 0)
+            if (Pelvis.linearVelocity.y < 0)
             {
                 if (_jumpTimer < _timeToPeak)
                 {
@@ -1574,30 +1574,30 @@ namespace HexabodyVR.PlayerController
 
         public virtual void NormalizeVelocity()
         {
-            LocoBall.velocity = Pelvis.velocity;
-            Knee.velocity = Pelvis.velocity;
-            Head.velocity = Pelvis.velocity;
+            LocoBall.linearVelocity = Pelvis.linearVelocity;
+            Knee.linearVelocity = Pelvis.linearVelocity;
+            Head.linearVelocity = Pelvis.linearVelocity;
         }
 
         public void RemoveDrag()
         {
-            _headDrag = Head.drag;
-            _pelvisDrag = Pelvis.drag;
-            _kneeDrag = Knee.drag;
-            _ballDrag = LocoBall.drag;
+            _headDrag = Head.linearDamping;
+            _pelvisDrag = Pelvis.linearDamping;
+            _kneeDrag = Knee.linearDamping;
+            _ballDrag = LocoBall.linearDamping;
 
-            Pelvis.drag = 0f;
-            Head.drag = 0f;
-            Knee.drag = 0f;
-            LocoBall.drag = 0f;
+            Pelvis.linearDamping = 0f;
+            Head.linearDamping = 0f;
+            Knee.linearDamping = 0f;
+            LocoBall.linearDamping = 0f;
         }
 
         public void ResetDrag()
         {
-            Pelvis.drag = _pelvisDrag;
-            Head.drag = _headDrag;
-            Knee.drag = _kneeDrag;
-            LocoBall.drag = _ballDrag;
+            Pelvis.linearDamping = _pelvisDrag;
+            Head.linearDamping = _headDrag;
+            Knee.linearDamping = _kneeDrag;
+            LocoBall.linearDamping = _ballDrag;
         }
 
 
@@ -1768,9 +1768,9 @@ namespace HexabodyVR.PlayerController
 
         public void Stop()
         {
-            LocoBall.velocity = Head.velocity = Pelvis.velocity = Knee.velocity = Vector3.zero;
-            LeftHandRigidBody.velocity = Vector3.zero;
-            RightHandRigidBody.velocity = Vector3.zero;
+            LocoBall.linearVelocity = Head.linearVelocity = Pelvis.linearVelocity = Knee.linearVelocity = Vector3.zero;
+            LeftHandRigidBody.linearVelocity = Vector3.zero;
+            RightHandRigidBody.linearVelocity = Vector3.zero;
             LocoBall.angularVelocity = Vector3.zero;
         }
 
@@ -1826,10 +1826,10 @@ namespace HexabodyVR.PlayerController
 
         public void AddVelocity(Vector3 velocity)
         {
-            Head.velocity += velocity;
-            Pelvis.velocity += velocity;
-            Knee.velocity += velocity;
-            LocoBall.velocity += velocity;
+            Head.linearVelocity += velocity;
+            Pelvis.linearVelocity += velocity;
+            Knee.linearVelocity += velocity;
+            LocoBall.linearVelocity += velocity;
         }
 
         private void ApplyFrictionFactor(float factor)

@@ -62,8 +62,8 @@ namespace DigitalRuby.ThunderAndLightning
                 Rigidbody rb = obj.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
-                    rb.drag = 0.0f;
-                    rb.velocity = Vector3.zero;
+                    rb.linearDamping = 0.0f;
+                    rb.linearVelocity = Vector3.zero;
                     rb.angularVelocity = Vector3.zero;
                 }
             }
@@ -142,9 +142,9 @@ namespace DigitalRuby.ThunderAndLightning
                 Rigidbody rb = obj.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
-                    rb.velocity = Vector3.zero;
+                    rb.linearVelocity = Vector3.zero;
                     rb.angularVelocity = Vector3.zero;
-                    rb.drag = 0.5f;
+                    rb.linearDamping = 0.5f;
                 }
             }
         }

@@ -77,6 +77,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Messing
+    second: {fileID: 2100000, guid: 36c44c510b71fae45aaac674fed244b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Metal
     second: {fileID: 2100000, guid: e6ee3667f34d52d40ba3f55ad8de011f, type: 2}
   - first:
@@ -97,6 +102,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Steel
+    second: {fileID: 2100000, guid: 51ad066d9f88dfd4c8e6ff3c58b77141, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: TableWood
     second: {fileID: 2100000, guid: c94eb3e0d81af874ab0fad1e6d351488, type: 2}
   - first:
@@ -114,6 +124,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Yellow
     second: {fileID: 2100000, guid: d7c5d3c6793ffa143905aca94a9661c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ceramic_Mat
+    second: {fileID: 2100000, guid: 2d498c4aa0793b5459027e7387bba2a8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -171,7 +186,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Plane_SInk_0","Plane.006","Plane.004","Plane.001","Object_2.001","Object_2","Kittcxhen.007","Kittcxhen.006","Kittcxhen.005","Kittcxhen.004","Kittcxhen.002","Kittcxhen.001","Kittcxhen","Frame_wood_wood_0","Door.004","Door.003","Door.002","dishwasher_dishwasher_0","defaultMaterial.001","defaultMaterial","Cylinder.003","Cylinder.002","Cube.013","Cube.012","Cube.011","Cube.010","Cube.009","Cube.008","Cube.007","Cube.006","Cube.005","Cube.004","Cube.003","Cube.002","Cube.001","Cube","base_geladeira_low_0","_gltfNode_8","Object_2.002","Object_4","Cube.038","Plane_White_0.001","Plane_White_0","Door.006","Cube.034","Cube.033","Cube.032","Cube.031","Cube.030","Cube.027","Cube.023","Object_7","TV","Object_2.008","Object_2.007","Object_2.006","Object_2.005","Object_2.004","Object_2.003","Cube.061","Cube.060","Cube.059","Cube.044","Cube.043","Cube.042","Cube.016","SmallBed"],"padding":[114,122,142,68,44,45,84,38,16,44,38,32,19,39,69,73,68,86,144,88,256,175,195,195,75,126,118,119,159,163,103,116,117,33,180,103,52,55,45,62,93,107,107,72,29,41,35,39,156,156,129,64,50,65,57,53,155,85,45,133,201,166,166,236,236,40,40],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["Plane_SInk_0","Plane.006","Plane.004","Plane.001","Object_2.001","Object_2","Kittcxhen.007","Kittcxhen.006","Kittcxhen.005","Kittcxhen.004","Kittcxhen.002","Kittcxhen.001","Kittcxhen","Frame_wood_wood_0","Door.004","Door.003","Door.002","dishwasher_dishwasher_0","defaultMaterial.001","defaultMaterial","Cylinder.003","Cylinder.002","Cube.013","Cube.012","Cube.011","Cube.010","Cube.009","Cube.008","Cube.007","Cube.006","Cube.005","Cube.004","Cube.003","Cube.002","Cube.001","Cube","base_geladeira_low_0","_gltfNode_8","Object_2.002","Object_4","Cube.038","Plane_White_0.001","Plane_White_0","Door.006","Cube.034","Cube.033","Cube.032","Cube.031","Cube.030","Cube.027","Cube.023","Object_7","TV","Object_2.008","Object_2.007","Object_2.006","Object_2.005","Object_2.004","Object_2.003","Cube.061","Cube.060","Cube.059","Cube.044","Cube.043","Cube.042","Cube.016","SmallBed","WaschingMachine","Cube.063","Object_2.010","Object_2.009","Mesh_0.002","Mesh_0.001","lisuwc_hinges_plastic_Mat_0","lisuwc_body_ceramic_Mat_0","heated_towel_rail_ANTRAX_BD_BEND_027_heated_towel_rail__334b69","heated_towel_rail_ANTRAX_BD_BEND_027_heated_towel_rail__334b6","Cube.062","Cube.025","Cube.021","Cube.014"],"padding":[114,122,142,68,46,45,84,38,16,44,38,32,19,39,69,73,68,86,164,88,256,256,195,195,75,126,118,59,159,163,103,55,256,54,180,103,52,55,45,62,75,107,107,72,256,41,35,91,156,156,136,64,50,65,57,53,155,85,45,133,201,166,166,224,236,40,40,80,158,256,256,256,66,256,165,90,256,245,256,256,256],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

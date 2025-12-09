@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using UnityEditor.Experimental.SceneManagement;
+
 
 namespace MagicLightProbes
 {
@@ -145,7 +145,7 @@ namespace MagicLightProbes
                         case LightType.Spot:
                             spotLights.Add(lights[i]);
                             break;
-                        case LightType.Area:
+                        case LightType.Rectangle:
                             areaLights.Add(lights[i]);
                             break;
                     }
