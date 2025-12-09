@@ -13,9 +13,14 @@ Shader "Banter/GalleryImage"
         _NoiseStrength ("Noise Strength", Float) = 0.005
         _NoiseSpeed ("Noise Speed", Float) = 0.5
 
+        [Header(Fracture Effect)]
+        _TileCount ("Tile Count", Float) = 10
+        _GapSize ("Gap Size", Range(0, 0.4)) = 0.1
+        _EdgeThickness ("Edge Glow Thickness", Range(0.01, 0.2)) = 0.05
+
         [Header(Edge Glow)]
         _GlowTint ("Glow Tint", Color) = (1, 1, 1, 1)
-        _GlowIntensity ("Glow Intensity", Float) = 0.5
+        _GlowIntensity ("Glow Intensity", Float) = 1.0
         _GlowSaturationBoost ("Glow Saturation Boost", Range(1, 3)) = 1.5
 
         [Header(Border Falloff)]
@@ -28,7 +33,7 @@ Shader "Banter/GalleryImage"
 
     SubShader
     {
-        Tags { "RenderType"="Opaque" "Queue"="Geometry" }
+        Tags { "RenderType"="TransparentCutout" "Queue"="AlphaTest" }
         Cull Off
         ZWrite On
         ZTest LEqual
@@ -124,6 +129,10 @@ Shader "Banter/GalleryImage"
             float _NoiseStrength;
             float _NoiseSpeed;
 
+            float _TileCount;
+            float _GapSize;
+            float _EdgeThickness;
+
             float4 _GlowTint;
             float _GlowIntensity;
             float _GlowSaturationBoost;
@@ -210,13 +219,36 @@ Shader "Banter/GalleryImage"
             }
 
             // ============================================
-            // Fragment Shader - Edge glow based on UV border
+            // Fragment Shader - Fracture effect with tile clipping
             // ============================================
             fixed4 frag(v2f i) : SV_Target
             {
+                // ============================================
+                // Fracture Effect - Alpha clip tiles
+                // ============================================
+                // Tile coordinates (0-1 within each tile)
+                float2 tileUV = frac(i.uv * _TileCount);
+
+                // Distance from tile center (0 at center, ~0.707 at corner for circular)
+                float distFromCenter = length(tileUV - 0.5);
+
+                // Gap size scales with loading progress and border mask
+                float gapSize = _GapSize * _LoadingProgress * i.borderMask;
+
+                // Tile radius (0.5 = full tile, smaller = gaps between tiles)
+                float tileRadius = 0.5 - gapSize;
+
+                // Clip pixels outside the tile (in the gap)
+                clip(tileRadius - distFromCenter);
+
+                // ============================================
                 // Sample main texture
+                // ============================================
                 float3 texColor = tex2D(_MainTex, i.uv).rgb * _EmissionIntensity;
 
+                // ============================================
+                // Edge Glow - at tile boundaries
+                // ============================================
                 // Sample texture at high mip level to get average/dominant color
                 float3 avgColor = tex2Dlod(_MainTex, float4(0.5, 0.5, 0, 8)).rgb;
 
@@ -226,8 +258,12 @@ Shader "Banter/GalleryImage"
                 // Apply tint on top
                 glowBaseColor *= _GlowTint.rgb;
 
-                // Apply glow based on border mask and loading progress
-                float glowAmount = i.borderMask * _GlowIntensity * _LoadingProgress;
+                // Glow at tile edges (distance from the clipped edge)
+                float edgeDist = tileRadius - distFromCenter;
+                float tileEdgeGlow = 1.0 - smoothstep(0.0, _EdgeThickness, edgeDist);
+
+                // Combine tile edge glow with border mask and loading progress
+                float glowAmount = tileEdgeGlow * i.borderMask * _GlowIntensity * _LoadingProgress;
                 float3 glow = glowBaseColor * glowAmount;
 
                 // Final color: texture + edge glow

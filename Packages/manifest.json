@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.sidequest.banter": "https://github.com/SideQuestVR/BanterSDK.git",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ai.navigation": "2.0.9",
     "com.unity.cinemachine": "2.10.4",
@@ -53,7 +52,11 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
+    "com.unity.modules.xr": "1.0.0",
+    "com.sidequest.banter": "3.1.2",
+    "com.basis.bundlemanagement": "file:com.basis.bundlemanagement",
+    "com.basis.sdk": "file:com.basis.sdk",
+    "com.basis.odinserializer": "file:com.basis.odinserializer"
   },
   "scopedRegistries": [
     {
@@ -62,6 +65,13 @@
       "scopes": [
         "com.normalvr",
         "io.normcore"
+      ]
+    },
+    {
+      "name": "OpenUPM",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.sidequest"
       ]
     }
   ]

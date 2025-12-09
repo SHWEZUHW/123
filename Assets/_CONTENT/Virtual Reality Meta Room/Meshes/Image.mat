@@ -38,15 +38,16 @@ Material:
     m_Ints: []
     m_Floats:
     - _EdgeScale: 0.1
-    - _EdgeThickness: 0.177
+    - _EdgeThickness: 0.0477
     - _EmissionIntensity: 1
     - _ExplodeAmount: 0.01
-    - _FalloffMax: 0.322
+    - _FalloffMax: 0.3
     - _FalloffMin: 0
     - _Float1: -0.57
-    - _GlowIntensity: 15.11
+    - _GapSize: 0.294
+    - _GlowIntensity: 15
     - _GlowSaturationBoost: 1.5
-    - _LoadingProgress: 1
+    - _LoadingProgress: 0
     - _MidScaleBoost: 1
     - _NoiseScale: 3.59
     - _NoiseSpeed: 0.5
@@ -66,6 +67,7 @@ Material:
     - _ShimmerScale: 20
     - _ShimmerSpeed: 5
     - _ShrinkAmount: 0.5
+    - _TileCount: 26.87
     - __dirty: 0
     m_Colors:
     - _GlowColor: {r: 0.19999999, g: 0.53769684, b: 1, a: 1}
