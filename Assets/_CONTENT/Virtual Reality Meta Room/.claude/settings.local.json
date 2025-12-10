@@ -3,7 +3,8 @@
     "allow": [
       "Bash(cat:*)",
       "Bash(python3:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(python -m json.tool:*)"
     ],
     "deny": [],
     "ask": []

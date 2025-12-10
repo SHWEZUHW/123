@@ -1,0 +1,33 @@
+Found disallowed visual scripting nodes, please check the logs for more information.:::10:46:45
+Visual Scripting check passed!:::11:27:54
+Build started...:::11:27:54
+Building: android.banter:::11:27:54
+Building: windows.banter:::11:28:31
+Build finished.:::11:28:48
+Upload started: Assets\WebRoot\windows.banter...:::11:28:49
+Uploaded Assets\WebRoot\windows.banter to https://test.bant.ing/windows.banter:::11:29:14
+Upload started: Assets\WebRoot\android.banter...:::11:29:14
+Uploaded Assets\WebRoot\android.banter to https://test.bant.ing/android.banter:::11:29:32
+Upload started: Assets\WebRoot\index.html...:::11:29:32
+Uploaded Assets\WebRoot\index.html to https://test.bant.ing/index.html:::11:29:33
+File not found, skipping: Assets\WebRoot\script.js:::11:29:33
+File not found, skipping: Assets\WebRoot\bullshcript.js:::11:29:33
+Upload complete.:::11:29:33
+Visual Scripting check passed!:::17:10:17
+Build started...:::17:10:17
+Building: android.banter:::17:10:17
+Building: windows.banter:::17:11:00
+Build finished.:::17:11:20
+Upload started: Assets\WebRoot\windows.banter...:::17:11:21
+Uploaded Assets\WebRoot\windows.banter to https://test.bant.ing/windows.banter:::17:11:51
+Upload started: Assets\WebRoot\android.banter...:::17:11:51
+Uploaded Assets\WebRoot\android.banter to https://test.bant.ing/android.banter:::17:12:21
+Upload started: Assets\WebRoot\index.html...:::17:12:21
+Uploaded Assets\WebRoot\index.html to https://test.bant.ing/index.html:::17:12:22
+File not found, skipping: Assets\WebRoot\script.js:::17:12:22
+File not found, skipping: Assets\WebRoot\bullshcript.js:::17:12:22
+Upload complete.:::17:12:22
+Visual Scripting check passed!:::17:44:55
+Build started...:::17:44:55
+Building: android.banter:::17:44:55
+Building: windows.banter:::17:45:42
