@@ -1,9 +1,0 @@
-const scene = BS.BanterScene.getInstance();
-scene.On("unity-loaded", async () => {
-    const gameObject = await scene.Find("Browser42");
-    window.browser = await gameObject.GetComponent(BS.ComponentType.BanterBrowser);
-    window.browser.ToggleInteraction(false);
-
-    window.browser.url = "https://screen.sdq.st:8443/?room=elin";
-});
-

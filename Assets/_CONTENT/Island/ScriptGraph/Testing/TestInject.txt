@@ -1,1 +1,0 @@
-const something = "hi from vs"; console.log(something); something.split("vs")[0] + "js";
